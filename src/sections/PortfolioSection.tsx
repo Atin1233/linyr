@@ -2,25 +2,25 @@ import Link from 'next/link';
 
 const portfolioItems = [
   {
-    title: 'Nova Commerce',
+    title: 'Commerce',
     description:
-      'Enterprise SaaS storefront reimagined for repeatable revenue.',
+      'High-converting SaaS commerce landing system engineered for fast launches.',
     image: '/assets/images/nextjs-landing-page-screenshot.png',
-    href: '/demo/nova-commerce',
+    href: '/demo/commerce',
   },
   {
-    title: 'Helix Workflows',
+    title: 'Workflow',
     description:
-      'AI automation hub with real-time dashboards and 3D interactions.',
+      'Operational automation story blending traction metrics with product depth.',
     image: '/assets/images/nextjs-landing-page-banner.png',
-    href: '/demo/helix-workflows',
+    href: '/demo/workflow',
   },
   {
-    title: 'Signal One Labs',
+    title: 'Insights',
     description:
-      'Data-rich product marketing site with narrative storytelling.',
+      'Narrative analytics experience that builds trust around complex data.',
     image: '/assets/images/nextjs-boilerplate-saas.png',
-    href: '/demo/signal-one-labs',
+    href: '/demo/insights',
   },
 ];
 

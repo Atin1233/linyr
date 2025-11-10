@@ -3,87 +3,88 @@ import Link from 'next/link';
 import { Meta } from '../../layout/Meta';
 import { AppConfig } from '../../utils/AppConfig';
 
-const storytellingMoments = [
+const featureSections = [
   {
-    title: 'Insight-Led Hero Narrative',
+    title: 'Conversion-Calibrated Header',
     description:
-      'Data visualization hero with a concise problem statement, illustrating how Signal One Labs removes blind spots for growth teams.',
+      'Headline hierarchy, social proof, and action bar structured to drop bounce rate across paid campaigns.',
   },
   {
-    title: 'Proof Library',
+    title: 'Offer Framework',
     description:
-      'Case study carousel and testimonial stack demonstrating measurable uplifts across acquisition, activation, and retention.',
+      'Modular sections outlining tiers, objections, and differentiators so teams can iterate messaging rapidly.',
   },
   {
-    title: 'Strategic Call-to-Action Framework',
+    title: 'Revenue Snapshot',
     description:
-      'Sequenced CTAs that warm up analysts with interactive charts, then upsell execs on a workshop tailored to their pipeline.',
+      'Interactive stat grid that surfaces the metrics buyers care about before they request a demo.',
   },
 ];
 
-const SignalOneLabsDemo = () => (
+const CommerceDemo = () => (
   <>
     <Meta
-      title={`Signal One Labs Demo — ${AppConfig.title}`}
-      description="Step through the Signal One Labs design system crafted by Linyr Digital."
+      title={`Commerce Demo — ${AppConfig.title}`}
+      description="Explore the Commerce concept site crafted by Linyr Digital."
     />
     <main className="min-h-screen bg-linyr-offWhite text-linyr-charcoal">
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(30,64,255,0.18),transparent_45%),radial-gradient(circle_at_bottom_left,rgba(245,197,66,0.18),transparent_55%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(245,197,66,0.18),transparent_45%),radial-gradient(circle_at_bottom_left,rgba(30,64,255,0.18),transparent_55%)]" />
         <div className="relative mx-auto flex max-w-6xl flex-col gap-12 px-6 py-24 md:px-10">
           <div className="rounded-3xl border border-linyr-blue/15 bg-white/90 p-10 shadow-glass backdrop-blur">
             <span className="inline-flex items-center rounded-full border border-linyr-blue/20 bg-linyr-blue/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-linyr-blue">
               Demo Experience
             </span>
             <h1 className="mt-6 font-heading text-4xl text-linyr-charcoal md:text-5xl">
-              Signal One Labs — Narrative Intelligence Launchpad
+              Commerce — A Launch-Ready SaaS Storefront
             </h1>
             <p className="mt-6 max-w-3xl text-lg text-linyr-slate">
-              A storytelling-driven site for a data insights platform. This
-              concept balances analytical rigor with emotional appeal, showing
-              how Signal One Labs unlocks full-funnel clarity for modern teams.
+              This concept site demonstrates how Linyr Digital structures a
+              sales-ready story for commerce platforms. Every section is
+              designed to communicate value in seconds and accelerate scheduling
+              a call.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <Link
-                href="#storytelling"
+                href="#demo-overview"
                 className="inline-flex items-center rounded-full bg-linyr-blue px-6 py-3 text-sm font-semibold text-white shadow-glow transition hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(30,64,255,0.35)] focus:outline-none focus-visible:ring-2 focus-visible:ring-linyr-gold focus-visible:ring-offset-2"
               >
-                Tour the Story
+                See the Highlights
               </Link>
               <Link
-                href="/#book-consultation"
+                href="/#services"
                 className="inline-flex items-center rounded-full border border-linyr-blue/30 px-6 py-3 text-sm font-semibold text-linyr-blue transition hover:border-linyr-gold/50 hover:text-linyr-gold focus:outline-none focus-visible:ring-2 focus-visible:ring-linyr-gold focus-visible:ring-offset-2"
               >
-                Book a Consultation
+                Back to Services
               </Link>
             </div>
           </div>
 
           <div
-            id="storytelling"
+            id="demo-overview"
             className="grid gap-8 md:grid-cols-[1.4fr,1fr]"
           >
             <div className="overflow-hidden rounded-3xl border border-linyr-blue/15 bg-white shadow-glass">
               <img
-                src="/assets/images/nextjs-boilerplate-saas.png"
-                alt="Signal One Labs demo hero mockup"
+                src="/assets/images/nextjs-landing-page-screenshot.png"
+                alt="Commerce demo hero mockup"
                 className="size-full object-cover"
               />
             </div>
             <div className="space-y-6 rounded-3xl border border-linyr-blue/15 bg-white p-8 shadow-glass">
               <h2 className="font-heading text-2xl text-linyr-charcoal">
-                Moments That Matter
+                Experience Pillars
               </h2>
               <ul className="space-y-4 text-sm leading-relaxed text-linyr-slate">
-                {storytellingMoments.map((moment) => (
+                {featureSections.map((feature) => (
                   <li
-                    key={moment.title}
+                    key={feature.title}
                     className="rounded-2xl border border-linyr-blue/10 bg-linyr-blue/5 p-4"
                   >
                     <p className="font-heading text-base text-linyr-charcoal">
-                      {moment.title}
+                      {feature.title}
                     </p>
-                    <p className="mt-2">{moment.description}</p>
+                    <p className="mt-2">{feature.description}</p>
                   </li>
                 ))}
               </ul>
@@ -92,19 +93,18 @@ const SignalOneLabsDemo = () => (
 
           <div className="rounded-3xl border border-linyr-blue/15 bg-white/90 p-10 text-center shadow-glass backdrop-blur">
             <h3 className="font-heading text-2xl text-linyr-charcoal">
-              Let’s script your next high-conversion story.
+              Ready to build your revenue-grade landing experience?
             </h3>
             <p className="mx-auto mt-4 max-w-2xl text-sm text-linyr-slate">
-              When your site feels this considered, prospects trust faster,
-              analytics land clearer, and your brand wins the moments that
-              decide pipeline.
+              Linyr Digital merges strategy, craftsmanship, and analytics to
+              ship conversion-first websites in weeks, not quarters.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <Link
-                href="/#services"
+                href="/#book-consultation"
                 className="inline-flex items-center rounded-full bg-linyr-gold px-6 py-3 text-sm font-semibold text-linyr-charcoal transition hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(245,197,66,0.35)] focus:outline-none focus-visible:ring-2 focus-visible:ring-linyr-blue focus-visible:ring-offset-2"
               >
-                Explore Our Process
+                Book Your Consultation
               </Link>
               <Link
                 href="/"
@@ -119,4 +119,4 @@ const SignalOneLabsDemo = () => (
     </main>
   </>
 );
-export default SignalOneLabsDemo;
+export default CommerceDemo;

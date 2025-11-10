@@ -12,14 +12,14 @@ const portfolioItems = [
     title: 'Demo Site #2',
     description:
       'Operational automation story blending traction metrics with product depth.',
-    image: '/assets/images/nextjs-landing-page-screenshot.png',
+    image: '/assets/images/nextjs-landing-page-banner.png',
     href: '/demo/workflow',
   },
   {
     title: 'Demo Site #3',
     description:
       'Narrative analytics experience that builds trust around complex data.',
-    image: '/assets/images/nextjs-landing-page-screenshot.png',
+    image: '/assets/images/nextjs-boilerplate-saas.png',
     href: '/demo/insights',
   },
 ];

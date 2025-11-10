@@ -3,6 +3,13 @@ import Link from 'next/link';
 import { Meta } from '../../layout/Meta';
 import { AppConfig } from '../../utils/AppConfig';
 
+const navigationLinks = [
+  { label: 'Overview', href: '#overview' },
+  { label: 'Treatments', href: '#treatments' },
+  { label: 'Care Team', href: '#care-team' },
+  { label: 'Patient Info', href: '#patient-info' },
+];
+
 const treatmentGrid = [
   {
     name: 'Smile Design Studio',
@@ -93,7 +100,34 @@ const LuminaSmilesDemo = () => (
       description="Step through Lumina Smiles Dental, a serene dental studio landing page crafted by Linyr Digital for patient confidence and online bookings."
     />
     <main className="bg-[#f4f9ff] text-[#0f172a]">
-      <section className="relative overflow-hidden">
+      <section id="overview" className="relative overflow-hidden">
+        <header className="absolute inset-x-0 top-0 z-30">
+          <div className="mx-auto flex max-w-6xl items-center justify-between rounded-b-3xl bg-white/95 px-6 py-4 text-[#0f172a] shadow-[0_10px_35px_rgba(37,99,235,0.15)] backdrop-blur md:px-12">
+            <Link
+              href="/"
+              className="font-heading text-lg font-semibold text-[#2563eb]"
+            >
+              Lumina Smiles
+            </Link>
+            <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
+              {navigationLinks.map((item) => (
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  className="rounded-full px-3 py-1 text-[#0f172a]/75 transition hover:bg-[#2563eb]/10 hover:text-[#2563eb]"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </nav>
+            <Link
+              href="#treatments"
+              className="inline-flex items-center rounded-full bg-[#2563eb] px-4 py-2 text-xs font-semibold text-white shadow-[0_12px_30px_rgba(37,99,235,0.32)] transition hover:-translate-y-0.5 hover:bg-[#1d4ed8]"
+            >
+              Book a visit
+            </Link>
+          </div>
+        </header>
         <div className="absolute inset-0 bg-gradient-to-br from-[#8ec5fc] via-[#e0c3fc] to-[#a5f3fc]" />
         <div className="relative mx-auto flex max-w-6xl flex-col gap-20 px-6 py-28 md:px-12">
           <div className="grid gap-12 md:grid-cols-[1.1fr,0.9fr]">
@@ -202,7 +236,7 @@ const LuminaSmilesDemo = () => (
         </div>
       </section>
 
-      <section className="bg-[#eff6ff] py-24 text-[#0f172a]">
+      <section id="care-team" className="bg-[#eff6ff] py-24 text-[#0f172a]">
         <div className="mx-auto max-w-6xl px-6 md:px-12">
           <div className="md:flex md:items-end md:justify-between">
             <div>
@@ -247,7 +281,7 @@ const LuminaSmilesDemo = () => (
         </div>
       </section>
 
-      <section className="bg-white py-24 text-[#0f172a]">
+      <section id="patient-info" className="bg-white py-24 text-[#0f172a]">
         <div className="mx-auto max-w-6xl px-6 md:px-12">
           <div className="grid gap-12 md:grid-cols-[1.1fr,0.9fr]">
             <div className="space-y-6">

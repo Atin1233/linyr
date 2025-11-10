@@ -3,6 +3,13 @@ import Link from 'next/link';
 import { Meta } from '../../layout/Meta';
 import { AppConfig } from '../../utils/AppConfig';
 
+const navigationLinks = [
+  { label: 'Services', href: '#services' },
+  { label: 'Journey', href: '#journey' },
+  { label: 'Case Studies', href: '#case-studies' },
+  { label: 'Insights', href: '#insights' },
+];
+
 const advisoryHighlights = [
   {
     title: 'Strategic Finance Pods',
@@ -98,6 +105,33 @@ const RedwoodLedgerDemo = () => (
     />
     <main className="bg-[#070d23] text-white">
       <section className="relative overflow-hidden">
+        <header className="absolute inset-x-0 top-0 z-30">
+          <div className="mx-auto flex max-w-6xl items-center justify-between rounded-b-3xl bg-white/95 px-6 py-4 text-[#0b1739] shadow-[0_10px_35px_rgba(7,13,35,0.35)] backdrop-blur md:px-12">
+            <Link
+              href="/"
+              className="font-heading text-lg font-semibold text-[#0b1739]"
+            >
+              Redwood Ledger
+            </Link>
+            <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
+              {navigationLinks.map((item) => (
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  className="rounded-full px-3 py-1 text-[#0b1739]/85 transition hover:bg-[#1E40FF]/5 hover:text-[#1E40FF]"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </nav>
+            <Link
+              href="#services"
+              className="inline-flex items-center rounded-full bg-[#0b1739] px-4 py-2 text-xs font-semibold text-white shadow-[0_12px_30px_rgba(7,13,35,0.4)] transition hover:-translate-y-0.5 hover:bg-[#091131]"
+            >
+              Schedule a consult
+            </Link>
+          </div>
+        </header>
         <div className="absolute inset-0 bg-gradient-to-br from-[#0b1739] via-[#131f4b] to-[#1f2f63]" />
         <div className="relative mx-auto flex max-w-6xl flex-col gap-20 px-6 py-28 md:px-12">
           <div className="grid gap-12 md:grid-cols-[1.2fr,0.8fr]">
@@ -306,7 +340,7 @@ const RedwoodLedgerDemo = () => (
         </div>
       </section>
 
-      <section className="bg-[#0d1536] py-24">
+      <section id="journey" className="bg-[#0d1536] py-24">
         <div className="mx-auto max-w-6xl px-6 md:px-12">
           <div className="md:flex md:items-start md:justify-between">
             <div className="max-w-xl">
@@ -360,7 +394,7 @@ const RedwoodLedgerDemo = () => (
         </div>
       </section>
 
-      <section className="bg-white py-24 text-linyr-charcoal">
+      <section id="insights" className="bg-white py-24 text-linyr-charcoal">
         <div className="mx-auto max-w-6xl px-6 md:px-12">
           <div className="grid gap-12 md:grid-cols-[1.1fr,0.9fr]">
             <div>
@@ -426,7 +460,7 @@ const RedwoodLedgerDemo = () => (
         </div>
       </section>
 
-      <section className="bg-[#0b1739]/5 py-24">
+      <section id="case-studies" className="bg-[#0b1739]/5 py-24">
         <div className="mx-auto max-w-6xl px-6 md:px-12">
           <div className="mb-12 text-center text-[#0b1739]">
             <span className="inline-flex items-center rounded-full border border-[#0b1739]/15 bg-white px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-[#0b1739]/70">

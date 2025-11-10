@@ -1,21 +1,26 @@
+import Link from 'next/link';
+
 const portfolioItems = [
   {
     title: 'Nova Commerce',
     description:
       'Enterprise SaaS storefront reimagined for repeatable revenue.',
     image: '/assets/images/nextjs-landing-page-screenshot.png',
+    href: '/demo/nova-commerce',
   },
   {
     title: 'Helix Workflows',
     description:
       'AI automation hub with real-time dashboards and 3D interactions.',
     image: '/assets/images/nextjs-landing-page-banner.png',
+    href: '/demo/helix-workflows',
   },
   {
     title: 'Signal One Labs',
     description:
       'Data-rich product marketing site with narrative storytelling.',
     image: '/assets/images/nextjs-boilerplate-saas.png',
+    href: '/demo/signal-one-labs',
   },
 ];
 
@@ -48,9 +53,10 @@ const PortfolioSection = () => (
 
     <div className="grid gap-8 md:grid-cols-3">
       {portfolioItems.map((item) => (
-        <article
+        <Link
           key={item.title}
-          className="group flex flex-col overflow-hidden rounded-3xl border border-linyr-blue/10 bg-white shadow-glass transition duration-300 hover:-translate-y-1 hover:border-linyr-gold/40"
+          href={item.href}
+          className="group flex flex-col overflow-hidden rounded-3xl border border-linyr-blue/10 bg-white shadow-glass transition duration-300 hover:-translate-y-1 hover:border-linyr-gold/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-linyr-gold focus-visible:ring-offset-4"
         >
           <div className="relative h-52 overflow-hidden bg-linyr-charcoal/5">
             <img
@@ -66,10 +72,10 @@ const PortfolioSection = () => (
             </h3>
             <p className="mt-3 text-sm text-linyr-slate">{item.description}</p>
             <span className="mt-auto pt-6 text-sm font-semibold text-linyr-blue transition group-hover:text-linyr-gold">
-              View details →
+              Explore the demo →
             </span>
           </div>
-        </article>
+        </Link>
       ))}
     </div>
   </section>

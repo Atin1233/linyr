@@ -70,35 +70,22 @@ const CTAFooter = () => (
             </Link>
           </div>
         </div>
-        <div className="flex flex-col gap-6 rounded-3xl border border-white/15 bg-white/5 p-6 shadow-[0_22px_55px_rgba(5,8,25,0.45)]">
-          <div className="rounded-2xl border border-white/20 bg-white/10 p-5 text-sm text-white/80">
+        <div className="flex flex-col justify-center gap-6 rounded-3xl border border-white/15 bg-white/5 p-6 text-sm text-white/80 shadow-[0_22px_55px_rgba(5,8,25,0.45)]">
+          <div className="rounded-2xl border border-white/20 bg-white/10 p-5">
             <p className="text-xs uppercase tracking-[0.35em] text-white/60">
               What you leave with
             </p>
-            <ul className="mt-3 space-y-2">
-              <li>
-                ✔ Clarity on messaging pillars & high-impact hero narrative.
-              </li>
-              <li>
-                ✔ UX flow outline with key modules, motion, and content
-                prompts.
-              </li>
-              <li>
-                ✔ Timeline & investment ranges mapped to three engagement
-                tiers.
-              </li>
-            </ul>
-          </div>
-          <div className="rounded-2xl border border-white/20 bg-white/10 p-5 text-sm text-white/80">
-            <p className="text-xs uppercase tracking-[0.35em] text-white/60">
-              Recent launch outcomes
-            </p>
-            <ul className="mt-3 space-y-2">
-              <li>+128% conversion uplift for a crypto security platform.</li>
-              <li>3× trial signups for a hospitality marketplace relaunch.</li>
-              <li>
-                42-day brand, web, and growth system build for an AI SaaS.
-              </li>
+            <ul className="mt-3 space-y-3">
+              {[
+                'Clarity on messaging pillars & high-impact hero narrative.',
+                'UX flow outline with key modules, motion, and content prompts.',
+                'Timeline & investment ranges mapped to three engagement tiers.',
+              ].map((deliverable) => (
+                <li key={deliverable} className="flex items-start gap-3">
+                  <span className="mt-1 inline-flex size-2 rounded-full bg-linyr-gold" />
+                  <span>{deliverable}</span>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

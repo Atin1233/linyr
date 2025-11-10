@@ -13,7 +13,6 @@ const ctaContent = {
   ],
   ctaLabel: 'Schedule a Call',
   ctaHref: 'https://calendly.com/atinjain117/linyr',
-  secondaryLabel: 'hello@linyr.digital',
 };
 
 const CTAFooter = () => (
@@ -62,9 +61,8 @@ const CTAFooter = () => (
               {ctaContent.ctaLabel}
             </a>
             <Link
-              href="/launch-blueprint.pdf"
-              target="_blank"
-              className="inline-flex items-center gap-2 rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white/80 transition hover:border-white hover:text-white"
+              href="/launch-blueprint"
+              className="inline-flex items-center gap-2 rounded-full border border-linyr-blue/30 px-6 py-3 text-sm font-semibold text-linyr-blue transition hover:border-linyr-gold/50 hover:text-linyr-gold"
             >
               View launch blueprint →
             </Link>

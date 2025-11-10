@@ -3,6 +3,13 @@ import Link from 'next/link';
 import { Meta } from '../../layout/Meta';
 import { AppConfig } from '../../utils/AppConfig';
 
+const navigationLinks = [
+  { label: 'Menu', href: '#menu' },
+  { label: 'Events', href: '#experiences' },
+  { label: 'Gallery', href: '#gallery' },
+  { label: 'Visit', href: '#visit' },
+];
+
 const signatureItems = [
   {
     title: 'Fire-Kissed Espresso',
@@ -28,6 +35,14 @@ const signatureItems = [
     image:
       'https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1200&q=80',
   },
+];
+
+const galleryImages = [
+  'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=80',
+  'https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1400&q=80',
+  'https://images.unsplash.com/photo-1481833761820-0509d3217039?auto=format&fit=crop&w=1400&q=80',
+  'https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=1400&q=80',
+  'https://images.unsplash.com/photo-1504753793650-d4a2b783c15e?auto=format&fit=crop&w=1400&q=80',
 ];
 
 const eventHighlights = [
@@ -102,6 +117,33 @@ const HearthHarvestDemo = () => (
     />
     <main className="bg-[#221107] text-[#fdf5ed]">
       <section className="relative overflow-hidden">
+        <header className="absolute inset-x-0 top-0 z-30">
+          <div className="mx-auto flex max-w-6xl items-center justify-between rounded-b-3xl bg-white/95 px-6 py-4 text-[#3b1b0a] shadow-[0_10px_35px_rgba(28,12,4,0.18)] backdrop-blur md:px-12">
+            <Link
+              href="/"
+              className="font-heading text-lg font-semibold text-[#7c2d12]"
+            >
+              Hearth &amp; Harvest
+            </Link>
+            <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
+              {navigationLinks.map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className="rounded-full px-3 py-1 text-[#7c2d12] transition hover:bg-[#f97316]/10"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
+            <Link
+              href="#visit"
+              className="inline-flex items-center rounded-full bg-[#f97316] px-4 py-2 text-xs font-semibold text-white shadow-[0_12px_30px_rgba(231,111,33,0.35)] transition hover:-translate-y-0.5 hover:bg-[#ea580c]"
+            >
+              Reserve a Table
+            </Link>
+          </div>
+        </header>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(250,204,21,0.25),transparent_55%),radial-gradient(circle_at_bottom_right,rgba(180,83,9,0.35),transparent_60%),linear-gradient(135deg,#4b1f0f_0%,#8a3c1a_60%,#c2410c_100%)] opacity-95" />
         <div className="relative mx-auto flex max-w-6xl flex-col gap-20 px-6 py-28 md:px-12">
           <div className="grid gap-12 md:grid-cols-[1.1fr,0.9fr]">
@@ -353,7 +395,51 @@ const HearthHarvestDemo = () => (
         </div>
       </section>
 
-      <section className="bg-[#3b1b0a] py-24 text-white">
+      <section id="gallery" className="bg-[#3b1b0a] py-24 text-white">
+        <div className="mx-auto max-w-6xl px-6 md:px-12">
+          <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+            <div>
+              <span className="inline-flex items-center rounded-full border border-white/20 bg-white/5 px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-white/70">
+                Gallery
+              </span>
+              <h2 className="mt-6 font-heading text-3xl md:text-4xl">
+                A look inside our daily ritual.
+              </h2>
+              <p className="mt-3 max-w-xl text-sm text-white/75">
+                Swipe through Hearth &amp; Harvest moments—morning light,
+                barista craft, seasonal plates, and the glow of evenings by the
+                hearth.
+              </p>
+            </div>
+            <div className="text-sm text-white/70">
+              Tip: drag to explore or tap each image to pause the carousel.
+            </div>
+          </div>
+          <div className="mt-10 overflow-x-auto pb-4">
+            <div className="flex snap-x gap-6">
+              {galleryImages.map((src) => (
+                <div
+                  key={src}
+                  className="group relative h-72 w-[320px] flex-none snap-center overflow-hidden rounded-3xl border border-white/15 bg-black/20 shadow-[0_25px_60px_rgba(15,10,6,0.45)]"
+                >
+                  <img
+                    src={src}
+                    alt="Cafe gallery"
+                    className="size-full object-cover transition duration-700 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                  <span className="absolute bottom-4 left-4 rounded-full bg-white/15 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-white/80">
+                    Hearth moment
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="experiences" className="bg-[#3b1b0a] py-24 text-white">
         <div className="mx-auto max-w-6xl px-6 md:px-12">
           <div className="md:flex md:items-start md:justify-between">
             <div className="max-w-xl">
@@ -392,7 +478,7 @@ const HearthHarvestDemo = () => (
         </div>
       </section>
 
-      <section className="bg-[#fff7f1] py-24 text-[#3b1b0a]">
+      <section id="visit" className="bg-[#fff7f1] py-24 text-[#3b1b0a]">
         <div className="mx-auto max-w-6xl px-6 md:px-12">
           <div className="grid gap-12 md:grid-cols-[1.1fr,0.9fr]">
             <div>

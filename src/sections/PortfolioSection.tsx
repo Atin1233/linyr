@@ -5,21 +5,51 @@ const portfolioItems = [
     title: 'Demo Site #1',
     description:
       'Boutique CPA firm flagship that builds trust while guiding prospects to book consultations.',
-    image: '/assets/images/nextjs-landing-page-screenshot.png',
+    preview: {
+      gradient:
+        'linear-gradient(155deg, #0b1739 0%, #1f2f63 55%, rgba(30, 64, 175, 0.95) 100%)',
+      tag: 'Boutique CPA & Advisory',
+      heading: 'Fractional finance partner.',
+      subheading: 'Board-ready dashboards & audit-ready execution.',
+      stats: ['42% faster close cycles', '$6.8M capital raised'],
+      textColor: 'text-white',
+      tagColor: 'text-white/80',
+      statsVariant: 'light',
+    },
     href: '/demo/commerce',
   },
   {
     title: 'Demo Site #2',
     description:
       'Neighborhood cafe launch experience with menu storytelling and seamless ordering.',
-    image: '/assets/images/nextjs-landing-page-banner.png',
+    preview: {
+      gradient:
+        'linear-gradient(150deg, #44200d 0%, #7c3a1d 50%, rgba(249, 115, 22, 0.85) 100%)',
+      tag: 'Hearth & Harvest Cafe',
+      heading: 'Brunch • Vinyl • Fire-roasted espresso.',
+      subheading: 'Order ahead & join Harvest Rewards.',
+      stats: ['4.9★ guest rating', '+18K loyalty members'],
+      textColor: 'text-white',
+      tagColor: 'text-white/80',
+      statsVariant: 'light',
+    },
     href: '/demo/workflow',
   },
   {
     title: 'Demo Site #3',
     description:
       'Modern dental studio site focused on patient confidence and online bookings.',
-    image: '/assets/images/nextjs-boilerplate-saas.png',
+    preview: {
+      gradient:
+        'linear-gradient(160deg, #8ec5fc 0%, #e0c3fc 40%, rgba(165, 243, 252, 0.9) 100%)',
+      tag: 'Lumina Smiles Dental',
+      heading: 'Spa-grade comfort & concierge care.',
+      subheading: 'Virtual consults • 24/7 emergency support.',
+      stats: ['15K+ smiles transformed', '98% satisfaction'],
+      textColor: 'text-[#0f172a]',
+      tagColor: 'text-[#0f172a]/70',
+      statsVariant: 'dark',
+    },
     href: '/demo/insights',
   },
 ];
@@ -58,13 +88,51 @@ const PortfolioSection = () => (
           href={item.href}
           className="group flex flex-col overflow-hidden rounded-3xl border border-linyr-blue/10 bg-white shadow-glass transition duration-300 hover:-translate-y-1 hover:border-linyr-gold/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-linyr-gold focus-visible:ring-offset-4"
         >
-          <div className="relative h-52 overflow-hidden bg-linyr-charcoal/5">
-            <img
-              src={item.image}
-              alt={`${item.title} mockup`}
-              className="size-full object-cover transition duration-700 ease-out group-hover:scale-105"
+          <div className="relative h-52 overflow-hidden rounded-b-none">
+            <div
+              className="absolute inset-0"
+              style={{ background: item.preview.gradient }}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-linyr-charcoal/60 via-transparent to-transparent opacity-0 transition duration-300 group-hover:opacity-100" />
+            <div className="relative flex h-full flex-col justify-between overflow-hidden rounded-3xl border-b border-white/10 p-6">
+              <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.35em] text-white/70">
+                <span
+                  className={`inline-flex size-2 rounded-full ${item.preview.statsVariant === 'dark' ? 'bg-[#0f172a]/60' : 'bg-white/70'}`}
+                />
+                <span className={item.preview.tagColor}>
+                  {item.preview.tag}
+                </span>
+              </div>
+              <div>
+                <p
+                  className={`font-heading text-lg leading-snug ${item.preview.textColor}`}
+                >
+                  {item.preview.heading}
+                </p>
+                <p
+                  className={`mt-2 text-xs ${item.preview.textColor} opacity-80`}
+                >
+                  {item.preview.subheading}
+                </p>
+              </div>
+              <div className="mt-4 grid gap-2 text-[11px] font-medium sm:grid-cols-2">
+                {item.preview.stats.map((stat) => {
+                  const statClasses =
+                    item.preview.statsVariant === 'dark'
+                      ? 'inline-flex items-center gap-2 rounded-full bg-white/80 px-3 py-1 text-[#0f172a] backdrop-blur'
+                      : 'inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-white/90 backdrop-blur-sm';
+                  const dotClasses =
+                    item.preview.statsVariant === 'dark'
+                      ? 'inline-flex h-1.5 w-1.5 rounded-full bg-[#0f172a]/70'
+                      : 'inline-flex h-1.5 w-1.5 rounded-full bg-white/70';
+                  return (
+                    <span key={stat} className={statClasses}>
+                      <span className={dotClasses} />
+                      {stat}
+                    </span>
+                  );
+                })}
+              </div>
+            </div>
           </div>
           <div className="flex flex-1 flex-col p-6">
             <h3 className="font-heading text-xl text-linyr-charcoal">

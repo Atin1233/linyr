@@ -3,238 +3,405 @@ import Link from 'next/link';
 import { Meta } from '../../layout/Meta';
 import { AppConfig } from '../../utils/AppConfig';
 
-const CommerceDemo = () => (
+const advisoryHighlights = [
+  {
+    title: 'Strategic Finance Pods',
+    body: 'Dedicated CFO, controller, and analyst embedded with your leadership team to model scenarios and steer board conversations.',
+  },
+  {
+    title: 'Compliance Orchestrated',
+    body: 'Tax, payroll, and audit readiness automated through a single portal so founders can focus on growth instead of paperwork.',
+  },
+  {
+    title: 'Capital Raise Playbooks',
+    body: 'Investor decks, data rooms, and diligence trackers designed to accelerate fundraising cycles without sacrificing rigor.',
+  },
+];
+
+const servicePackages = [
+  {
+    name: 'Fractional CFO Residency',
+    price: 'Starting at $6,800 / month',
+    bullets: [
+      'Weekly leadership syncs and KPI instrumentation',
+      '12-month forecast, cash runway, and scenario modeling',
+      'Investor relations support and board reporting',
+    ],
+  },
+  {
+    name: 'Compliance Engine',
+    price: 'Starting at $2,900 / month',
+    bullets: [
+      'Full-cycle bookkeeping and multi-entity consolidation',
+      'Quarterly tax strategy, filings, and audit snapshots',
+      'Dedicated support channel with < 2 hour response time',
+    ],
+  },
+  {
+    name: 'Transaction Desk',
+    price: 'Custom engagement',
+    bullets: [
+      'M&A diligence, carve-out modeling, and integration roadmaps',
+      'Equity compensation, waterfall design, and 409A coordination',
+      'Collaborative war room with secure document vault',
+    ],
+  },
+];
+
+const RedwoodLedgerDemo = () => (
   <>
     <Meta
       title={`Redwood Ledger CPA Demo — ${AppConfig.title}`}
-      description="Explore Redwood Ledger CPA, the boutique accounting concept site crafted by Linyr Digital."
+      description="Explore Redwood Ledger CPA, a premium accounting and finance partner experience crafted by Linyr Digital."
     />
-    <main className="min-h-screen bg-linyr-offWhite text-linyr-charcoal">
+    <main className="bg-[#070d23] text-white">
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(245,197,66,0.18),transparent_45%),radial-gradient(circle_at_bottom_left,rgba(30,64,255,0.18),transparent_55%)]" />
-        <div className="relative mx-auto flex max-w-6xl flex-col gap-12 px-6 py-24 md:px-10">
-          <div className="rounded-3xl border border-linyr-blue/15 bg-white/90 p-10 shadow-glass backdrop-blur">
-            <span className="inline-flex items-center rounded-full border border-linyr-blue/20 bg-linyr-blue/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-linyr-blue">
-              Demo Experience
-            </span>
-            <h1 className="mt-6 font-heading text-4xl text-linyr-charcoal md:text-5xl">
-              Redwood Ledger CPA — Fractional Finance for Modern Teams
-            </h1>
-            <p className="mt-6 max-w-3xl text-lg text-linyr-slate">
-              This demo shows how we position a boutique accounting firm as a
-              strategic finance partner. It blends trust signals, clear service
-              paths, and decisive calls-to-action so prospects book discovery
-              calls with confidence.
-            </p>
-            <div className="mt-10 flex flex-wrap items-center gap-4">
-              <Link
-                href="#demo-overview"
-                className="inline-flex items-center rounded-full bg-linyr-blue px-6 py-3 text-sm font-semibold text-white shadow-glow transition hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(30,64,255,0.35)] focus:outline-none focus-visible:ring-2 focus-visible:ring-linyr-gold focus-visible:ring-offset-2"
-              >
-                See the Highlights
-              </Link>
-              <Link
-                href="/#services"
-                className="inline-flex items-center rounded-full border border-linyr-blue/30 px-6 py-3 text-sm font-semibold text-linyr-blue transition hover:border-linyr-gold/50 hover:text-linyr-gold focus:outline-none focus-visible:ring-2 focus-visible:ring-linyr-gold focus-visible:ring-offset-2"
-              >
-                Back to Services
-              </Link>
-            </div>
-          </div>
-
-          <div
-            id="demo-overview"
-            className="grid gap-8 md:grid-cols-[1.4fr,1fr]"
-          >
-            <div className="overflow-hidden rounded-3xl border border-linyr-blue/15 bg-white shadow-glass">
-              <img
-                src="/assets/images/nextjs-landing-page-screenshot.png"
-                alt="Commerce demo hero mockup"
-                className="size-full object-cover"
-              />
-            </div>
-            <div className="space-y-6 rounded-3xl border border-linyr-blue/15 bg-white p-8 shadow-glass">
-              <h2 className="font-heading text-2xl text-linyr-charcoal">
-                Built to Convert Sophisticated Buyers
-              </h2>
-              <p className="text-sm leading-relaxed text-linyr-slate">
-                Redwood Ledger’s homepage pairs strategic storytelling with
-                financial authority. The layout surfaces the firm’s signature
-                offers, validates outcomes with data, and directs prospects to a
-                consultation in under two scrolls.
-              </p>
-              <div className="grid gap-4 text-sm md:grid-cols-2">
-                <div className="rounded-2xl border border-linyr-blue/10 bg-linyr-blue/5 p-4">
-                  <p className="font-heading text-base text-linyr-charcoal">
-                    CFO Advisory Blueprint
-                  </p>
-                  <p className="mt-2 text-linyr-slate">
-                    Narrative and visual system that breaks complex financial
-                    strategy into approachable building blocks.
-                  </p>
-                </div>
-                <div className="rounded-2xl border border-linyr-blue/10 bg-linyr-blue/5 p-4">
-                  <p className="font-heading text-base text-linyr-charcoal">
-                    Compliance &amp; Tax HQ
-                  </p>
-                  <p className="mt-2 text-linyr-slate">
-                    Modular service tiles covering payroll, audits, and tax
-                    planning without overwhelming readers.
-                  </p>
-                </div>
-                <div className="rounded-2xl border border-linyr-blue/10 bg-linyr-blue/5 p-4">
-                  <p className="font-heading text-base text-linyr-charcoal">
-                    Client Confidence Hub
-                  </p>
-                  <p className="mt-2 text-linyr-slate">
-                    ROI stats, industry credentials, and rotating testimonials
-                    engineered to build trust instantly.
-                  </p>
-                </div>
-                <div className="rounded-2xl border border-linyr-blue/10 bg-linyr-blue/5 p-4">
-                  <p className="font-heading text-base text-linyr-charcoal">
-                    Conversion CTA System
-                  </p>
-                  <p className="mt-2 text-linyr-slate">
-                    Consultation prompts, downloadable resources, and phone
-                    callbacks designed to capture every lead type.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <section className="rounded-3xl border border-linyr-blue/15 bg-white p-10 shadow-glass">
-            <div className="grid gap-10 md:grid-cols-2">
-              <div>
-                <h2 className="font-heading text-2xl text-linyr-charcoal">
-                  Services Structured Around Outcomes
-                </h2>
-                <p className="mt-4 text-sm leading-relaxed text-linyr-slate">
-                  Each service block showcases benefits, timeline, and proof of
-                  impact. Prospects can explore fractional CFO, controller, and
-                  bookkeeping retainers without leaving the hero area.
-                </p>
-                <ul className="mt-6 space-y-3 text-sm text-linyr-slate">
-                  <li className="rounded-2xl border border-linyr-blue/10 bg-linyr-blue/5 p-4">
-                    <span className="font-heading text-base text-linyr-charcoal">
-                      Fractional CFO Pods
-                    </span>
-                    <p className="mt-2">
-                      {`Dedicated finance partners delivering forecasts, dashboards, and board prep in four-week sprints.`}
-                    </p>
-                  </li>
-                  <li className="rounded-2xl border border-linyr-blue/10 bg-linyr-blue/5 p-4">
-                    <span className="font-heading text-base text-linyr-charcoal">
-                      Compliance Engine
-                    </span>
-                    <p className="mt-2">
-                      Quarterly tax planning, payroll checks, and audit
-                      readiness wrapped in a single predictable program.
-                    </p>
-                  </li>
-                </ul>
-              </div>
-              <div className="space-y-6 rounded-3xl border border-linyr-blue/10 bg-linyr-blue/5 p-8">
-                <h3 className="font-heading text-xl text-linyr-charcoal">
-                  Growth Metrics at a Glance
-                </h3>
-                <div className="grid gap-6 text-center md:grid-cols-2">
-                  <div>
-                    <p className="font-heading text-4xl text-linyr-blue">42%</p>
-                    <p className="mt-2 text-xs uppercase tracking-[0.3em] text-linyr-slate">
-                      faster close cycles
-                    </p>
-                  </div>
-                  <div>
-                    <p className="font-heading text-4xl text-linyr-blue">
-                      $6.8M
-                    </p>
-                    <p className="mt-2 text-xs uppercase tracking-[0.3em] text-linyr-slate">
-                      capital raised by clients
-                    </p>
-                  </div>
-                  <div>
-                    <p className="font-heading text-4xl text-linyr-blue">97%</p>
-                    <p className="mt-2 text-xs uppercase tracking-[0.3em] text-linyr-slate">
-                      retention rate
-                    </p>
-                  </div>
-                  <div>
-                    <p className="font-heading text-4xl text-linyr-blue">12</p>
-                    <p className="mt-2 text-xs uppercase tracking-[0.3em] text-linyr-slate">
-                      industries served
-                    </p>
-                  </div>
-                </div>
-                <p className="text-sm leading-relaxed text-linyr-slate">
-                  Accompanying copy pairs these metrics with a short case study,
-                  ensuring founders understand the tangible return of partnering
-                  with Redwood.
-                </p>
-              </div>
-            </div>
-          </section>
-
-          <section className="grid gap-8 rounded-3xl border border-linyr-blue/15 bg-white p-10 shadow-glass md:grid-cols-[1.1fr,0.9fr]">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0b1739] via-[#131f4b] to-[#1f2f63]" />
+        <div className="relative mx-auto flex max-w-6xl flex-col gap-16 px-6 pb-24 pt-28 md:px-12">
+          <div className="grid gap-10 md:grid-cols-[1.2fr,0.8fr]">
             <div>
-              <h2 className="font-heading text-2xl text-linyr-charcoal">
-                What Prospects Experience
+              <span className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-white/80">
+                Boutique CPA &amp; Advisory
+              </span>
+              <h1 className="mt-6 font-heading text-4xl leading-tight text-white md:text-6xl">
+                Redwood Ledger CPA — Fractional finance that scales with
+                ambition.
+              </h1>
+              <p className="mt-6 text-lg text-white/70 md:text-xl">
+                We position Redwood as the executive finance partner for
+                venture-backed teams. Every section of this demo is tuned to
+                earn board-level trust, surface measurable outcomes, and convert
+                high-consideration prospects.
+              </p>
+              <div className="mt-10 flex flex-wrap items-center gap-4">
+                <Link
+                  href="#services"
+                  className="inline-flex items-center rounded-full bg-white/90 px-7 py-3 text-sm font-semibold text-[#111d4a] shadow-[0_18px_40px_rgba(255,255,255,0.25)] transition hover:-translate-y-0.5 hover:shadow-[0_22px_50px_rgba(255,255,255,0.3)]"
+                >
+                  View Service Packages
+                </Link>
+                <Link
+                  href="/#book-consultation"
+                  className="inline-flex items-center rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white/80 transition hover:border-white/60 hover:text-white"
+                >
+                  Book a discovery call →
+                </Link>
+              </div>
+            </div>
+            <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur">
+              <h2 className="font-heading text-2xl text-white">
+                Executive Snapshot
+              </h2>
+              <div className="mt-6 grid gap-6 sm:grid-cols-2">
+                <div>
+                  <p className="font-heading text-4xl text-white">42%</p>
+                  <p className="mt-1 text-xs uppercase tracking-[0.3em] text-white/60">
+                    faster close cycles
+                  </p>
+                </div>
+                <div>
+                  <p className="font-heading text-4xl text-white">$6.8M</p>
+                  <p className="mt-1 text-xs uppercase tracking-[0.3em] text-white/60">
+                    capital raised last quarter
+                  </p>
+                </div>
+                <div>
+                  <p className="font-heading text-4xl text-white">97%</p>
+                  <p className="mt-1 text-xs uppercase tracking-[0.3em] text-white/60">
+                    retention rate
+                  </p>
+                </div>
+                <div>
+                  <p className="font-heading text-4xl text-white">12</p>
+                  <p className="mt-1 text-xs uppercase tracking-[0.3em] text-white/60">
+                    industries supported
+                  </p>
+                </div>
+              </div>
+              <p className="mt-6 text-sm text-white/70">
+                Data pairings throughout the page reinforce Redwood’s command of
+                finance operations, while secondary CTAs keep prospects inside
+                the conversion funnel.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-3">
+            {advisoryHighlights.map((item) => (
+              <div
+                key={item.title}
+                className="rounded-3xl border border-white/10 bg-white/10 p-6 text-white/80 shadow-[0_25px_60px_rgba(10,14,40,0.45)]"
+              >
+                <h3 className="font-heading text-xl text-white">
+                  {item.title}
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed">{item.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="services" className="bg-white py-24 text-linyr-charcoal">
+        <div className="mx-auto max-w-6xl px-6 md:px-12">
+          <div className="md:flex md:items-end md:justify-between">
+            <div>
+              <span className="inline-flex items-center rounded-full bg-[#0b1739]/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-[#0b1739]">
+                Services
+              </span>
+              <h2 className="mt-6 font-heading text-3xl md:text-4xl">
+                Modular programs engineered around measurable outcomes.
+              </h2>
+            </div>
+            <p className="mt-4 max-w-xl text-sm text-linyr-slate md:mt-0">
+              Packages scale from foundational compliance to executive-level
+              finance leadership. Pricing cues are deliberate: transparent
+              enough to set expectations, flexible enough to start a
+              conversation.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-8 md:grid-cols-3">
+            {servicePackages.map((pkg) => (
+              <div
+                key={pkg.name}
+                className="flex h-full flex-col rounded-3xl border border-[#0b1739]/10 bg-[#f4f6ff] p-8 shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
+              >
+                <h3 className="font-heading text-xl text-[#0b1739]">
+                  {pkg.name}
+                </h3>
+                <p className="mt-3 text-sm font-semibold text-[#1f2f63]">
+                  {pkg.price}
+                </p>
+                <ul className="mt-6 space-y-3 text-sm text-[#334173]">
+                  {pkg.bullets.map((bullet) => (
+                    <li key={bullet} className="flex items-start gap-2">
+                      <span className="mt-1 inline-flex size-2 rounded-full bg-[#0b1739]" />
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  href="/#book-consultation"
+                  className="mt-auto inline-flex items-center justify-center rounded-full border border-[#0b1739]/20 px-4 py-2 text-sm font-semibold text-[#0b1739] transition hover:border-[#0b1739]/40 hover:text-[#091131]"
+                >
+                  Request scoping call →
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#0d1536] py-24">
+        <div className="mx-auto max-w-6xl px-6 md:px-12">
+          <div className="md:flex md:items-start md:justify-between">
+            <div className="max-w-xl">
+              <span className="inline-flex items-center rounded-full border border-white/20 bg-white/5 px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-white/70">
+                Advisory Journey
+              </span>
+              <h2 className="mt-6 font-heading text-3xl text-white md:text-4xl">
+                A guided path from first audit to board peace-of-mind.
+              </h2>
+              <p className="mt-4 text-sm leading-relaxed text-white/70">
+                Redwood’s onboarding is visualized as a three-stage
+                lifecycle—Audit, Build, Elevate—reinforced by status cards and
+                interactive scheduling prompts.
+              </p>
+            </div>
+            <div className="mt-10 grid gap-6 md:mt-0">
+              <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
+                <p className="text-xs uppercase tracking-[0.4em] text-white/60">
+                  Stage 01
+                </p>
+                <h3 className="mt-3 font-heading text-xl text-white">Audit</h3>
+                <p className="mt-2 text-sm text-white/70">
+                  Rapid finance health report, tooling audit, and compliance
+                  triage delivered in two weeks.
+                </p>
+              </div>
+              <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
+                <p className="text-xs uppercase tracking-[0.4em] text-white/60">
+                  Stage 02
+                </p>
+                <h3 className="mt-3 font-heading text-xl text-white">Build</h3>
+                <p className="mt-2 text-sm text-white/70">
+                  KPI architecture, operating cadence, and dashboards co-created
+                  with your leadership team.
+                </p>
+              </div>
+              <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
+                <p className="text-xs uppercase tracking-[0.4em] text-white/60">
+                  Stage 03
+                </p>
+                <h3 className="mt-3 font-heading text-xl text-white">
+                  Elevate
+                </h3>
+                <p className="mt-2 text-sm text-white/70">
+                  Forecasting, scenario planning, and investor relations that
+                  help you navigate milestones with confidence.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-24 text-linyr-charcoal">
+        <div className="mx-auto max-w-6xl px-6 md:px-12">
+          <div className="grid gap-12 md:grid-cols-[1.1fr,0.9fr]">
+            <div>
+              <h2 className="font-heading text-3xl md:text-4xl">
+                Trust, proof, and thought leadership in one narrative.
+              </h2>
+              <p className="mt-4 text-sm leading-relaxed text-linyr-slate">
+                A rotating hub of market reports, deep-dive webinars, and punchy
+                email insights demonstrates Redwood’s command of capital markets
+                and compliance.
+              </p>
+              <div className="mt-8 rounded-3xl border border-[#0b1739]/10 bg-[#0b1739]/5 p-6">
+                <p className="text-xs uppercase tracking-[0.3em] text-[#0b1739]">
+                  Featured Insight
+                </p>
+                <h3 className="mt-3 font-heading text-xl text-[#0b1739]">
+                  2025 SaaS Finance Benchmarks
+                </h3>
+                <p className="mt-2 text-sm text-[#1f2f63]">
+                  Learn how 150 seed through Series C companies are
+                  restructuring finance teams and the impact on burn multiples.
+                </p>
+                <Link
+                  href="/"
+                  className="mt-4 inline-flex items-center text-sm font-semibold text-[#0b1739] transition hover:text-[#091131]"
+                >
+                  Download the report →
+                </Link>
+              </div>
+            </div>
+            <div className="space-y-6">
+              <div className="rounded-3xl border border-[#0b1739]/10 bg-[#f8faff] p-6">
+                <p className="text-sm font-semibold text-[#0b1739]">
+                  Newsletter Series
+                </p>
+                <p className="mt-2 text-sm text-[#1f2f63]">
+                  Weekly “Ledger Signals” digest covering macro shifts, tax
+                  rulings, and revenue strategy tips.
+                </p>
+                <Link
+                  href="/"
+                  className="mt-4 inline-flex items-center text-sm font-semibold text-[#0b1739] transition hover:text-[#091131]"
+                >
+                  Join the digest →
+                </Link>
+              </div>
+              <div className="rounded-3xl border border-[#0b1739]/10 bg-[#f8faff] p-6">
+                <p className="text-sm font-semibold text-[#0b1739]">
+                  Board-Ready Templates
+                </p>
+                <p className="mt-2 text-sm text-[#1f2f63]">
+                  FP&amp;A packs, board memo outlines, and investor update
+                  templates available behind an email gate to capture qualified
+                  leads.
+                </p>
+                <Link
+                  href="/"
+                  className="mt-4 inline-flex items-center text-sm font-semibold text-[#0b1739] transition hover:text-[#091131]"
+                >
+                  Access the vault →
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#0b1739] py-24">
+        <div className="mx-auto max-w-5xl rounded-3xl border border-white/15 bg-white/5 p-10 text-center shadow-[0_30px_80px_rgba(6,12,30,0.55)] backdrop-blur">
+          <p className="text-xs uppercase tracking-[0.35em] text-white/60">
+            Client Testimonial
+          </p>
+          <blockquote className="mt-6 text-xl leading-relaxed text-white">
+            “Redwood Ledger stepped in like an executive partner. In 90 days we
+            had a finance operating system, investor-ready metrics, and clarity
+            on our Series B narrative.”
+          </blockquote>
+          <p className="mt-4 text-sm font-semibold text-white">
+            Jordan Hale — CEO, Manuscript AI
+          </p>
+        </div>
+      </section>
+
+      <section className="bg-white py-24 text-linyr-charcoal">
+        <div className="mx-auto max-w-6xl px-6 md:px-12">
+          <div className="grid gap-12 md:grid-cols-[1.1fr,0.9fr]">
+            <div>
+              <h2 className="font-heading text-3xl md:text-4xl">
+                FAQs crafted for venture-backed operators.
               </h2>
               <p className="mt-4 text-sm text-linyr-slate">
-                From hero to footer, every interaction supports a high-touch
-                buying journey. Video testimonials, FAQ accordions, and weekly
-                insight snippets nurture CFO-ready leads.
-              </p>
-              <ul className="mt-6 space-y-3 text-sm text-linyr-slate">
-                <li>Embedded Calendly and click-to-call CTAs.</li>
-                <li>Downloadable due diligence checklist to capture emails.</li>
-                <li>
-                  Resource library preview to showcase thought leadership.
-                </li>
-              </ul>
-            </div>
-            <div className="rounded-3xl border border-linyr-blue/10 bg-linyr-blue/5 p-8">
-              <h3 className="font-heading text-xl text-linyr-charcoal">
-                Client Testimonial
-              </h3>
-              <blockquote className="mt-4 text-sm italic text-linyr-slate">
-                “Within the first quarter we had a finance dashboard we trusted,
-                an investor-grade model, and a plan to extend runway. Redwood
-                Ledger feels like part of our executive team.”
-              </blockquote>
-              <p className="mt-4 text-sm font-semibold text-linyr-charcoal">
-                Priya Daniel, COO — Atlas Robotics
+                Inline FAQ accordions remove friction by covering pricing,
+                onboarding timelines, and reporting transparency—key concerns
+                for fast-scaling teams.
               </p>
             </div>
-          </section>
+            <div className="space-y-4">
+              {[
+                {
+                  q: 'How does onboarding work?',
+                  a: 'We begin with a two-week audit sprint that inventories tools, creates a finance scorecard, and maps the first 90-day roadmap.',
+                },
+                {
+                  q: 'Do you integrate with our existing systems?',
+                  a: 'Yes. NetSuite, QuickBooks, Ramp, Carta, Workday, Airbase, and custom data warehouses are all supported.',
+                },
+                {
+                  q: 'Can we start with compliance only?',
+                  a: 'Absolutely. Many clients begin with Compliance Engine and expand into Fractional CFO Pods once the foundation is stable.',
+                },
+              ].map((item) => (
+                <div
+                  key={item.q}
+                  className="rounded-2xl border border-[#0b1739]/10 bg-[#f8faff] p-5"
+                >
+                  <p className="font-heading text-base text-[#0b1739]">
+                    {item.q}
+                  </p>
+                  <p className="mt-2 text-sm text-[#1f2f63]">{item.a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
-          <div className="rounded-3xl border border-linyr-blue/15 bg-white/90 p-10 text-center shadow-glass backdrop-blur">
-            <h3 className="font-heading text-2xl text-linyr-charcoal">
-              Ready to modernize your professional services site?
-            </h3>
-            <p className="mx-auto mt-4 max-w-2xl text-sm text-linyr-slate">
-              Linyr Digital merges strategic messaging with premium execution to
-              deliver credibility and conversions for firms like yours.
-            </p>
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-              <Link
-                href="/#book-consultation"
-                className="inline-flex items-center rounded-full bg-linyr-gold px-6 py-3 text-sm font-semibold text-linyr-charcoal transition hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(245,197,66,0.35)] focus:outline-none focus-visible:ring-2 focus-visible:ring-linyr-blue focus-visible:ring-offset-2"
-              >
-                Book Your Consultation
-              </Link>
-              <Link
-                href="/"
-                className="inline-flex items-center rounded-full border border-linyr-blue/30 px-6 py-3 text-sm font-semibold text-linyr-blue transition hover:border-linyr-gold/50 hover:text-linyr-gold focus:outline-none focus-visible:ring-2 focus-visible:ring-linyr-gold focus-visible:ring-offset-2"
-              >
-                Back to Home
-              </Link>
-            </div>
+      <section className="bg-gradient-to-r from-[#0b1739] via-[#111d4a] to-[#1f2f63] py-24">
+        <div className="mx-auto max-w-4xl text-center">
+          <h2 className="font-heading text-3xl text-white md:text-4xl">
+            Let’s modernize your finance story.
+          </h2>
+          <p className="mt-4 px-6 text-sm text-white/70 md:text-base">
+            Ready to see how Redwood Ledger can partner with your leadership
+            team? Book a consultation and we’ll tailor an engagement roadmap in
+            under a week.
+          </p>
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+            <Link
+              href="/#book-consultation"
+              className="inline-flex items-center rounded-full bg-white px-8 py-3 text-sm font-semibold text-[#0b1739] transition hover:-translate-y-0.5 hover:shadow-[0_20px_50px_rgba(255,255,255,0.25)]"
+            >
+              Schedule Consultation
+            </Link>
+            <Link
+              href="/#services"
+              className="inline-flex items-center rounded-full border border-white/50 px-6 py-3 text-sm font-semibold text-white transition hover:border-white"
+            >
+              Explore Packages
+            </Link>
           </div>
         </div>
       </section>
     </main>
   </>
 );
-export default CommerceDemo;
+
+export default RedwoodLedgerDemo;

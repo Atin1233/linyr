@@ -5,27 +5,27 @@ import { AppConfig } from '../../utils/AppConfig';
 
 const workflowHighlights = [
   {
-    title: 'Operations Control Center',
+    title: 'Seasonal Menu Story',
     description:
-      'Dashboard-inspired hero that surfaces live metrics and reliability cues for automation leaders.',
+      'Hero and feature slices that showcase signature drinks, limited drops, and chef notes in a single glance.',
   },
   {
-    title: 'Journey-Based Story',
+    title: 'Order & Loyalty Ready',
     description:
-      'Sectioned narrative for RevOps, Support, and Product, each paired with tailored proof and next steps.',
+      'Callouts for mobile ordering, rewards enrollment, and table reservations that route guests to the right action instantly.',
   },
   {
-    title: 'Build Session CTA Flow',
+    title: 'Neighborhood Credibility',
     description:
-      'Guided CTAs that move visitors from education to scheduling a collaborative workflow audit.',
+      'Press mentions, community events, and review quotes woven together to build trust with locals and tourists alike.',
   },
 ];
 
 const WorkflowDemo = () => (
   <>
     <Meta
-      title={`Workflow Demo — ${AppConfig.title}`}
-      description="Preview the Workflow concept experience designed by Linyr Digital."
+      title={`Hearth & Harvest Cafe Demo — ${AppConfig.title}`}
+      description="Preview Hearth & Harvest Cafe, the hospitality landing concept designed by Linyr Digital."
     />
     <main className="min-h-screen bg-linyr-offWhite text-linyr-charcoal">
       <section className="relative overflow-hidden">
@@ -36,12 +36,12 @@ const WorkflowDemo = () => (
               Demo Experience
             </span>
             <h1 className="mt-6 font-heading text-4xl text-linyr-charcoal md:text-5xl">
-              Workflow — Automation with Authority
+              Hearth & Harvest Cafe — Crafted for Crave-Worthy Moments
             </h1>
             <p className="mt-6 max-w-3xl text-lg text-linyr-slate">
-              This sample site shows how we combine storytelling, data, and
-              product clarity to inspire busy teams to book a collaborative
-              build session.
+              See how we translate a neighborhood cafe’s ambiance into a digital
+              experience. From flavor storytelling to frictionless ordering, the
+              experience is built to boost foot traffic and repeat visits.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <Link
@@ -66,7 +66,7 @@ const WorkflowDemo = () => (
             <div className="overflow-hidden rounded-3xl border border-linyr-blue/15 bg-white shadow-glass">
               <img
                 src="/assets/images/nextjs-landing-page-banner.png"
-                alt="Workflow demo hero mockup"
+                alt="Hearth & Harvest Cafe demo hero mockup"
                 className="size-full object-cover"
               />
             </div>
@@ -92,12 +92,11 @@ const WorkflowDemo = () => (
 
           <div className="rounded-3xl border border-linyr-blue/15 bg-white/90 p-10 text-center shadow-glass backdrop-blur">
             <h3 className="font-heading text-2xl text-linyr-charcoal">
-              Launch a workflow experience that closes deals faster.
+              Let’s turn your hospitality brand into a destination.
             </h3>
             <p className="mx-auto mt-4 max-w-2xl text-sm text-linyr-slate">
-              With Linyr Digital, you partner with specialists who translate
-              complex product value into journeys that inspire confidence and
-              action.
+              Linyr Digital blends editorial storytelling with conversion UX so
+              restaurants and cafes can grow loyal communities.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <Link

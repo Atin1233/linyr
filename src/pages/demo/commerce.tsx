@@ -5,27 +5,27 @@ import { AppConfig } from '../../utils/AppConfig';
 
 const featureSections = [
   {
-    title: 'Conversion-Calibrated Header',
+    title: 'CFO Advisory Blueprint',
     description:
-      'Headline hierarchy, social proof, and action bar structured to drop bounce rate across paid campaigns.',
+      'Positioning module that translates complex finance guidance into a digestible offer stack for founders and operators.',
   },
   {
-    title: 'Offer Framework',
+    title: 'Compliance & Tax HQ',
     description:
-      'Modular sections outlining tiers, objections, and differentiators so teams can iterate messaging rapidly.',
+      'Service grid and explainer blocks covering tax strategy, payroll, and audit readiness without overwhelming visitors.',
   },
   {
-    title: 'Revenue Snapshot',
+    title: 'Client Confidence Hub',
     description:
-      'Interactive stat grid that surfaces the metrics buyers care about before they request a demo.',
+      'Testimonial carousel, credentials, and ROI proof so prospects know exactly why Redwood Ledger is their safest choice.',
   },
 ];
 
 const CommerceDemo = () => (
   <>
     <Meta
-      title={`Commerce Demo — ${AppConfig.title}`}
-      description="Explore the Commerce concept site crafted by Linyr Digital."
+      title={`Redwood Ledger CPA Demo — ${AppConfig.title}`}
+      description="Explore Redwood Ledger CPA, the boutique accounting concept site crafted by Linyr Digital."
     />
     <main className="min-h-screen bg-linyr-offWhite text-linyr-charcoal">
       <section className="relative overflow-hidden">
@@ -36,13 +36,13 @@ const CommerceDemo = () => (
               Demo Experience
             </span>
             <h1 className="mt-6 font-heading text-4xl text-linyr-charcoal md:text-5xl">
-              Commerce — A Launch-Ready SaaS Storefront
+              Redwood Ledger CPA — Fractional Finance for Modern Teams
             </h1>
             <p className="mt-6 max-w-3xl text-lg text-linyr-slate">
-              This concept site demonstrates how Linyr Digital structures a
-              sales-ready story for commerce platforms. Every section is
-              designed to communicate value in seconds and accelerate scheduling
-              a call.
+              This demo shows how we position a boutique accounting firm as a
+              strategic finance partner. It blends trust signals, clear service
+              paths, and decisive calls-to-action so prospects book discovery
+              calls with confidence.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <Link
@@ -93,11 +93,11 @@ const CommerceDemo = () => (
 
           <div className="rounded-3xl border border-linyr-blue/15 bg-white/90 p-10 text-center shadow-glass backdrop-blur">
             <h3 className="font-heading text-2xl text-linyr-charcoal">
-              Ready to build your revenue-grade landing experience?
+              Ready to modernize your professional services site?
             </h3>
             <p className="mx-auto mt-4 max-w-2xl text-sm text-linyr-slate">
-              Linyr Digital merges strategy, craftsmanship, and analytics to
-              ship conversion-first websites in weeks, not quarters.
+              Linyr Digital merges strategic messaging with premium execution to
+              deliver credibility and conversions for firms like yours.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <Link

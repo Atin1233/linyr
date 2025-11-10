@@ -4,21 +4,21 @@ const portfolioItems = [
   {
     title: 'Demo Site #1',
     description:
-      'High-converting SaaS commerce landing system engineered for fast launches.',
+      'Boutique CPA firm flagship that builds trust while guiding prospects to book consultations.',
     image: '/assets/images/nextjs-landing-page-screenshot.png',
     href: '/demo/commerce',
   },
   {
     title: 'Demo Site #2',
     description:
-      'Operational automation story blending traction metrics with product depth.',
+      'Neighborhood cafe launch experience with menu storytelling and seamless ordering.',
     image: '/assets/images/nextjs-landing-page-banner.png',
     href: '/demo/workflow',
   },
   {
     title: 'Demo Site #3',
     description:
-      'Narrative analytics experience that builds trust around complex data.',
+      'Modern dental studio site focused on patient confidence and online bookings.',
     image: '/assets/images/nextjs-boilerplate-saas.png',
     href: '/demo/insights',
   },

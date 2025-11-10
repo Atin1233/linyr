@@ -5,27 +5,27 @@ import { AppConfig } from '../../utils/AppConfig';
 
 const storytellingMoments = [
   {
-    title: 'Insight-Led Hero Narrative',
+    title: 'Smile Confidence Hero',
     description:
-      'Data visualization hero that frames the problem, surfaces immediate wins, and prompts deeper exploration.',
+      'Before-and-after gallery and value proposition crafted to calm patient anxieties within seconds.',
   },
   {
-    title: 'Proof Library',
+    title: 'Patient Assurance Stack',
     description:
-      'Case stories and testimonials arranged to highlight measurable uplifts across acquisition, activation, and retention.',
+      'Insurance partners, safety protocols, and testimonials presented to earn trust for high-consideration treatments.',
   },
   {
-    title: 'Strategic CTA Framework',
+    title: 'Frictionless Booking Flow',
     description:
-      'Sequenced CTAs that warm analysts with interactive content, then invite executives to book a roadmap session.',
+      'Multi-option CTAs for new patient forms, virtual consults, and phone scheduling to capture every lead type.',
   },
 ];
 
 const InsightsDemo = () => (
   <>
     <Meta
-      title={`Insights Demo — ${AppConfig.title}`}
-      description="Step through the Insights analytics concept built by Linyr Digital."
+      title={`Lumina Smiles Dental Demo — ${AppConfig.title}`}
+      description="Step through Lumina Smiles Dental, a patient-first dental studio website crafted by Linyr Digital."
     />
     <main className="min-h-screen bg-linyr-offWhite text-linyr-charcoal">
       <section className="relative overflow-hidden">
@@ -36,12 +36,12 @@ const InsightsDemo = () => (
               Demo Experience
             </span>
             <h1 className="mt-6 font-heading text-4xl text-linyr-charcoal md:text-5xl">
-              Insights — Narrative Intelligence Launchpad
+              Lumina Smiles Dental — Welcoming, Credible, Conversion-Focused
             </h1>
             <p className="mt-6 max-w-3xl text-lg text-linyr-slate">
-              A storytelling-driven analytics site that balances credibility
-              with emotion. Perfect for platforms that need to articulate impact
-              from first glance through conversion.
+              Explore how we help a modern dental studio highlight expertise,
+              showcase results, and make it effortless for new patients to book
+              their first appointment.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <Link
@@ -66,7 +66,7 @@ const InsightsDemo = () => (
             <div className="overflow-hidden rounded-3xl border border-linyr-blue/15 bg-white shadow-glass">
               <img
                 src="/assets/images/nextjs-boilerplate-saas.png"
-                alt="Insights demo hero mockup"
+                alt="Lumina Smiles dental demo hero mockup"
                 className="size-full object-cover"
               />
             </div>
@@ -92,12 +92,11 @@ const InsightsDemo = () => (
 
           <div className="rounded-3xl border border-linyr-blue/15 bg-white/90 p-10 text-center shadow-glass backdrop-blur">
             <h3 className="font-heading text-2xl text-linyr-charcoal">
-              Let’s script your next high-conversion story.
+              Let’s build a patient experience that converts online.
             </h3>
             <p className="mx-auto mt-4 max-w-2xl text-sm text-linyr-slate">
-              When your site feels considered, prospects trust faster, insights
-              land clearer, and your brand wins the moments that decide
-              pipeline.
+              Linyr Digital pairs elevated visuals with proof-driven narratives
+              so healthcare brands stand out and stay fully booked.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <Link

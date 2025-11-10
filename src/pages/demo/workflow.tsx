@@ -45,9 +45,9 @@ const HearthHarvestDemo = () => (
       title={`Hearth & Harvest Cafe Demo — ${AppConfig.title}`}
       description="Experience Hearth & Harvest Cafe, a hospitality landing page crafted by Linyr Digital to capture the warmth of an artisan coffeehouse."
     />
-    <main className="bg-[#2a1403] text-[#fdf5ed]">
+    <main className="bg-[#221107] text-[#fdf5ed]">
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#7c2d12] via-[#ea580c] to-[#f97316] opacity-90" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(250,204,21,0.25),transparent_55%),radial-gradient(circle_at_bottom_right,rgba(180,83,9,0.35),transparent_60%),linear-gradient(135deg,#4b1f0f_0%,#8a3c1a_60%,#c2410c_100%)] opacity-95" />
         <div className="relative mx-auto flex max-w-6xl flex-col gap-20 px-6 py-28 md:px-12">
           <div className="grid gap-12 md:grid-cols-[1.1fr,0.9fr]">
             <div className="fade-up">
@@ -65,7 +65,7 @@ const HearthHarvestDemo = () => (
               <div className="mt-10 flex flex-wrap items-center gap-4">
                 <Link
                   href="#menu"
-                  className="inline-flex items-center rounded-full bg-white/95 px-7 py-3 text-sm font-semibold text-[#7c2d12] shadow-[0_18px_40px_rgba(249,115,22,0.35)] transition hover:-translate-y-0.5 hover:shadow-[0_22px_50px_rgba(249,115,22,0.45)]"
+                  className="inline-flex items-center rounded-full bg-[#fef3c7] px-7 py-3 text-sm font-semibold text-[#7c2d12] shadow-[0_24px_45px_rgba(120,61,20,0.35)] transition hover:-translate-y-0.5 hover:shadow-[0_28px_55px_rgba(120,61,20,0.45)]"
                 >
                   Explore the seasonal menu
                 </Link>
@@ -77,12 +77,12 @@ const HearthHarvestDemo = () => (
                 </Link>
               </div>
             </div>
-            <div className="fade-right relative overflow-hidden rounded-3xl border border-white/20 bg-white/10 p-6 backdrop-blur">
-              <div className="absolute -left-20 top-10 size-56 rounded-full bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.35),transparent)]" />
-              <div className="absolute -right-24 bottom-0 size-72 rounded-full bg-[radial-gradient(circle_at_center,rgba(250,204,21,0.3),transparent)]" />
+            <div className="fade-right relative overflow-hidden rounded-3xl border border-white/10 bg-black/15 p-6 shadow-[0_25px_60px_rgba(17,10,6,0.55)] backdrop-blur-sm">
+              <div className="absolute -left-24 top-8 size-64 rounded-full bg-[radial-gradient(circle_at_center,rgba(255,237,213,0.3),transparent)]" />
+              <div className="absolute -right-16 bottom-0 size-72 rounded-full bg-[radial-gradient(circle_at_center,rgba(134,89,60,0.4),transparent)]" />
               <div className="relative space-y-6">
                 <div className="grid gap-4">
-                  <div className="relative overflow-hidden rounded-3xl border border-white/10">
+                  <div className="relative overflow-hidden rounded-3xl border border-white/15">
                     <img
                       src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=900&q=80"
                       alt="Cafe interior"
@@ -95,7 +95,7 @@ const HearthHarvestDemo = () => (
                     </p>
                   </div>
                   <div className="grid gap-3 sm:grid-cols-2">
-                    <div className="rounded-2xl border border-white/10 bg-black/30 p-4 text-sm text-white/80">
+                    <div className="rounded-2xl border border-white/10 bg-black/40 p-4 text-sm text-white/80">
                       <p className="text-xs uppercase tracking-[0.35em] text-white/60">
                         Happy hour fireside
                       </p>
@@ -103,7 +103,7 @@ const HearthHarvestDemo = () => (
                         {`Mon–Fri · 4-6PM · $2 off signature drinks & small plates`}
                       </p>
                     </div>
-                    <div className="rounded-2xl border border-white/10 bg-black/30 p-4 text-sm text-white/80">
+                    <div className="rounded-2xl border border-white/10 bg-black/40 p-4 text-sm text-white/80">
                       <p className="text-xs uppercase tracking-[0.35em] text-white/60">
                         Reserve the chef’s counter
                       </p>
@@ -118,7 +118,7 @@ const HearthHarvestDemo = () => (
           </div>
 
           <div className="grid gap-6 md:grid-cols-3">
-            <div className="rounded-3xl border border-white/20 bg-white/10 p-6 text-sm text-white/80">
+            <div className="rounded-3xl border border-white/15 bg-black/30 p-6 text-sm text-white/80 shadow-[0_20px_45px_rgba(20,10,6,0.5)]">
               <p className="text-xs uppercase tracking-[0.35em] text-white/60">
                 Roastery
               </p>
@@ -126,11 +126,10 @@ const HearthHarvestDemo = () => (
                 Single Origin Fire Roast
               </h3>
               <p className="mt-2">
-                Beans charred over mesquite, cooled in copper drums, and
-                profiled for layered caramel smoke.
+                {`Beans charred over mesquite, cooled in copper drums, and profiled for layered caramel smoke.`}
               </p>
             </div>
-            <div className="rounded-3xl border border-white/20 bg-white/10 p-6 text-sm text-white/80">
+            <div className="rounded-3xl border border-white/15 bg-black/30 p-6 text-sm text-white/80 shadow-[0_20px_45px_rgba(20,10,6,0.5)]">
               <p className="text-xs uppercase tracking-[0.35em] text-white/60">
                 Community
               </p>
@@ -138,11 +137,10 @@ const HearthHarvestDemo = () => (
                 A gathering place for makers
               </h3>
               <p className="mt-2">
-                Art installations, artisan goods, and co-working nooks nurture
-                creativity beyond the cup.
+                {`Art installations, artisan goods, and co-working nooks nurture creativity beyond the cup.`}
               </p>
             </div>
-            <div className="rounded-3xl border border-white/20 bg-white/10 p-6 text-sm text-white/80">
+            <div className="rounded-3xl border border-white/15 bg-black/30 p-6 text-sm text-white/80 shadow-[0_20px_45px_rgba(20,10,6,0.5)]">
               <p className="text-xs uppercase tracking-[0.35em] text-white/60">
                 Experience
               </p>
@@ -150,8 +148,7 @@ const HearthHarvestDemo = () => (
                 Sensory-first storytelling
               </h3>
               <p className="mt-2">
-                Immersive copy, ingredient spotlights, and motion accents
-                communicate warmth before guests step inside.
+                {`Immersive copy, ingredient spotlights, and motion accents communicate warmth before guests step inside.`}
               </p>
             </div>
           </div>
@@ -203,7 +200,7 @@ const HearthHarvestDemo = () => (
             ))}
           </div>
 
-          <div className="mt-12 rounded-3xl border border-[#f97316]/15 bg-white p-8 md:flex md:items-center md:justify-between">
+          <div className="mt-12 rounded-3xl border border-[#f97316]/15 bg-[#fff2e2] p-8 md:flex md:items-center md:justify-between">
             <div className="max-w-xl">
               <h3 className="font-heading text-2xl text-[#7c2d12]">
                 Join our loyalty collective &amp; unlock members-only brews.
@@ -351,7 +348,7 @@ const HearthHarvestDemo = () => (
               <div
                 // eslint-disable-next-line react/no-array-index-key
                 key={index}
-                className="fade-up group relative overflow-hidden rounded-3xl border border-white/15 bg-white/10"
+                className="fade-up group relative overflow-hidden rounded-3xl border border-white/15 bg-black/20"
               >
                 <img
                   src={src}
@@ -382,7 +379,7 @@ const HearthHarvestDemo = () => (
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <Link
               href="/#book-consultation"
-              className="inline-flex items-center rounded-full bg-[#f97316] px-7 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#ea580c]"
+              className="inline-flex items-center rounded-full bg-[#f59e0b] px-7 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#d97706]"
             >
               Book a tasting session
             </Link>
@@ -401,7 +398,7 @@ const HearthHarvestDemo = () => (
       @keyframes fadeUp {
         from {
           opacity: 0;
-          transform: translateY(24px);
+          transform: translateY(28px);
         }
         to {
           opacity: 1;
@@ -421,11 +418,11 @@ const HearthHarvestDemo = () => (
       }
 
       .fade-up {
-        animation: fadeUp 0.9s ease-out both;
+        animation: fadeUp 1s ease-out both;
       }
 
       .fade-right {
-        animation: fadeRight 1s ease-out both;
+        animation: fadeRight 1.1s ease-out both;
       }
     `}</style>
   </>

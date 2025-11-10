@@ -3,24 +3,6 @@ import Link from 'next/link';
 import { Meta } from '../../layout/Meta';
 import { AppConfig } from '../../utils/AppConfig';
 
-const storytellingMoments = [
-  {
-    title: 'Smile Confidence Hero',
-    description:
-      'Before-and-after gallery and value proposition crafted to calm patient anxieties within seconds.',
-  },
-  {
-    title: 'Patient Assurance Stack',
-    description:
-      'Insurance partners, safety protocols, and testimonials presented to earn trust for high-consideration treatments.',
-  },
-  {
-    title: 'Frictionless Booking Flow',
-    description:
-      'Multi-option CTAs for new patient forms, virtual consults, and phone scheduling to capture every lead type.',
-  },
-];
-
 const InsightsDemo = () => (
   <>
     <Meta
@@ -72,23 +54,156 @@ const InsightsDemo = () => (
             </div>
             <div className="space-y-6 rounded-3xl border border-linyr-blue/15 bg-white p-8 shadow-glass">
               <h2 className="font-heading text-2xl text-linyr-charcoal">
-                Moments That Matter
+                Designed for Patient Reassurance
               </h2>
-              <ul className="space-y-4 text-sm leading-relaxed text-linyr-slate">
-                {storytellingMoments.map((moment) => (
-                  <li
-                    key={moment.title}
-                    className="rounded-2xl border border-linyr-blue/10 bg-linyr-blue/5 p-4"
-                  >
-                    <p className="font-heading text-base text-linyr-charcoal">
-                      {moment.title}
-                    </p>
-                    <p className="mt-2">{moment.description}</p>
-                  </li>
-                ))}
-              </ul>
+              <p className="text-sm leading-relaxed text-linyr-slate">
+                {`Lumina Smiles combines calming visuals with data-backed proof to help anxious patients feel confident booking. The site clarifies treatments, showcases results, and gives multiple ways to connect in under a minute.`}
+              </p>
+              <div className="grid gap-4 text-sm md:grid-cols-2">
+                <div className="rounded-2xl border border-linyr-blue/10 bg-linyr-blue/5 p-4">
+                  <p className="font-heading text-base text-linyr-charcoal">
+                    Smile Confidence Hero
+                  </p>
+                  <p className="mt-2 text-linyr-slate">
+                    Life-style photography, outcome stats, and calming copy ease
+                    first-visit nerves.
+                  </p>
+                </div>
+                <div className="rounded-2xl border border-linyr-blue/10 bg-linyr-blue/5 p-4">
+                  <p className="font-heading text-base text-linyr-charcoal">
+                    Patient Assurance Stack
+                  </p>
+                  <p className="mt-2 text-linyr-slate">
+                    Insurance logos, safety protocol highlights, and doctor bios
+                    reinforce credibility.
+                  </p>
+                </div>
+                <div className="rounded-2xl border border-linyr-blue/10 bg-linyr-blue/5 p-4">
+                  <p className="font-heading text-base text-linyr-charcoal">
+                    Treatment Deep-Dives
+                  </p>
+                  <p className="mt-2 text-linyr-slate">
+                    Accordion FAQs and before/after sliders for cosmetic,
+                    restorative, and pediatric services.
+                  </p>
+                </div>
+                <div className="rounded-2xl border border-linyr-blue/10 bg-linyr-blue/5 p-4">
+                  <p className="font-heading text-base text-linyr-charcoal">
+                    Frictionless Booking Flow
+                  </p>
+                  <p className="mt-2 text-linyr-slate">
+                    New patient forms, virtual consult scheduler, and phone CTA
+                    available from every section.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
+
+          <section className="rounded-3xl border border-linyr-blue/15 bg-white p-10 shadow-glass">
+            <div className="grid gap-10 md:grid-cols-2">
+              <div>
+                <h2 className="font-heading text-2xl text-linyr-charcoal">
+                  Services Presented With Care
+                </h2>
+                <p className="mt-4 text-sm leading-relaxed text-linyr-slate">
+                  Treatment cards outline benefits, recovery time, and financing
+                  options. Icons and microcopy keep the tone welcoming and
+                  informative.
+                </p>
+                <ul className="mt-6 space-y-3 text-sm text-linyr-slate">
+                  <li className="rounded-2xl border border-linyr-blue/10 bg-linyr-blue/5 p-4">
+                    <span className="font-heading text-base text-linyr-charcoal">
+                      Invisalign® Smile Plans
+                    </span>
+                    <p className="mt-2">
+                      Clear aligner roadmaps with monthly payment explainer and
+                      progress tracking app preview.
+                    </p>
+                  </li>
+                  <li className="rounded-2xl border border-linyr-blue/10 bg-linyr-blue/5 p-4">
+                    <span className="font-heading text-base text-linyr-charcoal">
+                      Comfort Care Restorations
+                    </span>
+                    <p className="mt-2">
+                      Same-day crowns and sedation options described plainly to
+                      reduce patient hesitation.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <div className="space-y-6 rounded-3xl border border-linyr-blue/10 bg-linyr-blue/5 p-8">
+                <h3 className="font-heading text-xl text-linyr-charcoal">
+                  Results &amp; Reputation
+                </h3>
+                <div className="grid gap-6 text-center md:grid-cols-2">
+                  <div>
+                    <p className="font-heading text-4xl text-linyr-blue">
+                      15K+
+                    </p>
+                    <p className="mt-2 text-xs uppercase tracking-[0.3em] text-linyr-slate">
+                      smiles transformed
+                    </p>
+                  </div>
+                  <div>
+                    <p className="font-heading text-4xl text-linyr-blue">98%</p>
+                    <p className="mt-2 text-xs uppercase tracking-[0.3em] text-linyr-slate">
+                      new patient satisfaction
+                    </p>
+                  </div>
+                  <div>
+                    <p className="font-heading text-4xl text-linyr-blue">
+                      24/7
+                    </p>
+                    <p className="mt-2 text-xs uppercase tracking-[0.3em] text-linyr-slate">
+                      emergency support
+                    </p>
+                  </div>
+                  <div>
+                    <p className="font-heading text-4xl text-linyr-blue">
+                      4.9★
+                    </p>
+                    <p className="mt-2 text-xs uppercase tracking-[0.3em] text-linyr-slate">
+                      average review
+                    </p>
+                  </div>
+                </div>
+                <p className="text-sm leading-relaxed text-linyr-slate">
+                  These real-world outcomes sit alongside testimonial videos and
+                  credential badges to cement trust.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section className="grid gap-8 rounded-3xl border border-linyr-blue/15 bg-white p-10 shadow-glass md:grid-cols-[1.1fr,0.9fr]">
+            <div>
+              <h2 className="font-heading text-2xl text-linyr-charcoal">
+                Patient Journey Support
+              </h2>
+              <p className="mt-4 text-sm text-linyr-slate">
+                {`Prospective patients can explore financing, meet the care team, or preview the clinic’s calming spaces. Educational resources and downloadable guides nurture long-term loyalty.`}
+              </p>
+              <ul className="mt-6 space-y-3 text-sm text-linyr-slate">
+                <li>Interactive office tour with 360° photography.</li>
+                <li>Dental wellness blog with preventative care tips.</li>
+                <li>Insurance checker &amp; payment calculator modal.</li>
+              </ul>
+            </div>
+            <div className="rounded-3xl border border-linyr-blue/10 bg-linyr-blue/5 p-8">
+              <h3 className="font-heading text-xl text-linyr-charcoal">
+                Patient Testimonial
+              </h3>
+              <blockquote className="mt-4 text-sm italic text-linyr-slate">
+                “The site walked me through every step before my veneers
+                appointment. Scheduling, financing, even parking directions were
+                handled in minutes.”
+              </blockquote>
+              <p className="mt-4 text-sm font-semibold text-linyr-charcoal">
+                Jasmine Moore, Lumina Smiles Patient
+              </p>
+            </div>
+          </section>
 
           <div className="rounded-3xl border border-linyr-blue/15 bg-white/90 p-10 text-center shadow-glass backdrop-blur">
             <h3 className="font-heading text-2xl text-linyr-charcoal">

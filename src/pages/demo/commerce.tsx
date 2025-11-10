@@ -3,24 +3,6 @@ import Link from 'next/link';
 import { Meta } from '../../layout/Meta';
 import { AppConfig } from '../../utils/AppConfig';
 
-const featureSections = [
-  {
-    title: 'CFO Advisory Blueprint',
-    description:
-      'Positioning module that translates complex finance guidance into a digestible offer stack for founders and operators.',
-  },
-  {
-    title: 'Compliance & Tax HQ',
-    description:
-      'Service grid and explainer blocks covering tax strategy, payroll, and audit readiness without overwhelming visitors.',
-  },
-  {
-    title: 'Client Confidence Hub',
-    description:
-      'Testimonial carousel, credentials, and ROI proof so prospects know exactly why Redwood Ledger is their safest choice.',
-  },
-];
-
 const CommerceDemo = () => (
   <>
     <Meta
@@ -73,23 +55,159 @@ const CommerceDemo = () => (
             </div>
             <div className="space-y-6 rounded-3xl border border-linyr-blue/15 bg-white p-8 shadow-glass">
               <h2 className="font-heading text-2xl text-linyr-charcoal">
-                Experience Pillars
+                Built to Convert Sophisticated Buyers
               </h2>
-              <ul className="space-y-4 text-sm leading-relaxed text-linyr-slate">
-                {featureSections.map((feature) => (
-                  <li
-                    key={feature.title}
-                    className="rounded-2xl border border-linyr-blue/10 bg-linyr-blue/5 p-4"
-                  >
-                    <p className="font-heading text-base text-linyr-charcoal">
-                      {feature.title}
-                    </p>
-                    <p className="mt-2">{feature.description}</p>
-                  </li>
-                ))}
-              </ul>
+              <p className="text-sm leading-relaxed text-linyr-slate">
+                Redwood Ledger’s homepage pairs strategic storytelling with
+                financial authority. The layout surfaces the firm’s signature
+                offers, validates outcomes with data, and directs prospects to a
+                consultation in under two scrolls.
+              </p>
+              <div className="grid gap-4 text-sm md:grid-cols-2">
+                <div className="rounded-2xl border border-linyr-blue/10 bg-linyr-blue/5 p-4">
+                  <p className="font-heading text-base text-linyr-charcoal">
+                    CFO Advisory Blueprint
+                  </p>
+                  <p className="mt-2 text-linyr-slate">
+                    Narrative and visual system that breaks complex financial
+                    strategy into approachable building blocks.
+                  </p>
+                </div>
+                <div className="rounded-2xl border border-linyr-blue/10 bg-linyr-blue/5 p-4">
+                  <p className="font-heading text-base text-linyr-charcoal">
+                    Compliance &amp; Tax HQ
+                  </p>
+                  <p className="mt-2 text-linyr-slate">
+                    Modular service tiles covering payroll, audits, and tax
+                    planning without overwhelming readers.
+                  </p>
+                </div>
+                <div className="rounded-2xl border border-linyr-blue/10 bg-linyr-blue/5 p-4">
+                  <p className="font-heading text-base text-linyr-charcoal">
+                    Client Confidence Hub
+                  </p>
+                  <p className="mt-2 text-linyr-slate">
+                    ROI stats, industry credentials, and rotating testimonials
+                    engineered to build trust instantly.
+                  </p>
+                </div>
+                <div className="rounded-2xl border border-linyr-blue/10 bg-linyr-blue/5 p-4">
+                  <p className="font-heading text-base text-linyr-charcoal">
+                    Conversion CTA System
+                  </p>
+                  <p className="mt-2 text-linyr-slate">
+                    Consultation prompts, downloadable resources, and phone
+                    callbacks designed to capture every lead type.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
+
+          <section className="rounded-3xl border border-linyr-blue/15 bg-white p-10 shadow-glass">
+            <div className="grid gap-10 md:grid-cols-2">
+              <div>
+                <h2 className="font-heading text-2xl text-linyr-charcoal">
+                  Services Structured Around Outcomes
+                </h2>
+                <p className="mt-4 text-sm leading-relaxed text-linyr-slate">
+                  Each service block showcases benefits, timeline, and proof of
+                  impact. Prospects can explore fractional CFO, controller, and
+                  bookkeeping retainers without leaving the hero area.
+                </p>
+                <ul className="mt-6 space-y-3 text-sm text-linyr-slate">
+                  <li className="rounded-2xl border border-linyr-blue/10 bg-linyr-blue/5 p-4">
+                    <span className="font-heading text-base text-linyr-charcoal">
+                      Fractional CFO Pods
+                    </span>
+                    <p className="mt-2">
+                      {`Dedicated finance partners delivering forecasts, dashboards, and board prep in four-week sprints.`}
+                    </p>
+                  </li>
+                  <li className="rounded-2xl border border-linyr-blue/10 bg-linyr-blue/5 p-4">
+                    <span className="font-heading text-base text-linyr-charcoal">
+                      Compliance Engine
+                    </span>
+                    <p className="mt-2">
+                      Quarterly tax planning, payroll checks, and audit
+                      readiness wrapped in a single predictable program.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <div className="space-y-6 rounded-3xl border border-linyr-blue/10 bg-linyr-blue/5 p-8">
+                <h3 className="font-heading text-xl text-linyr-charcoal">
+                  Growth Metrics at a Glance
+                </h3>
+                <div className="grid gap-6 text-center md:grid-cols-2">
+                  <div>
+                    <p className="font-heading text-4xl text-linyr-blue">42%</p>
+                    <p className="mt-2 text-xs uppercase tracking-[0.3em] text-linyr-slate">
+                      faster close cycles
+                    </p>
+                  </div>
+                  <div>
+                    <p className="font-heading text-4xl text-linyr-blue">
+                      $6.8M
+                    </p>
+                    <p className="mt-2 text-xs uppercase tracking-[0.3em] text-linyr-slate">
+                      capital raised by clients
+                    </p>
+                  </div>
+                  <div>
+                    <p className="font-heading text-4xl text-linyr-blue">97%</p>
+                    <p className="mt-2 text-xs uppercase tracking-[0.3em] text-linyr-slate">
+                      retention rate
+                    </p>
+                  </div>
+                  <div>
+                    <p className="font-heading text-4xl text-linyr-blue">12</p>
+                    <p className="mt-2 text-xs uppercase tracking-[0.3em] text-linyr-slate">
+                      industries served
+                    </p>
+                  </div>
+                </div>
+                <p className="text-sm leading-relaxed text-linyr-slate">
+                  Accompanying copy pairs these metrics with a short case study,
+                  ensuring founders understand the tangible return of partnering
+                  with Redwood.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section className="grid gap-8 rounded-3xl border border-linyr-blue/15 bg-white p-10 shadow-glass md:grid-cols-[1.1fr,0.9fr]">
+            <div>
+              <h2 className="font-heading text-2xl text-linyr-charcoal">
+                What Prospects Experience
+              </h2>
+              <p className="mt-4 text-sm text-linyr-slate">
+                From hero to footer, every interaction supports a high-touch
+                buying journey. Video testimonials, FAQ accordions, and weekly
+                insight snippets nurture CFO-ready leads.
+              </p>
+              <ul className="mt-6 space-y-3 text-sm text-linyr-slate">
+                <li>Embedded Calendly and click-to-call CTAs.</li>
+                <li>Downloadable due diligence checklist to capture emails.</li>
+                <li>
+                  Resource library preview to showcase thought leadership.
+                </li>
+              </ul>
+            </div>
+            <div className="rounded-3xl border border-linyr-blue/10 bg-linyr-blue/5 p-8">
+              <h3 className="font-heading text-xl text-linyr-charcoal">
+                Client Testimonial
+              </h3>
+              <blockquote className="mt-4 text-sm italic text-linyr-slate">
+                “Within the first quarter we had a finance dashboard we trusted,
+                an investor-grade model, and a plan to extend runway. Redwood
+                Ledger feels like part of our executive team.”
+              </blockquote>
+              <p className="mt-4 text-sm font-semibold text-linyr-charcoal">
+                Priya Daniel, COO — Atlas Robotics
+              </p>
+            </div>
+          </section>
 
           <div className="rounded-3xl border border-linyr-blue/15 bg-white/90 p-10 text-center shadow-glass backdrop-blur">
             <h3 className="font-heading text-2xl text-linyr-charcoal">

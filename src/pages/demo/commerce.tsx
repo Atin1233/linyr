@@ -57,21 +57,17 @@ const RedwoodLedgerDemo = () => (
     <main className="bg-[#070d23] text-white">
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#0b1739] via-[#131f4b] to-[#1f2f63]" />
-        <div className="relative mx-auto flex max-w-6xl flex-col gap-16 px-6 pb-24 pt-28 md:px-12">
-          <div className="grid gap-10 md:grid-cols-[1.2fr,0.8fr]">
-            <div>
+        <div className="relative mx-auto flex max-w-6xl flex-col gap-20 px-6 py-28 md:px-12">
+          <div className="grid gap-12 md:grid-cols-[1.2fr,0.8fr]">
+            <div className="fade-up">
               <span className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-white/80">
                 Boutique CPA &amp; Advisory
               </span>
               <h1 className="mt-6 font-heading text-4xl leading-tight text-white md:text-6xl">
-                Redwood Ledger CPA — Fractional finance that scales with
-                ambition.
+                {`Redwood Ledger CPA — Fractional finance that scales with ambition.`}
               </h1>
               <p className="mt-6 text-lg text-white/70 md:text-xl">
-                We position Redwood as the executive finance partner for
-                venture-backed teams. Every section of this demo is tuned to
-                earn board-level trust, surface measurable outcomes, and convert
-                high-consideration prospects.
+                {`We position Redwood as the executive finance partner for venture-backed teams. Every section of this demo is tuned to earn board-level trust, surface measurable outcomes, and convert high-consideration prospects.`}
               </p>
               <div className="mt-10 flex flex-wrap items-center gap-4">
                 <Link
@@ -88,41 +84,53 @@ const RedwoodLedgerDemo = () => (
                 </Link>
               </div>
             </div>
-            <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur">
-              <h2 className="font-heading text-2xl text-white">
-                Executive Snapshot
-              </h2>
-              <div className="mt-6 grid gap-6 sm:grid-cols-2">
-                <div>
-                  <p className="font-heading text-4xl text-white">42%</p>
-                  <p className="mt-1 text-xs uppercase tracking-[0.3em] text-white/60">
-                    faster close cycles
-                  </p>
+            <div className="fade-right relative overflow-hidden rounded-3xl border border-white/15 bg-white/10 p-6 backdrop-blur">
+              <div className="absolute -left-12 -top-12 size-44 rounded-full bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.4),transparent)]" />
+              <div className="absolute -right-16 bottom-0 size-60 rounded-full bg-[radial-gradient(circle_at_center,rgba(148,197,255,0.35),transparent)]" />
+              <div className="relative space-y-6">
+                <h2 className="font-heading text-2xl text-white">
+                  Executive Dashboard
+                </h2>
+                <div className="grid gap-5 sm:grid-cols-2">
+                  <div className="rounded-2xl border border-white/10 bg-black/30 p-4 text-white">
+                    <p className="text-xs uppercase tracking-[0.3em] text-white/60">
+                      ARR
+                    </p>
+                    <p className="mt-2 font-heading text-3xl">$48.6M</p>
+                    <p className="mt-1 text-xs text-white/60">+12% QoQ</p>
+                  </div>
+                  <div className="rounded-2xl border border-white/10 bg-black/30 p-4 text-white">
+                    <p className="text-xs uppercase tracking-[0.3em] text-white/60">
+                      Burn Multiple
+                    </p>
+                    <p className="mt-2 font-heading text-3xl">0.9×</p>
+                    <p className="mt-1 text-xs text-white/60">best-in-class</p>
+                  </div>
+                  <div className="rounded-2xl border border-white/10 bg-black/30 p-4 text-white">
+                    <p className="text-xs uppercase tracking-[0.3em] text-white/60">
+                      Runway
+                    </p>
+                    <p className="mt-2 font-heading text-3xl">21 mo</p>
+                    <p className="mt-1 text-xs text-white/60">scenario safe</p>
+                  </div>
+                  <div className="rounded-2xl border border-white/10 bg-black/30 p-4 text-white">
+                    <p className="text-xs uppercase tracking-[0.3em] text-white/60">
+                      Retention
+                    </p>
+                    <p className="mt-2 font-heading text-3xl">97%</p>
+                    <p className="mt-1 text-xs text-white/60">net revenue</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="font-heading text-4xl text-white">$6.8M</p>
-                  <p className="mt-1 text-xs uppercase tracking-[0.3em] text-white/60">
-                    capital raised last quarter
-                  </p>
-                </div>
-                <div>
-                  <p className="font-heading text-4xl text-white">97%</p>
-                  <p className="mt-1 text-xs uppercase tracking-[0.3em] text-white/60">
-                    retention rate
-                  </p>
-                </div>
-                <div>
-                  <p className="font-heading text-4xl text-white">12</p>
-                  <p className="mt-1 text-xs uppercase tracking-[0.3em] text-white/60">
-                    industries supported
-                  </p>
-                </div>
+                <img
+                  src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&w=900&q=80"
+                  alt="Finance workspace overview"
+                  className="w-full rounded-2xl border border-white/10 object-cover shadow-[0_18px_40px_rgba(7,13,35,0.45)]"
+                  loading="lazy"
+                />
+                <p className="text-sm text-white/70">
+                  {`Motion elements and hero analytics set expectations for a modern finance function while maintaining Redwood’s premium feel.`}
+                </p>
               </div>
-              <p className="mt-6 text-sm text-white/70">
-                Data pairings throughout the page reinforce Redwood’s command of
-                finance operations, while secondary CTAs keep prospects inside
-                the conversion funnel.
-              </p>
             </div>
           </div>
 
@@ -130,7 +138,7 @@ const RedwoodLedgerDemo = () => (
             {advisoryHighlights.map((item) => (
               <div
                 key={item.title}
-                className="rounded-3xl border border-white/10 bg-white/10 p-6 text-white/80 shadow-[0_25px_60px_rgba(10,14,40,0.45)]"
+                className="fade-up rounded-3xl border border-white/10 bg-white/10 p-6 text-white/80 shadow-[0_25px_60px_rgba(10,14,40,0.45)]"
               >
                 <h3 className="font-heading text-xl text-white">
                   {item.title}
@@ -165,7 +173,7 @@ const RedwoodLedgerDemo = () => (
             {servicePackages.map((pkg) => (
               <div
                 key={pkg.name}
-                className="flex h-full flex-col rounded-3xl border border-[#0b1739]/10 bg-[#f4f6ff] p-8 shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
+                className="fade-up-delayed flex h-full flex-col rounded-3xl border border-[#0b1739]/10 bg-[#f4f6ff] p-8 shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
               >
                 <h3 className="font-heading text-xl text-[#0b1739]">
                   {pkg.name}
@@ -255,9 +263,7 @@ const RedwoodLedgerDemo = () => (
                 Trust, proof, and thought leadership in one narrative.
               </h2>
               <p className="mt-4 text-sm leading-relaxed text-linyr-slate">
-                A rotating hub of market reports, deep-dive webinars, and punchy
-                email insights demonstrates Redwood’s command of capital markets
-                and compliance.
+                {`A rotating hub of market reports, deep-dive webinars, and punchy email insights demonstrates Redwood’s command of capital markets and compliance.`}
               </p>
               <div className="mt-8 rounded-3xl border border-[#0b1739]/10 bg-[#0b1739]/5 p-6">
                 <p className="text-xs uppercase tracking-[0.3em] text-[#0b1739]">
@@ -374,6 +380,53 @@ const RedwoodLedgerDemo = () => (
         </div>
       </section>
 
+      <section className="bg-[#0b1739] py-24">
+        <div className="mx-auto max-w-6xl px-6 md:px-12">
+          <div className="md:flex md:items-center md:justify-between">
+            <div className="max-w-xl text-white">
+              <h2 className="font-heading text-3xl md:text-4xl">
+                {`Interactive reporting brings signals to life.`}
+              </h2>
+              <p className="mt-4 text-sm text-white/70">
+                {`We showcase Redwood’s reporting muscle through a responsive analytics gallery. Each card can animate to reveal drilldowns, boosting perceived sophistication.`}
+              </p>
+            </div>
+            <Link
+              href="/"
+              className="fade-right mt-8 inline-flex items-center rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white transition hover:border-white md:mt-0"
+            >
+              Launch the analytics demo →
+            </Link>
+          </div>
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {[
+              'https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&w=900&q=80',
+              'https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=900&q=80',
+              'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80',
+            ].map((src, i) => (
+              <div
+                // eslint-disable-next-line react/no-array-index-key
+                key={i}
+                className="fade-up rounded-3xl border border-white/15 bg-black/30 p-4 shadow-[0_25px_60px_rgba(0,0,0,0.45)]"
+              >
+                <div className="relative overflow-hidden rounded-2xl">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-white/10" />
+                  <img
+                    src={src}
+                    alt="Financial data visualization"
+                    className="h-48 w-full rounded-2xl object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <p className="mt-4 text-sm text-white/80">
+                  {`Interactive drilldowns, anomaly alerts, and scenario toggles show how Redwood builds modern finance intelligence.`}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="bg-gradient-to-r from-[#0b1739] via-[#111d4a] to-[#1f2f63] py-24">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="font-heading text-3xl text-white md:text-4xl">
@@ -401,6 +454,42 @@ const RedwoodLedgerDemo = () => (
         </div>
       </section>
     </main>
+
+    <style jsx>{`
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(24px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeRight {
+        from {
+          opacity: 0;
+          transform: translateX(24px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      .fade-up {
+        animation: fadeUp 0.9s ease-out both;
+      }
+
+      .fade-up-delayed {
+        animation: fadeUp 0.9s ease-out 0.15s both;
+      }
+
+      .fade-right {
+        animation: fadeRight 1s ease-out both;
+      }
+    `}</style>
   </>
 );
 

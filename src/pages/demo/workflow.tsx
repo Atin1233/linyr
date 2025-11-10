@@ -48,9 +48,9 @@ const HearthHarvestDemo = () => (
     <main className="bg-[#2a1403] text-[#fdf5ed]">
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#7c2d12] via-[#ea580c] to-[#f97316] opacity-90" />
-        <div className="relative mx-auto flex max-w-6xl flex-col gap-16 px-6 pb-24 pt-28 md:px-12">
+        <div className="relative mx-auto flex max-w-6xl flex-col gap-20 px-6 py-28 md:px-12">
           <div className="grid gap-12 md:grid-cols-[1.1fr,0.9fr]">
-            <div>
+            <div className="fade-up">
               <span className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-white/80">
                 Neighborhood Cafe Demo
               </span>
@@ -77,29 +77,41 @@ const HearthHarvestDemo = () => (
                 </Link>
               </div>
             </div>
-            <div className="rounded-3xl border border-white/20 bg-white/10 p-8 backdrop-blur">
-              <h2 className="font-heading text-2xl text-white">
-                Tonight at the Hearth
-              </h2>
-              <p className="mt-4 text-sm text-white/80">
-                Reserve a seat at our chef’s counter, discover the story behind
-                every roast, and unlock member-only menu drops.
-              </p>
-              <div className="mt-6 grid gap-4 text-sm text-white/80">
-                <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
-                  <p className="font-semibold text-white">
-                    Happy Hour Fireside
-                  </p>
-                  <p className="mt-1">
-                    Mon–Fri · 4-6PM · $2 off signature drinks &amp; small plates
-                  </p>
-                </div>
-                <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
-                  <p className="font-semibold text-white">Reserve a Table</p>
-                  <p className="mt-1">
-                    Weekend brunch seating with tasting menu and live acoustic
-                    sets.
-                  </p>
+            <div className="fade-right relative overflow-hidden rounded-3xl border border-white/20 bg-white/10 p-6 backdrop-blur">
+              <div className="absolute -left-20 top-10 size-56 rounded-full bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.35),transparent)]" />
+              <div className="absolute -right-24 bottom-0 size-72 rounded-full bg-[radial-gradient(circle_at_center,rgba(250,204,21,0.3),transparent)]" />
+              <div className="relative space-y-6">
+                <div className="grid gap-4">
+                  <div className="relative overflow-hidden rounded-3xl border border-white/10">
+                    <img
+                      src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=900&q=80"
+                      alt="Cafe interior"
+                      className="h-48 w-full object-cover"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-white/20" />
+                    <p className="absolute bottom-4 left-4 text-sm font-semibold text-white">
+                      Tonight’s sensory experience
+                    </p>
+                  </div>
+                  <div className="grid gap-3 sm:grid-cols-2">
+                    <div className="rounded-2xl border border-white/10 bg-black/30 p-4 text-sm text-white/80">
+                      <p className="text-xs uppercase tracking-[0.35em] text-white/60">
+                        Happy hour fireside
+                      </p>
+                      <p className="mt-2">
+                        {`Mon–Fri · 4-6PM · $2 off signature drinks & small plates`}
+                      </p>
+                    </div>
+                    <div className="rounded-2xl border border-white/10 bg-black/30 p-4 text-sm text-white/80">
+                      <p className="text-xs uppercase tracking-[0.35em] text-white/60">
+                        Reserve the chef’s counter
+                      </p>
+                      <p className="mt-2">
+                        {`Brunch tasting menu with chef introductions and vinyl DJs.`}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -312,6 +324,51 @@ const HearthHarvestDemo = () => (
         </div>
       </section>
 
+      <section className="bg-[#2a1403] py-24 text-white">
+        <div className="mx-auto max-w-6xl px-6 md:px-12">
+          <div className="md:flex md:items-center md:justify-between">
+            <div className="max-w-xl">
+              <h2 className="font-heading text-3xl md:text-4xl">
+                {`A gallery of moments brewed daily.`}
+              </h2>
+              <p className="mt-4 text-sm text-white/80">
+                {`Scrollable media blocks show latte pours, pastry prep, and the glow of evening service. Motion on hover keeps guests immersed.`}
+              </p>
+            </div>
+            <Link
+              href="/"
+              className="fade-right mt-8 inline-flex items-center rounded-full border border-white/40 px-6 py-3 text-sm font-semibold text-white transition hover:border-white md:mt-0"
+            >
+              View our lookbook →
+            </Link>
+          </div>
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {[
+              'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80',
+              'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80',
+              'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80&sat=-50',
+            ].map((src, index) => (
+              <div
+                // eslint-disable-next-line react/no-array-index-key
+                key={index}
+                className="fade-up group relative overflow-hidden rounded-3xl border border-white/15 bg-white/10"
+              >
+                <img
+                  src={src}
+                  alt="Cafe lifestyle"
+                  className="h-64 w-full object-cover transition duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                <p className="absolute bottom-6 left-6 text-sm font-semibold tracking-wide text-white">
+                  Hearth moments
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="bg-[#431d0a] py-24 text-white">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <h2 className="font-heading text-3xl md:text-4xl">
@@ -339,6 +396,38 @@ const HearthHarvestDemo = () => (
         </div>
       </section>
     </main>
+
+    <style jsx>{`
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(24px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeRight {
+        from {
+          opacity: 0;
+          transform: translateX(24px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      .fade-up {
+        animation: fadeUp 0.9s ease-out both;
+      }
+
+      .fade-right {
+        animation: fadeRight 1s ease-out both;
+      }
+    `}</style>
   </>
 );
 

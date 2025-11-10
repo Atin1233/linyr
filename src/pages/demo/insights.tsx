@@ -42,9 +42,9 @@ const LuminaSmilesDemo = () => (
     <main className="bg-[#f4f9ff] text-[#0f172a]">
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#8ec5fc] via-[#e0c3fc] to-[#a5f3fc]" />
-        <div className="relative mx-auto flex max-w-6xl flex-col gap-16 px-6 pb-24 pt-28 md:px-12">
+        <div className="relative mx-auto flex max-w-6xl flex-col gap-20 px-6 py-28 md:px-12">
           <div className="grid gap-12 md:grid-cols-[1.1fr,0.9fr]">
-            <div>
+            <div className="fade-up">
               <span className="inline-flex items-center rounded-full border border-white/30 bg-white/20 px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-white">
                 Modern Dental Studio Demo
               </span>
@@ -52,9 +52,7 @@ const LuminaSmilesDemo = () => (
                 Lumina Smiles — Calming care, luminous results.
               </h1>
               <p className="mt-6 text-lg text-[#1e293b]/80 md:text-xl">
-                This concept site shows patients every reason to feel at
-                ease—soft gradients, welcoming copy, interactive before/after
-                stories, and multiple ways to connect with the care team.
+                {`This concept site shows patients every reason to feel at ease—soft gradients, welcoming copy, interactive before/after stories, and multiple ways to connect with the care team.`}
               </p>
               <div className="mt-10 flex flex-wrap items-center gap-4">
                 <Link
@@ -71,34 +69,42 @@ const LuminaSmilesDemo = () => (
                 </Link>
               </div>
             </div>
-            <div className="rounded-3xl border border-white/40 bg-white/40 p-8 backdrop-blur">
-              <h2 className="font-heading text-2xl text-[#0f172a]">
-                New patient overview
-              </h2>
-              <ul className="mt-6 space-y-4 text-sm text-[#1e293b]/80">
-                <li className="flex items-start gap-3">
-                  <span className="mt-1 inline-flex size-2 rounded-full bg-[#2563eb]" />
-                  <span>Calming welcome video with virtual office tour.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="mt-1 inline-flex size-2 rounded-full bg-[#2563eb]" />
-                  <span>
-                    Insurance concierge with instant benefits checker.
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="mt-1 inline-flex size-2 rounded-full bg-[#2563eb]" />
-                  <span>
-                    Online booking for virtual consultations and in-studio
-                    appointments.
-                  </span>
-                </li>
-              </ul>
-              <p className="mt-6 text-sm text-[#1e293b]/70">
-                Throughout the page, we pair emotional reassurance with clinical
-                credibility, nudging visitors toward the CTA with gentle
-                transitions.
-              </p>
+            <div className="fade-right relative overflow-hidden rounded-3xl border border-white/40 bg-white/50 p-6 backdrop-blur">
+              <div className="absolute -top-16 right-0 size-48 rounded-full bg-[radial-gradient(circle_at_center,rgba(148,197,252,0.35),transparent)]" />
+              <div className="absolute -bottom-16 left-8 size-56 rounded-full bg-[radial-gradient(circle_at_center,rgba(224,195,252,0.45),transparent)]" />
+              <div className="relative space-y-6">
+                <div className="grid gap-4">
+                  <div className="relative overflow-hidden rounded-3xl border border-white/40">
+                    <img
+                      src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=900&q=80"
+                      alt="Dental studio lobby"
+                      className="h-48 w-full object-cover"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/60 via-transparent to-transparent" />
+                    <p className="absolute bottom-4 left-4 text-sm font-semibold text-white">
+                      Walk through the Lumina welcome lounge
+                    </p>
+                  </div>
+                  <ul className="space-y-3 text-sm text-[#1e293b]/80">
+                    <li className="flex items-start gap-3">
+                      <span className="mt-1 inline-flex size-2 rounded-full bg-[#2563eb]" />
+                      <span>{`Calming welcome video with virtual office tour.`}</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="mt-1 inline-flex size-2 rounded-full bg-[#2563eb]" />
+                      <span>{`Insurance concierge with instant benefits checker.`}</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="mt-1 inline-flex size-2 rounded-full bg-[#2563eb]" />
+                      <span>{`Online booking for virtual and in-studio appointments.`}</span>
+                    </li>
+                  </ul>
+                </div>
+                <p className="text-sm text-[#1e293b]/70">
+                  {`Throughout the page, emotional reassurance blends with clinical credibility. Soft reveals, luminous gradients, and motion cues move visitors toward booking.`}
+                </p>
+              </div>
             </div>
           </div>
 
@@ -143,6 +149,51 @@ const LuminaSmilesDemo = () => (
         </div>
       </section>
 
+      <section className="bg-[#e0f2ff] py-24 text-[#0f172a]">
+        <div className="mx-auto max-w-6xl px-6 md:px-12">
+          <div className="md:flex md:items-center md:justify-between">
+            <div className="max-w-xl">
+              <h2 className="font-heading text-3xl md:text-4xl">
+                {`A meditative visual gallery.`}
+              </h2>
+              <p className="mt-4 text-sm text-[#475569]">
+                {`We highlight Lumina’s calming environments through a soft-focus media grid with hover parallax. It signals attention to detail and a serene patient journey.`}
+              </p>
+            </div>
+            <Link
+              href="/"
+              className="fade-right mt-8 inline-flex items-center rounded-full border border-[#2563eb]/40 px-6 py-3 text-sm font-semibold text-[#2563eb] transition hover:border-[#2563eb] md:mt-0"
+            >
+              Tour the studio →
+            </Link>
+          </div>
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {[
+              'https://images.unsplash.com/photo-1505849864904-01b9e182ed1e?auto=format&fit=crop&w=900&q=80',
+              'https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?auto=format&fit=crop&w=900&q=80',
+              'https://images.unsplash.com/photo-1573496529574-be85d6a60704?auto=format&fit=crop&w=900&q=80',
+            ].map((src, idx) => (
+              <div
+                // eslint-disable-next-line react/no-array-index-key
+                key={idx}
+                className="fade-up group relative overflow-hidden rounded-3xl border border-[#bfdbfe] bg-white"
+              >
+                <img
+                  src={src}
+                  alt="Lumina dental experience"
+                  className="h-64 w-full object-cover transition duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/60 via-transparent to-transparent" />
+                <p className="absolute bottom-6 left-6 text-sm font-semibold text-white">
+                  Lumina wellness moments
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="treatments" className="bg-white py-24 text-[#0f172a]">
         <div className="mx-auto max-w-6xl px-6 md:px-12">
           <div className="md:flex md:items-end md:justify-between">
@@ -165,7 +216,7 @@ const LuminaSmilesDemo = () => (
             {treatmentGrid.map((item) => (
               <div
                 key={item.name}
-                className="flex h-full flex-col rounded-3xl border border-[#bfdbfe]/80 bg-[#eff6ff] p-8 shadow-[0_22px_50px_rgba(148,163,184,0.18)] transition hover:-translate-y-1 hover:shadow-[0_28px_65px_rgba(148,163,184,0.26)]"
+                className="fade-up flex h-full flex-col rounded-3xl border border-[#bfdbfe]/80 bg-[#eff6ff] p-8 shadow-[0_22px_50px_rgba(148,163,184,0.18)] transition hover:-translate-y-1 hover:shadow-[0_28px_65px_rgba(148,163,184,0.26)]"
               >
                 <h3 className="font-heading text-xl text-[#1d4ed8]">
                   {item.name}
@@ -298,8 +349,7 @@ const LuminaSmilesDemo = () => (
             Ready to make Lumina your home for dental wellness?
           </h2>
           <p className="mt-4 text-sm text-[#475569] md:text-base">
-            Book a consultation and we’ll craft a personalized care journey.
-            Prefer to talk it through? Call our concierge team at{' '}
+            {`Ready to make Lumina your home for dental wellness? Book a consultation and we’ll craft a personalized care journey. Prefer to talk it through? Call our concierge team at `}
             <span className="font-semibold">(555) 012-4567</span>.
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
@@ -319,6 +369,38 @@ const LuminaSmilesDemo = () => (
         </div>
       </section>
     </main>
+
+    <style jsx>{`
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(24px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeRight {
+        from {
+          opacity: 0;
+          transform: translateX(24px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      .fade-up {
+        animation: fadeUp 0.9s ease-out both;
+      }
+
+      .fade-right {
+        animation: fadeRight 1s ease-out both;
+      }
+    `}</style>
   </>
 );
 

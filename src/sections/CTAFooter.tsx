@@ -20,7 +20,7 @@ const CTAFooter = () => (
     className="relative overflow-hidden bg-linyr-offWhite py-28 text-linyr-charcoal"
   >
     <div
-      className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(245,197,66,0.28),transparent_45%),radial-gradient(circle_at_bottom_left,rgba(30,64,255,0.28),transparent_55%)] opacity-80"
+      className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.85),transparent_45%),radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.85),transparent_55%)]"
       aria-hidden
     />
     <div className="relative mx-auto max-w-6xl">

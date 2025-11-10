@@ -4,12 +4,17 @@
 
 @tailwind utilities;
 
+:root {
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  @apply bg-linyr-offWhite text-linyr-charcoal antialiased;
+  @apply bg-linyr-offWhite text-linyr-charcoal antialiased font-body;
 }
 
 a {

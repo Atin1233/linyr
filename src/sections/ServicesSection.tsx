@@ -55,7 +55,7 @@ const ServicesSection = () => (
               key={deliverable}
               className="flex items-start gap-3 rounded-2xl border border-linyr-blue/10 bg-linyr-blue/5 p-4 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-linyr-gold/40"
             >
-              <span className="mt-1 inline-flex h-6 w-6 flex-none items-center justify-center rounded-full bg-linyr-blue text-sm font-semibold text-white shadow-glow">
+              <span className="mt-1 inline-flex size-6 flex-none items-center justify-center rounded-full bg-linyr-blue text-sm font-semibold text-white shadow-glow">
                 ✓
               </span>
               <span>{deliverable}</span>
@@ -82,4 +82,3 @@ const ServicesSection = () => (
 );
 
 export { ServicesSection };
-

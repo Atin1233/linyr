@@ -92,7 +92,9 @@ const ProofSection = () => {
                 <p className="mt-6 text-sm font-semibold text-white">
                   {primaryTestimonial.name}
                 </p>
-                <p className="text-sm text-white/60">{primaryTestimonial.role}</p>
+                <p className="text-sm text-white/60">
+                  {primaryTestimonial.role}
+                </p>
               </div>
             )}
           </div>
@@ -120,4 +122,3 @@ const ProofSection = () => {
 };
 
 export { ProofSection };
-

@@ -1,9 +1,9 @@
+import { Meta } from '../layout/Meta';
 import { CTAFooter } from '../sections/CTAFooter';
 import { HeroSection } from '../sections/HeroSection';
 import { PortfolioSection } from '../sections/PortfolioSection';
 import { ProofSection } from '../sections/ProofSection';
 import { ServicesSection } from '../sections/ServicesSection';
-import { Meta } from '../layout/Meta';
 import { AppConfig } from '../utils/AppConfig';
 
 const Index = () => (

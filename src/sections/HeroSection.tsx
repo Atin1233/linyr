@@ -5,7 +5,7 @@ const heroContent = {
   title: 'Linyr Digital',
   subtitle: 'Fast. Beautiful. Built to Convert.',
   description:
-    "We craft AI-era websites that load instantly, feel luxurious, and turn your visitors into loyal customers. Let’s design a digital flagship that sets you apart.",
+    'We craft AI-era websites that load instantly, feel luxurious, and turn your visitors into loyal customers. Let’s design a digital flagship that sets you apart.',
   ctaLabel: 'Get Your Free Quote',
   ctaHref: '#book-consultation',
   supportText: 'Projects delivered in 6 weeks or less.',
@@ -43,7 +43,7 @@ const HeroSection = () => (
           className="group inline-flex items-center justify-center rounded-full bg-linyr-blue px-8 py-3 text-base font-semibold text-white shadow-glow transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(30,64,255,0.35)] focus:outline-none focus-visible:ring-2 focus-visible:ring-linyr-gold focus-visible:ring-offset-2"
         >
           {heroContent.ctaLabel}
-          <span className="ml-2 inline-flex h-6 w-6 items-center justify-center rounded-full bg-white/90 text-linyr-blue transition-transform duration-300 ease-out group-hover:translate-x-1">
+          <span className="ml-2 inline-flex size-6 items-center justify-center rounded-full bg-white/90 text-linyr-blue transition-transform duration-300 ease-out group-hover:translate-x-1">
             →
           </span>
         </Link>
@@ -58,4 +58,3 @@ const HeroSection = () => (
 );
 
 export { HeroSection };
-

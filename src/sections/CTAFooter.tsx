@@ -33,7 +33,7 @@ const CTAFooter = () => (
             key={point}
             className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2"
           >
-            <span className="inline-flex h-2 w-2 rounded-full bg-linyr-gold" />
+            <span className="inline-flex size-2 rounded-full bg-linyr-gold" />
             {point}
           </li>
         ))}
@@ -46,13 +46,15 @@ const CTAFooter = () => (
         >
           {ctaContent.ctaLabel}
         </a>
-        <span className="text-sm text-white/70">{ctaContent.secondaryLabel}</span>
+        <span className="text-sm text-white/70">
+          {ctaContent.secondaryLabel}
+        </span>
       </div>
     </div>
-    <div
-      className="relative mx-auto mt-16 flex max-w-5xl flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 text-sm text-white/60 sm:flex-row"
-    >
-      <span>© {new Date().getFullYear()} Linyr Digital. All rights reserved.</span>
+    <div className="relative mx-auto mt-16 flex max-w-5xl flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 text-sm text-white/60 sm:flex-row">
+      <span>
+        © {new Date().getFullYear()} Linyr Digital. All rights reserved.
+      </span>
       <div className="flex gap-6">
         <a
           href="https://www.linkedin.com"
@@ -84,4 +86,3 @@ const CTAFooter = () => (
 );
 
 export { CTAFooter };
-

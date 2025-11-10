@@ -1,17 +1,20 @@
 const portfolioItems = [
   {
     title: 'Nova Commerce',
-    description: 'Enterprise SaaS storefront reimagined for repeatable revenue.',
+    description:
+      'Enterprise SaaS storefront reimagined for repeatable revenue.',
     image: '/assets/images/nextjs-landing-page-screenshot.png',
   },
   {
     title: 'Helix Workflows',
-    description: 'AI automation hub with real-time dashboards and 3D interactions.',
+    description:
+      'AI automation hub with real-time dashboards and 3D interactions.',
     image: '/assets/images/nextjs-landing-page-banner.png',
   },
   {
     title: 'Signal One Labs',
-    description: 'Data-rich product marketing site with narrative storytelling.',
+    description:
+      'Data-rich product marketing site with narrative storytelling.',
     image: '/assets/images/nextjs-boilerplate-saas.png',
   },
 ];
@@ -53,7 +56,7 @@ const PortfolioSection = () => (
             <img
               src={item.image}
               alt={`${item.title} mockup`}
-              className="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-105"
+              className="size-full object-cover transition duration-700 ease-out group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-linyr-charcoal/60 via-transparent to-transparent opacity-0 transition duration-300 group-hover:opacity-100" />
           </div>
@@ -73,4 +76,3 @@ const PortfolioSection = () => (
 );
 
 export { PortfolioSection };
-

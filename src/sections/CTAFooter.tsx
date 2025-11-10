@@ -5,12 +5,14 @@ const ctaContent = {
   subtitle:
     'Let’s identify the quick wins, the long-term vision, and how we ship a launch-ready experience in record time.',
   bulletPoints: [
-    '30-minute strategy session with a lead strategist',
-    'Actionable insights tailored to your current funnel',
-    'No obligations — we only pitch if there’s a clear fit',
+    '30-minute strategy intensive with a product strategist and creative director.',
+    'A funnel audit that maps quick-win launch experiments & long-term opportunities.',
+    'A transparent fit check — if the engagement isn’t right, we share resources instead.',
+    'Launch blueprint delivered within 5 business days including timeline, team, and investment tiers.',
+    'Embedded partner model with a strategist and creative lead from day zero.',
   ],
   ctaLabel: 'Schedule a Call',
-  ctaHref: 'mailto:hello@linyr.digital',
+  ctaHref: 'https://calendly.com/atinjain117/linyr',
   secondaryLabel: 'hello@linyr.digital',
 };
 
@@ -20,7 +22,7 @@ const CTAFooter = () => (
     className="relative overflow-hidden bg-linyr-offWhite py-28 text-linyr-charcoal"
   >
     <div
-      className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.85),transparent_45%),radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.85),transparent_55%)]"
+      className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.95),transparent_50%),radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.88),transparent_55%)]"
       aria-hidden
     />
     <div className="relative mx-auto max-w-6xl">
@@ -41,76 +43,63 @@ const CTAFooter = () => (
             </p>
           </div>
 
-          <ul className="grid gap-3 text-sm text-white/80 md:grid-cols-2">
+          <div className="space-y-3 text-sm text-white/85">
             {ctaContent.bulletPoints.map((point) => (
-              <li
-                key={point}
-                className="inline-flex items-start gap-3 rounded-2xl border border-white/15 bg-white/10 px-4 py-3 backdrop-blur"
-              >
+              <div key={point} className="flex items-start gap-3">
                 <span className="mt-1 inline-flex size-2 rounded-full bg-linyr-gold" />
-                <span>{point}</span>
-              </li>
+                <p className="leading-relaxed">{point}</p>
+              </div>
             ))}
-          </ul>
-
-          <div className="flex flex-col gap-4 text-sm text-white/70 md:flex-row md:items-center">
-            <div className="inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/10 px-4 py-2">
-              <span className="inline-flex size-1.5 rounded-full bg-linyr-gold" />
-              Launch blueprint delivered in 5 business days.
-            </div>
-            <div className="inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/10 px-4 py-2">
-              <span className="inline-flex size-1.5 rounded-full bg-linyr-gold" />
-              Dedicated strategist & creative lead on every project.
-            </div>
           </div>
 
           <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
             <a
               href={ctaContent.ctaHref}
+              target="_blank"
+              rel="noreferrer"
               className="inline-flex items-center rounded-full bg-linyr-gold px-8 py-3 text-base font-semibold text-linyr-charcoal transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_22px_60px_rgba(245,197,66,0.45)]"
             >
               {ctaContent.ctaLabel}
             </a>
             <Link
-              href="/demo/commerce"
+              href="/launch-blueprint.pdf"
+              target="_blank"
               className="inline-flex items-center gap-2 rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white/80 transition hover:border-white hover:text-white"
             >
               View launch blueprint →
             </Link>
           </div>
         </div>
-
         <div className="flex flex-col gap-6 rounded-3xl border border-white/15 bg-white/5 p-6 shadow-[0_22px_55px_rgba(5,8,25,0.45)]">
           <div className="rounded-2xl border border-white/20 bg-white/10 p-5 text-sm text-white/80">
             <p className="text-xs uppercase tracking-[0.35em] text-white/60">
-              Contact
+              What you leave with
             </p>
-            <p className="mt-3 text-lg font-semibold text-white">
-              {ctaContent.secondaryLabel}
-            </p>
-            <p className="mt-1 text-white/60">
-              Available Monday–Friday · 9a–7p EST
-            </p>
+            <ul className="mt-3 space-y-2">
+              <li>
+                ✔ Clarity on messaging pillars & high-impact hero narrative.
+              </li>
+              <li>
+                ✔ UX flow outline with key modules, motion, and content
+                prompts.
+              </li>
+              <li>
+                ✔ Timeline & investment ranges mapped to three engagement
+                tiers.
+              </li>
+            </ul>
           </div>
           <div className="rounded-2xl border border-white/20 bg-white/10 p-5 text-sm text-white/80">
             <p className="text-xs uppercase tracking-[0.35em] text-white/60">
-              Recent wins
+              Recent launch outcomes
             </p>
             <ul className="mt-3 space-y-2">
-              <li>● Crypto security platform → +128% conversion in 6 weeks</li>
+              <li>+128% conversion uplift for a crypto security platform.</li>
+              <li>3× trial signups for a hospitality marketplace relaunch.</li>
               <li>
-                ● Hospitality marketplace → 3× trial signups post redesign
+                42-day brand, web, and growth system build for an AI SaaS.
               </li>
-              <li>● AI workflow SaaS → Brand relaunch in 42 days</li>
             </ul>
-          </div>
-          <div className="rounded-2xl border border-white/20 bg-white/5 p-5 text-sm text-white/70">
-            <p className="text-xs uppercase tracking-[0.35em] text-white/50">
-              Availability
-            </p>
-            <p className="mt-3 text-base font-semibold text-white">
-              2 kickoff slots remaining for this quarter.
-            </p>
           </div>
         </div>
       </div>

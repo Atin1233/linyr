@@ -14,7 +14,19 @@ module.exports = {
       '6xl': '4rem',
     },
     extend: {
+      fontFamily: {
+        heading: ['var(--font-heading)', 'sans-serif'],
+        body: ['var(--font-body)', 'sans-serif'],
+      },
       colors: {
+        linyr: {
+          blue: '#1E40FF',
+          charcoal: '#111827',
+          offWhite: '#F9FAFB',
+          gold: '#F5C542',
+          slate: '#1F2937',
+          sky: '#A5B4FC',
+        },
         primary: {
           100: '#E6F6FE',
           200: '#C0EAFC',
@@ -40,6 +52,17 @@ module.exports = {
       },
       lineHeight: {
         hero: '4.5rem',
+      },
+      boxShadow: {
+        glass: '0 20px 45px rgba(17, 24, 39, 0.25)',
+        glow: '0 0 30px rgba(30, 64, 255, 0.35)',
+      },
+      backdropBlur: {
+        xs: '2px',
+      },
+      backgroundImage: {
+        'linyr-hero':
+          'radial-gradient(circle at top left, rgba(30, 64, 255, 0.18), transparent 55%), radial-gradient(circle at bottom right, rgba(245, 197, 66, 0.22), transparent 60%)',
       },
     },
   },

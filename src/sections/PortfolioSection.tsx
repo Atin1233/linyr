@@ -2,21 +2,21 @@ import Link from 'next/link';
 
 const portfolioItems = [
   {
-    title: 'Commerce',
+    title: 'Demo Site #1',
     description:
       'High-converting SaaS commerce landing system engineered for fast launches.',
     image: '/assets/images/nextjs-landing-page-screenshot.png',
     href: '/demo/commerce',
   },
   {
-    title: 'Workflow',
+    title: 'Demo Site #2',
     description:
       'Operational automation story blending traction metrics with product depth.',
     image: '/assets/images/nextjs-landing-page-screenshot.png',
     href: '/demo/workflow',
   },
   {
-    title: 'Insights',
+    title: 'Demo Site #3',
     description:
       'Narrative analytics experience that builds trust around complex data.',
     image: '/assets/images/nextjs-landing-page-screenshot.png',

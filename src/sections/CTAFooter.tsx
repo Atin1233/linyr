@@ -15,15 +15,15 @@ const ctaContent = {
 const CTAFooter = () => (
   <section
     id="book-consultation"
-    className="relative overflow-hidden bg-linyr-charcoal py-24 text-linyr-offWhite"
+    className="relative overflow-hidden bg-linyr-offWhite py-24 text-linyr-charcoal"
   >
     <div
-      className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(245,197,66,0.35),transparent_45%),radial-gradient(circle_at_bottom_left,rgba(30,64,255,0.45),transparent_55%)]"
+      className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(245,197,66,0.28),transparent_45%),radial-gradient(circle_at_bottom_left,rgba(30,64,255,0.28),transparent_55%)] opacity-80"
       aria-hidden
     />
-    <div className="relative mx-auto max-w-5xl rounded-3xl border border-white/10 bg-white/5 p-10 text-center shadow-[0_25px_65px_rgba(0,0,0,0.45)] backdrop-blur">
+    <div className="relative mx-auto max-w-5xl rounded-3xl border border-white/15 bg-gradient-to-br from-linyr-blue via-[#2333ff] to-[#101c6b] p-10 text-center text-linyr-offWhite shadow-[0_25px_65px_rgba(10,19,70,0.45)] backdrop-blur">
       <h2 className="font-heading text-3xl md:text-4xl">{ctaContent.title}</h2>
-      <p className="mx-auto mt-5 max-w-3xl text-base text-white/70 md:text-lg">
+      <p className="mx-auto mt-5 max-w-3xl text-base text-white/75 md:text-lg">
         {ctaContent.subtitle}
       </p>
 
@@ -46,19 +46,19 @@ const CTAFooter = () => (
         >
           {ctaContent.ctaLabel}
         </a>
-        <span className="text-sm text-white/70">
+        <span className="text-sm text-white/80">
           {ctaContent.secondaryLabel}
         </span>
       </div>
     </div>
-    <div className="relative mx-auto mt-16 flex max-w-5xl flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 text-sm text-white/60 sm:flex-row">
+    <div className="relative mx-auto mt-16 flex max-w-5xl flex-col items-center justify-between gap-4 border-t border-linyr-charcoal/10 pt-6 text-sm text-linyr-charcoal sm:flex-row">
       <span>
         © {new Date().getFullYear()} Linyr Digital. All rights reserved.
       </span>
       <div className="flex gap-6">
         <a
           href="https://www.linkedin.com"
-          className="hover:text-linyr-gold"
+          className="hover:text-linyr-blue"
           target="_blank"
           rel="noreferrer"
         >
@@ -66,7 +66,7 @@ const CTAFooter = () => (
         </a>
         <a
           href="https://dribbble.com"
-          className="hover:text-linyr-gold"
+          className="hover:text-linyr-blue"
           target="_blank"
           rel="noreferrer"
         >
@@ -74,7 +74,7 @@ const CTAFooter = () => (
         </a>
         <a
           href="https://behance.net"
-          className="hover:text-linyr-gold"
+          className="hover:text-linyr-blue"
           target="_blank"
           rel="noreferrer"
         >

@@ -52,7 +52,7 @@ const ProofSection = () => {
       className="relative mx-auto max-w-7xl px-6 pb-28 pt-10 text-linyr-charcoal md:px-10"
       id="proof"
     >
-      <div className="rounded-3xl bg-linyr-charcoal text-linyr-offWhite shadow-glass">
+      <div className="rounded-3xl bg-gradient-to-br from-linyr-blue via-[#2333ff] to-[#101c6b] text-linyr-offWhite shadow-glass">
         <div className="border-b border-white/10 px-6 py-10 md:px-12">
           <p className="text-sm uppercase tracking-[0.4em] text-white/60">
             Trusted By Fast-Growing Teams

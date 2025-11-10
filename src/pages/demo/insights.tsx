@@ -12,6 +12,8 @@ const treatmentGrid = [
       'Custom veneer roadmap',
       'Personalized shading &amp; texture',
     ],
+    image:
+      'https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?auto=format&fit=crop&w=1200&q=80',
   },
   {
     name: 'Comfort Restorations',
@@ -21,6 +23,8 @@ const treatmentGrid = [
       'In-house milling &amp; lab partners',
       'Post-visit wellness kit',
     ],
+    image:
+      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80',
   },
   {
     name: 'Family Wellness',
@@ -30,7 +34,56 @@ const treatmentGrid = [
       'Growth monitoring &amp; orthodontic screening',
       'Gentle education moments',
     ],
+    image:
+      'https://images.unsplash.com/photo-1581579186983-45502ce41e8b?auto=format&fit=crop&w=1200&q=80',
   },
+];
+
+const clinicGallery = [
+  {
+    src: 'https://images.unsplash.com/photo-1580281780460-82d277b0e3f1?auto=format&fit=crop&w=1200&q=80',
+    alt: 'Dentist consulting with patient in bright operatory',
+    label: 'Consult lounge',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1200&q=80',
+    alt: 'Reception staff greeting guest',
+    label: 'Concierge desk',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1588776814441-33f6f9e3f3c1?auto=format&fit=crop&w=1200&q=80',
+    alt: 'State-of-the-art dental equipment',
+    label: 'Digital studio',
+  },
+];
+
+const teamMembers = [
+  {
+    name: 'Dr. Mina Hartley',
+    role: 'Cosmetic & Restorative Dentist',
+    image:
+      'https://images.unsplash.com/photo-1525134479668-1bee5c7c6845?auto=format&fit=crop&w=1200&q=80',
+  },
+  {
+    name: 'Dr. Julian Park',
+    role: 'Implant & Surgical Specialist',
+    image:
+      'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=1200&q=80',
+  },
+  {
+    name: 'Amelia Chen, RDH',
+    role: 'Lead Hygienist & Wellness Coach',
+    image:
+      'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80',
+  },
+];
+
+const insurancePartners = [
+  'Delta Dental',
+  'MetLife',
+  'Guardian',
+  'Blue Cross Blue Shield',
+  'Cigna',
 ];
 
 const LuminaSmilesDemo = () => (
@@ -149,6 +202,143 @@ const LuminaSmilesDemo = () => (
         </div>
       </section>
 
+      <section className="bg-[#eff6ff] py-24 text-[#0f172a]">
+        <div className="mx-auto max-w-6xl px-6 md:px-12">
+          <div className="md:flex md:items-end md:justify-between">
+            <div>
+              <span className="inline-flex items-center rounded-full bg-[#2563eb]/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-[#2563eb]">
+                Care team
+              </span>
+              <h2 className="mt-6 font-heading text-3xl md:text-4xl">
+                Meet the clinicians behind Lumina’s patient experience.
+              </h2>
+            </div>
+            <p className="mt-4 max-w-xl text-sm text-[#475569] md:mt-0">
+              Biography cards ground the practice in real people—headshots,
+              specialties, and bedside manner anchors that help patients feel an
+              instant connection.
+            </p>
+          </div>
+          <div className="mt-12 grid gap-8 md:grid-cols-3">
+            {teamMembers.map((member) => (
+              <article
+                key={member.name}
+                className="overflow-hidden rounded-3xl border border-[#bfdbfe] bg-white shadow-[0_22px_55px_rgba(148,163,184,0.18)]"
+              >
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="h-60 w-full object-cover"
+                  loading="lazy"
+                />
+                <div className="space-y-3 p-6 text-sm text-[#475569]">
+                  <h3 className="font-heading text-xl text-[#1d4ed8]">
+                    {member.name}
+                  </h3>
+                  <p>{member.role}</p>
+                  <p>
+                    Personalized care notes, bedside manner highlights, and
+                    education credentials sit here for SEO-rich storytelling.
+                  </p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-24 text-[#0f172a]">
+        <div className="mx-auto max-w-6xl px-6 md:px-12">
+          <div className="grid gap-12 md:grid-cols-[1.1fr,0.9fr]">
+            <div className="space-y-6">
+              <span className="inline-flex items-center rounded-full bg-[#2563eb]/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-[#2563eb]">
+                Patient-first details
+              </span>
+              <h2 className="font-heading text-3xl md:text-4xl">
+                A calm studio with concierge-level transparency.
+              </h2>
+              <p className="text-sm text-[#475569]">
+                Small business patients need practical answers fast—where to
+                park, which insurance plans we accept, who to call after-hours.
+                This section mirrors what we wire into Lumina’s real site.
+              </p>
+              <dl className="grid gap-4 text-sm text-[#475569] sm:grid-cols-2">
+                <div className="rounded-2xl border border-[#bfdbfe] bg-[#eff6ff] p-4">
+                  <dt className="font-heading text-base text-[#1d4ed8]">
+                    Find us
+                  </dt>
+                  <dd>721 Aurora Avenue · Suite 300 · Seattle, WA 98109</dd>
+                </div>
+                <div className="rounded-2xl border border-[#bfdbfe] bg-[#eff6ff] p-4">
+                  <dt className="font-heading text-base text-[#1d4ed8]">
+                    Studio hours
+                  </dt>
+                  <dd>
+                    Mon–Thu · 7a–6p · Fri · 7a–3p · Select Saturdays by request
+                  </dd>
+                </div>
+                <div className="rounded-2xl border border-[#bfdbfe] bg-[#eff6ff] p-4">
+                  <dt className="font-heading text-base text-[#1d4ed8]">
+                    Contact
+                  </dt>
+                  <dd>(206) 555-0148 · care@luminasmiles.com</dd>
+                </div>
+                <div className="rounded-2xl border border-[#bfdbfe] bg-[#eff6ff] p-4">
+                  <dt className="font-heading text-base text-[#1d4ed8]">
+                    After-hours
+                  </dt>
+                  <dd>
+                    24/7 triage line and emergency doctor-on-call support.
+                  </dd>
+                </div>
+              </dl>
+              <div className="flex flex-wrap gap-3">
+                {insurancePartners.map((partner) => (
+                  <span
+                    key={partner}
+                    className="rounded-full border border-[#bfdbfe] bg-[#eff6ff] px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-[#2563eb]"
+                  >
+                    {partner}
+                  </span>
+                ))}
+              </div>
+              <div className="flex flex-wrap gap-3">
+                <Link
+                  href="/#book-consultation"
+                  className="inline-flex items-center rounded-full bg-[#2563eb] px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#1d4ed8]"
+                >
+                  Book a new patient exam
+                </Link>
+                <Link
+                  href="/"
+                  className="inline-flex items-center rounded-full border border-[#bfdbfe] px-6 py-3 text-sm font-semibold text-[#2563eb] transition hover:border-[#2563eb] hover:text-[#1e40af]"
+                >
+                  Download patient forms
+                </Link>
+              </div>
+            </div>
+            <div className="grid gap-6 sm:grid-cols-2">
+              {clinicGallery.map((item) => (
+                <figure
+                  key={item.alt}
+                  className="overflow-hidden rounded-3xl border border-[#bfdbfe] bg-white shadow-[0_20px_55px_rgba(148,163,184,0.2)]"
+                >
+                  <img
+                    src={item.src}
+                    alt={item.alt}
+                    className="h-48 w-full object-cover transition duration-500 hover:scale-105"
+                    loading="lazy"
+                  />
+                  <figcaption className="px-5 py-4 text-sm text-[#475569]">
+                    {item.label}
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-[#e0f2ff] py-24 text-[#0f172a]">
         <div className="mx-auto max-w-6xl px-6 md:px-12">
           <div className="md:flex md:items-center md:justify-between">
@@ -216,26 +406,34 @@ const LuminaSmilesDemo = () => (
             {treatmentGrid.map((item) => (
               <div
                 key={item.name}
-                className="fade-up flex h-full flex-col rounded-3xl border border-[#bfdbfe]/80 bg-[#eff6ff] p-8 shadow-[0_22px_50px_rgba(148,163,184,0.18)] transition hover:-translate-y-1 hover:shadow-[0_28px_65px_rgba(148,163,184,0.26)]"
+                className="fade-up overflow-hidden rounded-3xl border border-[#bfdbfe]/80 bg-[#eff6ff] shadow-[0_22px_50px_rgba(148,163,184,0.18)] transition hover:-translate-y-1 hover:shadow-[0_28px_65px_rgba(148,163,184,0.26)]"
               >
-                <h3 className="font-heading text-xl text-[#1d4ed8]">
-                  {item.name}
-                </h3>
-                <p className="mt-3 text-sm text-[#475569]">{item.copy}</p>
-                <ul className="mt-6 space-y-2 text-sm text-[#475569]">
-                  {item.perks.map((perk) => (
-                    <li key={perk} className="flex items-start gap-2">
-                      <span className="mt-1 inline-flex size-2 rounded-full bg-[#1d4ed8]" />
-                      <span>{perk}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Link
-                  href="/"
-                  className="mt-6 inline-flex items-center text-sm font-semibold text-[#1d4ed8] transition hover:text-[#1e40af]"
-                >
-                  Book this experience →
-                </Link>
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="h-44 w-full object-cover"
+                  loading="lazy"
+                />
+                <div className="flex h-full flex-col p-6">
+                  <h3 className="font-heading text-xl text-[#1d4ed8]">
+                    {item.name}
+                  </h3>
+                  <p className="mt-3 text-sm text-[#475569]">{item.copy}</p>
+                  <ul className="mt-6 space-y-2 text-sm text-[#475569]">
+                    {item.perks.map((perk) => (
+                      <li key={perk} className="flex items-start gap-2">
+                        <span className="mt-1 inline-flex size-2 rounded-full bg-[#1d4ed8]" />
+                        <span>{perk}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Link
+                    href="/"
+                    className="mt-6 inline-flex items-center text-sm font-semibold text-[#1d4ed8] transition hover:text-[#1e40af]"
+                  >
+                    Book this experience →
+                  </Link>
+                </div>
               </div>
             ))}
           </div>

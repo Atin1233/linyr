@@ -48,6 +48,48 @@ const servicePackages = [
   },
 ];
 
+const workspaceGallery = [
+  {
+    src: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80',
+    alt: 'Finance leadership workshop in modern boardroom',
+    caption: 'Founder working session inside Redwood Ledger HQ.',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1454165205744-3b78555e5572?auto=format&fit=crop&w=1200&q=80',
+    alt: 'Financial models and dashboards on laptop',
+    caption: 'Live dashboards and scenario modeling at work.',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80',
+    alt: 'Advisor reviewing paperwork with client',
+    caption: 'Client advisory pods meeting on-site with founders.',
+  },
+];
+
+const clientSnapshots = [
+  {
+    company: 'Northwind Labs',
+    industry: 'AI Security',
+    headline: 'Extended runway by 18 months with redesigned capital stack.',
+    image:
+      'https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=80',
+  },
+  {
+    company: 'Cascade Robotics',
+    industry: 'Robotics Manufacturing',
+    headline: 'Reduced burn multiple to 0.9× after unit economics overhaul.',
+    image:
+      'https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1200&q=80',
+  },
+  {
+    company: 'Atlas Banking',
+    industry: 'Fintech',
+    headline: 'Closed Series B with investor-ready diligence package.',
+    image:
+      'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80',
+  },
+];
+
 const RedwoodLedgerDemo = () => (
   <>
     <Meta
@@ -146,6 +188,69 @@ const RedwoodLedgerDemo = () => (
                 <p className="mt-3 text-sm leading-relaxed">{item.body}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-24 text-[#0b1739]">
+        <div className="mx-auto max-w-6xl px-6 md:px-12">
+          <div className="grid gap-12 lg:grid-cols-[1.2fr,0.8fr]">
+            <div className="fade-up">
+              <span className="inline-flex items-center rounded-full border border-[#0b1739]/15 bg-[#0b1739]/5 px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-[#0b1739]/70">
+                Inside the practice
+              </span>
+              <h2 className="mt-6 font-heading text-3xl md:text-4xl">
+                Real finance operators, real rooms, real accountability.
+              </h2>
+              <p className="mt-4 text-base leading-relaxed text-[#1f2f63]">
+                Prospective partners want a feel for the people they will work
+                with. The workspace gallery and hospitality details show Redwood
+                Ledger is a hands-on finance house—not a faceless SaaS portal.
+              </p>
+              <dl className="mt-8 grid gap-4 text-sm text-[#1f2f63] sm:grid-cols-2">
+                <div className="rounded-2xl border border-[#0b1739]/10 bg-white/80 p-4">
+                  <dt className="font-semibold text-[#0b1739]">Office</dt>
+                  <dd>501 Congress Ave, Suite 2600 · Austin, TX</dd>
+                </div>
+                <div className="rounded-2xl border border-[#0b1739]/10 bg-white/80 p-4">
+                  <dt className="font-semibold text-[#0b1739]">
+                    Concierge line
+                  </dt>
+                  <dd>(512) 555-0192 · concierge@redwoodledger.com</dd>
+                </div>
+                <div className="rounded-2xl border border-[#0b1739]/10 bg-white/80 p-4">
+                  <dt className="font-semibold text-[#0b1739]">Client hours</dt>
+                  <dd>Monday–Friday · 8:00a–6:30p CST</dd>
+                </div>
+                <div className="rounded-2xl border border-[#0b1739]/10 bg-white/80 p-4">
+                  <dt className="font-semibold text-[#0b1739]">
+                    Quarterly summits
+                  </dt>
+                  <dd>
+                    In-person in Austin or live in your HQ, included in every
+                    plan.
+                  </dd>
+                </div>
+              </dl>
+            </div>
+            <div className="fade-right grid gap-6 sm:grid-cols-2">
+              {workspaceGallery.map((item) => (
+                <figure
+                  key={item.alt}
+                  className="overflow-hidden rounded-3xl border border-[#0b1739]/10 bg-[#f8faff]"
+                >
+                  <img
+                    src={item.src}
+                    alt={item.alt}
+                    className="h-48 w-full object-cover transition duration-500 hover:scale-105"
+                    loading="lazy"
+                  />
+                  <figcaption className="px-5 py-4 text-sm text-[#1f2f63]">
+                    {item.caption}
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -317,6 +422,47 @@ const RedwoodLedgerDemo = () => (
                 </Link>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#0b1739]/5 py-24">
+        <div className="mx-auto max-w-6xl px-6 md:px-12">
+          <div className="mb-12 text-center text-[#0b1739]">
+            <span className="inline-flex items-center rounded-full border border-[#0b1739]/15 bg-white px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-[#0b1739]/70">
+              Client stories
+            </span>
+            <h2 className="mt-6 font-heading text-3xl md:text-4xl">
+              Operators who rely on Redwood Ledger day-to-day.
+            </h2>
+            <p className="mx-auto mt-3 max-w-3xl text-base text-[#1f2f63]">
+              Each engagement showcases real companies, real teams, and the
+              tangible wins that followed partnering with our finance pods.
+            </p>
+          </div>
+          <div className="grid gap-8 md:grid-cols-3">
+            {clientSnapshots.map((client) => (
+              <article
+                key={client.company}
+                className="overflow-hidden rounded-3xl border border-[#0b1739]/10 bg-white shadow-[0_25px_70px_rgba(15,23,42,0.12)] transition hover:-translate-y-1 hover:shadow-[0_30px_80px_rgba(15,23,42,0.16)]"
+              >
+                <img
+                  src={client.image}
+                  alt={`${client.company} team`}
+                  className="h-44 w-full object-cover"
+                  loading="lazy"
+                />
+                <div className="space-y-2 px-6 py-5 text-sm text-[#1f2f63]">
+                  <p className="text-xs uppercase tracking-[0.3em] text-[#0b1739]/70">
+                    {client.industry}
+                  </p>
+                  <h3 className="font-heading text-lg text-[#0b1739]">
+                    {client.company}
+                  </h3>
+                  <p>{client.headline}</p>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>

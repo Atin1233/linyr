@@ -9,18 +9,24 @@ const signatureItems = [
     description:
       'Small-batch beans, maple smoked vanilla, and oat creme brûlée foam create a signature finish.',
     price: '$5.50',
+    image:
+      'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=80',
   },
   {
     title: 'Harvest Tartine',
     description:
       'Sourdough, whipped lemon ricotta, roasted root vegetables, micro herbs, and citrus drizzle.',
     price: '$12.00',
+    image:
+      'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=1200&q=80',
   },
   {
     title: 'Midnight Chai',
     description:
       'Black tea, cardamom caramel, charred orange zest, and smoked cinnamon cloud.',
     price: '$5.00',
+    image:
+      'https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1200&q=80',
   },
 ];
 
@@ -36,6 +42,55 @@ const eventHighlights = [
   {
     name: 'Maker Market Saturdays',
     copy: 'Local artists, florist pop-ups, and seasonal latte collaborations in the courtyard.',
+  },
+];
+
+const bakeryItems = [
+  {
+    name: 'Smoked Honey Cruffin',
+    description:
+      'Laminate dough, burnt honey butter, cinnamon sugar, vanilla bean custard.',
+    image:
+      'https://images.unsplash.com/photo-1483695028939-5bb13f8648b4?auto=format&fit=crop&w=1200&q=80',
+    price: '$4.75',
+  },
+  {
+    name: 'Stone Fruit Galette',
+    description:
+      'Flaky rye crust, roasted peaches, thyme syrup, mascarpone whip.',
+    image:
+      'https://images.unsplash.com/photo-1504753793650-d4a2b783c15e?auto=format&fit=crop&w=1200&q=80',
+    price: '$6.50',
+  },
+  {
+    name: 'Savory Garden Quiche',
+    description:
+      'Heirloom tomatoes, goat cheese, caramelized onions, basil pesto drizzle.',
+    image:
+      'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=1200&q=80',
+    price: '$7.25',
+  },
+];
+
+const pantryGoods = [
+  {
+    title: 'House Granola Blend',
+    detail: 'Almond brittle, cacao nibs, sorghum clusters, dried mulberries.',
+    image:
+      'https://images.unsplash.com/photo-1515504459833-1f1f26736e4b?auto=format&fit=crop&w=1200&q=80',
+  },
+  {
+    title: 'Seasonal Syrup Flight',
+    detail:
+      'Smoked rosemary, vanilla bean, burnt orange, and lavender cardamom.',
+    image:
+      'https://images.unsplash.com/photo-1455853659719-4b521eebc76d?auto=format&fit=crop&w=1200&q=80',
+  },
+  {
+    title: 'Roaster’s Reserve Beans',
+    detail: 'Honey-processed Guatemala El Injerto · 12oz whole bean.',
+    image:
+      'https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=1200&q=80',
   },
 ];
 
@@ -177,25 +232,33 @@ const HearthHarvestDemo = () => (
             {signatureItems.map((item) => (
               <article
                 key={item.title}
-                className="rounded-3xl border border-[#f97316]/10 bg-white p-6 shadow-[0_22px_45px_rgba(231,111,33,0.18)] transition hover:-translate-y-1 hover:shadow-[0_28px_60px_rgba(231,111,33,0.26)]"
+                className="overflow-hidden rounded-3xl border border-[#f97316]/15 bg-white shadow-[0_22px_45px_rgba(231,111,33,0.18)] transition hover:-translate-y-1 hover:shadow-[0_28px_60px_rgba(231,111,33,0.26)]"
               >
-                <header className="flex items-center justify-between">
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="size-full object-cover transition duration-500 hover:scale-105"
+                    loading="lazy"
+                  />
+                  <span className="absolute bottom-3 right-3 rounded-full bg-black/60 px-3 py-1 text-xs font-semibold text-white">
+                    {item.price}
+                  </span>
+                </div>
+                <div className="space-y-3 px-6 py-5">
                   <h3 className="font-heading text-xl text-[#7c2d12]">
                     {item.title}
                   </h3>
-                  <span className="rounded-full bg-[#f97316]/10 px-3 py-1 text-xs font-semibold text-[#7c2d12]">
-                    {item.price}
-                  </span>
-                </header>
-                <p className="mt-3 text-sm leading-relaxed text-[#6b3a21]">
-                  {item.description}
-                </p>
-                <Link
-                  href="/"
-                  className="mt-5 inline-flex items-center text-sm font-semibold text-[#7c2d12] transition hover:text-[#5a1e09]"
-                >
-                  Order now →
-                </Link>
+                  <p className="text-sm leading-relaxed text-[#6b3a21]">
+                    {item.description}
+                  </p>
+                  <Link
+                    href="/"
+                    className="inline-flex items-center text-sm font-semibold text-[#7c2d12] transition hover:text-[#5a1e09]"
+                  >
+                    Order now →
+                  </Link>
+                </div>
               </article>
             ))}
           </div>
@@ -217,6 +280,75 @@ const HearthHarvestDemo = () => (
             >
               Join Harvest Rewards
             </Link>
+          </div>
+
+          <div className="mt-14 grid gap-10 lg:grid-cols-[1.2fr,0.8fr]">
+            <div>
+              <h3 className="font-heading text-2xl text-[#7c2d12]">
+                From the bakery case
+              </h3>
+              <p className="mt-3 text-sm text-[#6b3a21]">
+                Fresh every dawn, showcased with photography that makes guests
+                hungry before they arrive.
+              </p>
+              <div className="mt-6 grid gap-6 sm:grid-cols-3">
+                {bakeryItems.map((item) => (
+                  <figure
+                    key={item.name}
+                    className="overflow-hidden rounded-3xl border border-[#f97316]/15 bg-white shadow-[0_12px_35px_rgba(231,111,33,0.15)]"
+                  >
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      className="h-40 w-full object-cover transition duration-500 hover:scale-105"
+                      loading="lazy"
+                    />
+                    <figcaption className="space-y-2 p-4 text-sm text-[#6b3a21]">
+                      <div className="flex items-center justify-between">
+                        <p className="font-heading text-base text-[#7c2d12]">
+                          {item.name}
+                        </p>
+                        <span className="rounded-full bg-[#f97316]/10 px-2 py-1 text-xs font-semibold text-[#7c2d12]">
+                          {item.price}
+                        </span>
+                      </div>
+                      <p>{item.description}</p>
+                    </figcaption>
+                  </figure>
+                ))}
+              </div>
+            </div>
+
+            <div className="rounded-3xl border border-[#f97316]/15 bg-white p-6 shadow-[0_18px_45px_rgba(231,111,33,0.16)]">
+              <h3 className="font-heading text-2xl text-[#7c2d12]">
+                Pantry & market shelf
+              </h3>
+              <p className="mt-3 text-sm text-[#6b3a21]">
+                Retail modules drive add-on revenue and capture holiday
+                preorders.
+              </p>
+              <ul className="mt-6 space-y-4">
+                {pantryGoods.map((good) => (
+                  <li
+                    key={good.title}
+                    className="flex gap-4 rounded-2xl border border-[#f97316]/15 bg-[#fff7f1] p-4"
+                  >
+                    <img
+                      src={good.image}
+                      alt={good.title}
+                      className="size-14 flex-none rounded-xl object-cover"
+                      loading="lazy"
+                    />
+                    <div className="text-sm text-[#6b3a21]">
+                      <p className="font-heading text-base text-[#7c2d12]">
+                        {good.title}
+                      </p>
+                      <p>{good.detail}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -362,6 +494,109 @@ const HearthHarvestDemo = () => (
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#fff7f1] py-24 text-[#3b1b0a]">
+        <div className="mx-auto max-w-6xl px-6 md:px-12">
+          <div className="grid gap-12 md:grid-cols-[1fr,1.1fr]">
+            <div className="space-y-6">
+              <span className="inline-flex items-center rounded-full bg-[#f97316]/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-[#c2410c]">
+                Visit Hearth & Harvest
+              </span>
+              <h2 className="font-heading text-3xl md:text-4xl">
+                Warm hospitality waiting in downtown Asheville.
+              </h2>
+              <p className="text-sm text-[#6b3a21]">
+                Practical modules help locals find hours, parking, and same-day
+                preorder options. Everything translates seamlessly to Google
+                Business Profile and delivery partners.
+              </p>
+              <dl className="grid gap-4 text-sm text-[#6b3a21] sm:grid-cols-2">
+                <div className="rounded-2xl border border-[#f97316]/15 bg-white p-4">
+                  <dt className="font-heading text-base text-[#7c2d12]">
+                    Address
+                  </dt>
+                  <dd>78 Cedar Street · Asheville, NC 28801</dd>
+                  <dd className="mt-1 text-xs uppercase tracking-widest text-[#c2410c]">
+                    Free street parking after 6p
+                  </dd>
+                </div>
+                <div className="rounded-2xl border border-[#f97316]/15 bg-white p-4">
+                  <dt className="font-heading text-base text-[#7c2d12]">
+                    Hours
+                  </dt>
+                  <dd>Mon–Thu · 7a–7p · Fri–Sat · 7a–11p · Sun · 8a–4p</dd>
+                </div>
+                <div className="rounded-2xl border border-[#f97316]/15 bg-white p-4">
+                  <dt className="font-heading text-base text-[#7c2d12]">
+                    Contact
+                  </dt>
+                  <dd>(828) 555-0136 · hello@hearthharvest.com</dd>
+                </div>
+                <div className="rounded-2xl border border-[#f97316]/15 bg-white p-4">
+                  <dt className="font-heading text-base text-[#7c2d12]">
+                    Same-day pickup
+                  </dt>
+                  <dd>Order pastries and beans by 2p for evening pickup.</dd>
+                </div>
+              </dl>
+              <div className="flex flex-wrap gap-3">
+                <Link
+                  href="/#book-consultation"
+                  className="inline-flex items-center rounded-full bg-[#f59e0b] px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#d97706]"
+                >
+                  Schedule a cafe tour
+                </Link>
+                <Link
+                  href="/"
+                  className="inline-flex items-center rounded-full border border-[#f97316]/30 px-6 py-3 text-sm font-semibold text-[#7c2d12] transition hover:border-[#f97316]/60 hover:text-[#5a1e09]"
+                >
+                  View catering menu
+                </Link>
+              </div>
+            </div>
+            <div className="overflow-hidden rounded-3xl border border-[#f97316]/15 bg-white shadow-[0_24px_55px_rgba(231,111,33,0.2)]">
+              <img
+                src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=1200&q=80"
+                alt="Cafe exterior on Cedar Street"
+                className="h-72 w-full object-cover"
+                loading="lazy"
+              />
+              <div className="grid gap-6 p-6 md:grid-cols-2">
+                {[
+                  {
+                    label: 'Neighborhood',
+                    value: 'Historic River Arts District',
+                  },
+                  {
+                    label: 'Transit',
+                    value: 'Bus R7 · Cedar & 2nd stop out front',
+                  },
+                  {
+                    label: 'Private Events',
+                    value: 'Fireside room for 25 guests',
+                  },
+                  {
+                    label: 'Accessibility',
+                    value: 'ADA entrance & hearing assistance',
+                  },
+                ].map((item) => (
+                  <div
+                    key={item.label}
+                    className="rounded-2xl border border-[#f97316]/15 bg-[#fff7f1] p-4 text-sm text-[#6b3a21]"
+                  >
+                    <p className="text-xs uppercase tracking-[0.3em] text-[#c2410c]">
+                      {item.label}
+                    </p>
+                    <p className="mt-2 font-heading text-base text-[#7c2d12]">
+                      {item.value}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -4,85 +4,81 @@ import { Meta } from '../../layout/Meta';
 import { AppConfig } from '../../utils/AppConfig';
 
 const navigationLinks = [
-  { label: 'Overview', href: '#overview' },
+  { label: 'Home', href: '#overview' },
   { label: 'Treatments', href: '#treatments' },
-  { label: 'Care Team', href: '#care-team' },
-  { label: 'Patient Info', href: '#patient-info' },
+  { label: 'Team', href: '#team' },
+  { label: 'Patients', href: '#patient-info' },
+  { label: 'Gallery', href: '#gallery' },
 ];
 
-const treatmentGrid = [
+const treatmentCategories = [
   {
-    name: 'Smile Design Studio',
-    copy: 'Digital mockups, wax-up previews, and veneer artistry guided by our cosmetic atelier.',
-    perks: [
-      '3D smile preview session',
-      'Custom veneer roadmap',
-      'Personalized shading &amp; texture',
+    title: 'Cosmetic Dentistry',
+    description:
+      'Veneers, bonding, whitening, and smile design plans crafted to enhance aesthetics while protecting long-term health.',
+    items: [
+      'Smile design consults',
+      'Porcelain veneers & bonding',
+      'Professional whitening',
+      'Aligners & retainers',
     ],
-    image:
-      'https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?auto=format&fit=crop&w=1200&q=80',
   },
   {
-    name: 'Comfort Restorations',
-    copy: 'Sedation choices, same-day crowns, and guided recovery ensure restorative care stays stress-free.',
-    perks: [
-      'Spa-inspired sedation suites',
-      'In-house milling &amp; lab partners',
-      'Post-visit wellness kit',
+    title: 'Restorative Care',
+    description:
+      'Same-day crowns, implants, and restorative dentistry using digital imaging for comfort and precision.',
+    items: [
+      'CEREC same-day crowns',
+      'Dental implants & bridges',
+      'Inlays/onlays',
+      'TMJ therapy',
     ],
-    image:
-      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80',
   },
   {
-    name: 'Family Wellness',
-    copy: 'Preventative care for every age, with tailored guidance for parents and teens.',
-    perks: [
-      'Fluoride varnish &amp; sealants',
-      'Growth monitoring &amp; orthodontic screening',
-      'Gentle education moments',
+    title: 'Wellness & Prevention',
+    description:
+      'Comprehensive exams, hygiene visits, and preventative plans for the entire family, including pediatric specialists.',
+    items: [
+      'Comprehensive exams',
+      'Periodontal therapy',
+      'Pediatric dentistry',
+      'Night guards & sleep care',
     ],
-    image:
-      'https://images.unsplash.com/photo-1581579186983-45502ce41e8b?auto=format&fit=crop&w=1200&q=80',
-  },
-];
-
-const clinicGallery = [
-  {
-    src: 'https://images.unsplash.com/photo-1580281780460-82d277b0e3f1?auto=format&fit=crop&w=1200&q=80',
-    alt: 'Dentist consulting with patient in bright operatory',
-    label: 'Consult lounge',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1200&q=80',
-    alt: 'Reception staff greeting guest',
-    label: 'Concierge desk',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1588776814441-33f6f9e3f3c1?auto=format&fit=crop&w=1200&q=80',
-    alt: 'State-of-the-art dental equipment',
-    label: 'Digital studio',
   },
 ];
 
-const teamMembers = [
+const doctorProfiles = [
   {
     name: 'Dr. Mina Hartley',
     role: 'Cosmetic & Restorative Dentist',
+    bio: 'Spearheads Lumina’s cosmetic studio with 12+ years designing minimally invasive smile makeovers.',
     image:
-      'https://images.unsplash.com/photo-1525134479668-1bee5c7c6845?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1000&q=80',
   },
   {
     name: 'Dr. Julian Park',
     role: 'Implant & Surgical Specialist',
+    bio: 'Board-certified surgeon focused on implants, gum grafts, and complex restorative treatment.',
     image:
-      'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=1000&q=80',
   },
   {
     name: 'Amelia Chen, RDH',
     role: 'Lead Hygienist & Wellness Coach',
+    bio: 'Coordinates hygiene, home-care plans, and wellness workshops for families and professionals.',
     image:
-      'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?auto=format&fit=crop&w=1000&q=80',
   },
+];
+
+const patientResources = [
+  {
+    label: 'Address',
+    value: '721 Aurora Avenue · Suite 300 · Seattle, WA 98109',
+  },
+  { label: 'Patient line', value: '(206) 555-0148 · care@luminasmiles.com' },
+  { label: 'Hours', value: 'Mon–Thu 7a–6p · Fri 7a–3p · Select Sat by appt' },
+  { label: 'After-hours', value: '24/7 emergency line and on-call dentist' },
 ];
 
 const insurancePartners = [
@@ -93,187 +89,228 @@ const insurancePartners = [
   'Cigna',
 ];
 
+const smileGallery = [
+  'https://images.unsplash.com/photo-1505849864904-01b9e182ed1e?auto=format&fit=crop&w=1200&q=80',
+  'https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?auto=format&fit=crop&w=1200&q=80',
+  'https://images.unsplash.com/photo-1573496529574-be85d6a60704?auto=format&fit=crop&w=1200&q=80',
+];
+
+const testimonials = [
+  {
+    quote:
+      '“From the warm welcome to the digital smile preview, I felt informed and cared for. The team explained every step and my new smile feels natural.”',
+    name: 'Avery Martinez',
+    detail: 'Wedding photographer · Invisalign & whitening',
+  },
+  {
+    quote:
+      '“The sedation options, recovery guides, and follow-up calls made implant surgery surprisingly smooth. Lumina truly delivers concierge care.”',
+    name: 'Daniel Rios',
+    detail: 'Entrepreneur · Implant restoration',
+  },
+];
+
 const LuminaSmilesDemo = () => (
   <>
     <Meta
       title={`Lumina Smiles Dental Demo — ${AppConfig.title}`}
-      description="Step through Lumina Smiles Dental, a serene dental studio landing page crafted by Linyr Digital for patient confidence and online bookings."
+      description="Tour Lumina Smiles Dental, a contemporary practice site featuring treatments, team introductions, patient resources, and a calming visual gallery."
     />
-    <main className="bg-[#f4f9ff] text-[#0f172a]">
-      <section id="overview" className="relative overflow-hidden">
-        <header className="absolute inset-x-0 top-0 z-30">
-          <div className="mx-auto flex max-w-6xl items-center justify-between rounded-b-3xl bg-white/95 px-6 py-4 text-[#0f172a] shadow-[0_10px_35px_rgba(37,99,235,0.15)] backdrop-blur md:px-12">
-            <Link
-              href="/"
-              className="font-heading text-lg font-semibold text-[#2563eb]"
-            >
-              Lumina Smiles
-            </Link>
-            <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
-              {navigationLinks.map((item) => (
-                <Link
-                  key={item.label}
-                  href={item.href}
-                  className="rounded-full px-3 py-1 text-[#0f172a]/75 transition hover:bg-[#2563eb]/10 hover:text-[#2563eb]"
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </nav>
-            <Link
-              href="#treatments"
-              className="inline-flex items-center rounded-full bg-[#2563eb] px-4 py-2 text-xs font-semibold text-white shadow-[0_12px_30px_rgba(37,99,235,0.32)] transition hover:-translate-y-0.5 hover:bg-[#1d4ed8]"
-            >
-              Book a visit
-            </Link>
-          </div>
-        </header>
-        <div className="absolute inset-0 bg-gradient-to-br from-[#8ec5fc] via-[#e0c3fc] to-[#a5f3fc]" />
-        <div className="relative mx-auto flex max-w-6xl flex-col gap-20 px-6 py-28 md:px-12">
-          <div className="grid gap-12 md:grid-cols-[1.1fr,0.9fr]">
-            <div className="fade-up">
-              <span className="inline-flex items-center rounded-full border border-white/30 bg-white/20 px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-white">
-                Modern Dental Studio Demo
-              </span>
-              <h1 className="mt-6 font-heading text-4xl leading-tight text-[#0f172a] md:text-6xl">
-                Lumina Smiles — Calming care, luminous results.
-              </h1>
-              <p className="mt-6 text-lg text-[#1e293b]/80 md:text-xl">
-                {`This concept site shows patients every reason to feel at ease—soft gradients, welcoming copy, interactive before/after stories, and multiple ways to connect with the care team.`}
-              </p>
-              <div className="mt-10 flex flex-wrap items-center gap-4">
-                <Link
-                  href="#treatments"
-                  className="inline-flex items-center rounded-full bg-white px-7 py-3 text-sm font-semibold text-[#2563eb] shadow-[0_18px_40px_rgba(134,192,255,0.35)] transition hover:-translate-y-0.5 hover:shadow-[0_22px_50px_rgba(134,192,255,0.45)]"
-                >
-                  Explore treatments
-                </Link>
-                <Link
-                  href="/#book-consultation"
-                  className="inline-flex items-center rounded-full border border-white/60 px-6 py-3 text-sm font-semibold text-white transition hover:border-white"
-                >
-                  Schedule a consult →
-                </Link>
-              </div>
+    <main className="bg-[#f5f8ff] text-[#0f172a]">
+      <header className="sticky top-0 z-40 bg-white/95 backdrop-blur">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 md:px-12">
+          <Link
+            href="/"
+            className="font-heading text-lg font-semibold text-[#2563eb]"
+          >
+            Lumina Smiles
+          </Link>
+          <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
+            {navigationLinks.map((link) => (
+              <Link
+                key={link.label}
+                href={link.href}
+                className="rounded-full px-3 py-1 text-[#1e293b]/80 transition hover:bg-[#e6efff] hover:text-[#2563eb]"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+          <Link
+            href="/#book-consultation"
+            className="inline-flex items-center rounded-full bg-[#2563eb] px-4 py-2 text-xs font-semibold text-white shadow-[0_8px_22px_rgba(37,99,235,0.25)] transition hover:-translate-y-0.5 hover:bg-[#1d4ed8]"
+          >
+            Book an appointment
+          </Link>
+        </div>
+      </header>
+
+      <section id="overview" className="border-b border-[#e0e7ff] bg-white">
+        <div className="mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-[1.1fr,0.9fr] md:px-12">
+          <div className="space-y-6">
+            <span className="inline-flex items-center rounded-full bg-[#e6efff] px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-[#2563eb]">
+              Calm, concierge dental care
+            </span>
+            <h1 className="font-heading text-4xl leading-tight md:text-5xl">
+              A dental studio built around comfort, technology, and lasting
+              wellness.
+            </h1>
+            <p className="text-base text-[#475569]">
+              From virtual smile design to gentle recovery plans, Lumina Smiles
+              brings together specialists, hygienists, and patient coordinators
+              under one roof. Explore treatments, meet the team, and plan your
+              first visit.
+            </p>
+            <div className="flex flex-wrap items-center gap-4">
+              <Link
+                href="#treatments"
+                className="inline-flex items-center rounded-full bg-[#2563eb] px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#1d4ed8]"
+              >
+                Explore treatments
+              </Link>
+              <Link
+                href="#patient-info"
+                className="inline-flex items-center rounded-full border border-[#2563eb]/30 px-6 py-3 text-sm font-semibold text-[#2563eb] transition hover:border-[#2563eb]"
+              >
+                New patient guide →
+              </Link>
             </div>
-            <div className="fade-right relative overflow-hidden rounded-3xl border border-white/40 bg-white/50 p-6 backdrop-blur">
-              <div className="absolute -top-16 right-0 size-48 rounded-full bg-[radial-gradient(circle_at_center,rgba(148,197,252,0.35),transparent)]" />
-              <div className="absolute -bottom-16 left-8 size-56 rounded-full bg-[radial-gradient(circle_at_center,rgba(224,195,252,0.45),transparent)]" />
-              <div className="relative space-y-6">
-                <div className="grid gap-4">
-                  <div className="relative overflow-hidden rounded-3xl border border-white/40">
-                    <img
-                      src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=900&q=80"
-                      alt="Dental studio lobby"
-                      className="h-48 w-full object-cover"
-                      loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/60 via-transparent to-transparent" />
-                    <p className="absolute bottom-4 left-4 text-sm font-semibold text-white">
-                      Walk through the Lumina welcome lounge
-                    </p>
-                  </div>
-                  <ul className="space-y-3 text-sm text-[#1e293b]/80">
-                    <li className="flex items-start gap-3">
-                      <span className="mt-1 inline-flex size-2 rounded-full bg-[#2563eb]" />
-                      <span>{`Calming welcome video with virtual office tour.`}</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="mt-1 inline-flex size-2 rounded-full bg-[#2563eb]" />
-                      <span>{`Insurance concierge with instant benefits checker.`}</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="mt-1 inline-flex size-2 rounded-full bg-[#2563eb]" />
-                      <span>{`Online booking for virtual and in-studio appointments.`}</span>
-                    </li>
-                  </ul>
-                </div>
-                <p className="text-sm text-[#1e293b]/70">
-                  {`Throughout the page, emotional reassurance blends with clinical credibility. Soft reveals, luminous gradients, and motion cues move visitors toward booking.`}
+            <ul className="grid gap-4 text-sm text-[#475569] sm:grid-cols-2">
+              <li className="rounded-2xl border border-[#e0e7ff] bg-[#f5f8ff] p-4">
+                <p className="font-heading text-base text-[#0f172a]">
+                  Digital smile previews
+                </p>
+                <p className="mt-1 text-xs uppercase tracking-[0.2em] text-[#2563eb]">
+                  see results before treatment
+                </p>
+              </li>
+              <li className="rounded-2xl border border-[#e0e7ff] bg-[#f5f8ff] p-4">
+                <p className="font-heading text-base text-[#0f172a]">
+                  Sedation & comfort options
+                </p>
+                <p className="mt-1 text-xs uppercase tracking-[0.2em] text-[#2563eb]">
+                  for every appointment
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div className="overflow-hidden rounded-3xl border border-[#e0e7ff] shadow-[0_20px_60px_rgba(37,99,235,0.12)]">
+            <img
+              src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1400&q=80"
+              alt="Dental studio reception"
+              className="h-72 w-full object-cover"
+              loading="lazy"
+            />
+            <div className="grid gap-4 border-t border-[#e0e7ff] bg-white px-6 py-5 text-sm text-[#475569]">
+              <div>
+                <p className="text-xs uppercase tracking-[0.3em] text-[#2563eb]">
+                  First visit
+                </p>
+                <p className="mt-1">
+                  Welcome consult, comfort menu, and 3D imaging in under 90
+                  minutes.
                 </p>
               </div>
-            </div>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-3">
-            <div className="rounded-3xl border border-white/40 bg-white/50 p-6 text-sm text-[#1e293b]/80 shadow-[0_25px_60px_rgba(140,197,252,0.35)]">
-              <p className="text-xs uppercase tracking-[0.3em] text-[#2563eb]">
-                Comfort
-              </p>
-              <h3 className="mt-3 font-heading text-xl text-[#0f172a]">
-                Spa-inspired sedation lounge
-              </h3>
-              <p className="mt-2">
-                Aromatherapy, weighted blankets, and tranquil audio create a
-                restorative atmosphere for anxious patients.
-              </p>
-            </div>
-            <div className="rounded-3xl border border-white/40 bg-white/50 p-6 text-sm text-[#1e293b]/80 shadow-[0_25px_60px_rgba(140,197,252,0.35)]">
-              <p className="text-xs uppercase tracking-[0.3em] text-[#2563eb]">
-                Technology
-              </p>
-              <h3 className="mt-3 font-heading text-xl text-[#0f172a]">
-                3D Smile Lab
-              </h3>
-              <p className="mt-2">
-                Iterative previews with AI-assisted modelling ensure patients
-                visualize their transformation before treatment.
-              </p>
-            </div>
-            <div className="rounded-3xl border border-white/40 bg-white/50 p-6 text-sm text-[#1e293b]/80 shadow-[0_25px_60px_rgba(140,197,252,0.35)]">
-              <p className="text-xs uppercase tracking-[0.3em] text-[#2563eb]">
-                Care Team
-              </p>
-              <h3 className="mt-3 font-heading text-xl text-[#0f172a]">
-                Concierge follow-through
-              </h3>
-              <p className="mt-2">
-                SMS check-ins, recovery kits, and curated post-care routines
-                drive satisfaction and referrals.
-              </p>
+              <div className="flex items-center gap-4">
+                <div className="rounded-2xl border border-[#e0e7ff] bg-[#f5f8ff] p-4 text-center">
+                  <p className="font-heading text-xl text-[#2563eb]">98%</p>
+                  <p className="mt-1 text-xs uppercase tracking-[0.2em] text-[#2563eb]/70">
+                    patient satisfaction
+                  </p>
+                </div>
+                <div className="rounded-2xl border border-[#e0e7ff] bg-[#f5f8ff] p-4 text-center">
+                  <p className="font-heading text-xl text-[#2563eb]">24/7</p>
+                  <p className="mt-1 text-xs uppercase tracking-[0.2em] text-[#2563eb]/70">
+                    emergency line
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="care-team" className="bg-[#eff6ff] py-24 text-[#0f172a]">
+      <section id="treatments" className="bg-white py-24">
         <div className="mx-auto max-w-6xl px-6 md:px-12">
           <div className="md:flex md:items-end md:justify-between">
             <div>
-              <span className="inline-flex items-center rounded-full bg-[#2563eb]/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-[#2563eb]">
-                Care team
+              <span className="inline-flex items-center rounded-full bg-[#e6efff] px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-[#2563eb]">
+                Treatments
               </span>
-              <h2 className="mt-6 font-heading text-3xl md:text-4xl">
-                Meet the clinicians behind Lumina’s patient experience.
+              <h2 className="mt-4 font-heading text-3xl md:text-4xl">
+                Comprehensive dentistry, personalized to you.
               </h2>
             </div>
             <p className="mt-4 max-w-xl text-sm text-[#475569] md:mt-0">
-              Biography cards ground the practice in real people—headshots,
-              specialties, and bedside manner anchors that help patients feel an
-              instant connection.
+              We blend cosmetic expertise, restorative technology, and
+              preventative care so every patient has a confident path forward.
             </p>
           </div>
+
           <div className="mt-12 grid gap-8 md:grid-cols-3">
-            {teamMembers.map((member) => (
+            {treatmentCategories.map((category) => (
               <article
-                key={member.name}
-                className="overflow-hidden rounded-3xl border border-[#bfdbfe] bg-white shadow-[0_22px_55px_rgba(148,163,184,0.18)]"
+                key={category.title}
+                className="rounded-3xl border border-[#e0e7ff] bg-[#f5f8ff] p-8 shadow-[0_16px_45px_rgba(15,23,42,0.08)]"
+              >
+                <h3 className="font-heading text-xl text-[#0f172a]">
+                  {category.title}
+                </h3>
+                <p className="mt-3 text-sm text-[#475569]">
+                  {category.description}
+                </p>
+                <ul className="mt-6 space-y-2 text-sm text-[#475569]">
+                  {category.items.map((item) => (
+                    <li key={item} className="flex items-start gap-2">
+                      <span className="mt-1 inline-flex size-2 rounded-full bg-[#2563eb]" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="team" className="bg-[#f0f4ff] py-24">
+        <div className="mx-auto max-w-6xl px-6 md:px-12">
+          <div className="md:flex md:items-end md:justify-between">
+            <div className="max-w-xl">
+              <span className="inline-flex items-center rounded-full bg-white px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-[#2563eb]/70">
+                Meet the team
+              </span>
+              <h2 className="mt-4 font-heading text-3xl md:text-4xl">
+                Specialists, hygienists, and coordinators who know your name.
+              </h2>
+            </div>
+            <p className="mt-4 max-w-lg text-sm text-[#475569] md:mt-0">
+              Each patient is paired with a lead dentist and wellness
+              coordinator so communication is easy and every visit feels
+              familiar.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-8 md:grid-cols-3">
+            {doctorProfiles.map((doctor) => (
+              <article
+                key={doctor.name}
+                className="overflow-hidden rounded-3xl border border-[#e0e7ff] bg-white shadow-[0_18px_55px_rgba(15,23,42,0.1)]"
               >
                 <img
-                  src={member.image}
-                  alt={member.name}
-                  className="h-60 w-full object-cover"
+                  src={doctor.image}
+                  alt={doctor.name}
+                  className="h-64 w-full object-cover"
                   loading="lazy"
                 />
-                <div className="space-y-3 p-6 text-sm text-[#475569]">
-                  <h3 className="font-heading text-xl text-[#1d4ed8]">
-                    {member.name}
+                <div className="space-y-2 p-6 text-sm text-[#475569]">
+                  <h3 className="font-heading text-lg text-[#0f172a]">
+                    {doctor.name}
                   </h3>
-                  <p>{member.role}</p>
-                  <p>
-                    Personalized care notes, bedside manner highlights, and
-                    education credentials sit here for SEO-rich storytelling.
+                  <p className="text-xs uppercase tracking-[0.3em] text-[#2563eb]">
+                    {doctor.role}
                   </p>
+                  <p>{doctor.bio}</p>
                 </div>
               </article>
             ))}
@@ -281,192 +318,123 @@ const LuminaSmilesDemo = () => (
         </div>
       </section>
 
-      <section id="patient-info" className="bg-white py-24 text-[#0f172a]">
+      <section id="patient-info" className="bg-white py-24">
         <div className="mx-auto max-w-6xl px-6 md:px-12">
           <div className="grid gap-12 md:grid-cols-[1.1fr,0.9fr]">
             <div className="space-y-6">
-              <span className="inline-flex items-center rounded-full bg-[#2563eb]/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-[#2563eb]">
-                Patient-first details
+              <span className="inline-flex items-center rounded-full bg-[#e6efff] px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-[#2563eb]">
+                Patient resources
               </span>
               <h2 className="font-heading text-3xl md:text-4xl">
-                A calm studio with concierge-level transparency.
+                Clear details before your first visit.
               </h2>
               <p className="text-sm text-[#475569]">
-                Small business patients need practical answers fast—where to
-                park, which insurance plans we accept, who to call after-hours.
-                This section mirrors what we wire into Lumina’s real site.
+                We make it easy to transfer records, check insurance, and feel
+                comfortable from the moment you arrive. Call or message us
+                anytime.
               </p>
               <dl className="grid gap-4 text-sm text-[#475569] sm:grid-cols-2">
-                <div className="rounded-2xl border border-[#bfdbfe] bg-[#eff6ff] p-4">
-                  <dt className="font-heading text-base text-[#1d4ed8]">
-                    Find us
-                  </dt>
-                  <dd>721 Aurora Avenue · Suite 300 · Seattle, WA 98109</dd>
-                </div>
-                <div className="rounded-2xl border border-[#bfdbfe] bg-[#eff6ff] p-4">
-                  <dt className="font-heading text-base text-[#1d4ed8]">
-                    Studio hours
-                  </dt>
-                  <dd>
-                    Mon–Thu · 7a–6p · Fri · 7a–3p · Select Saturdays by request
-                  </dd>
-                </div>
-                <div className="rounded-2xl border border-[#bfdbfe] bg-[#eff6ff] p-4">
-                  <dt className="font-heading text-base text-[#1d4ed8]">
-                    Contact
-                  </dt>
-                  <dd>(206) 555-0148 · care@luminasmiles.com</dd>
-                </div>
-                <div className="rounded-2xl border border-[#bfdbfe] bg-[#eff6ff] p-4">
-                  <dt className="font-heading text-base text-[#1d4ed8]">
-                    After-hours
-                  </dt>
-                  <dd>
-                    24/7 triage line and emergency doctor-on-call support.
-                  </dd>
-                </div>
+                {patientResources.map((item) => (
+                  <div
+                    key={item.label}
+                    className="rounded-2xl border border-[#e0e7ff] bg-[#f5f8ff] p-4"
+                  >
+                    <dt className="font-heading text-base text-[#0f172a]">
+                      {item.label}
+                    </dt>
+                    <dd>{item.value}</dd>
+                  </div>
+                ))}
               </dl>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-[#2563eb]">
                 {insurancePartners.map((partner) => (
                   <span
                     key={partner}
-                    className="rounded-full border border-[#bfdbfe] bg-[#eff6ff] px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-[#2563eb]"
+                    className="rounded-full border border-[#e0e7ff] bg-white px-4 py-2"
                   >
                     {partner}
                   </span>
                 ))}
               </div>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-4">
                 <Link
-                  href="/#book-consultation"
+                  href="tel:12065550148"
                   className="inline-flex items-center rounded-full bg-[#2563eb] px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#1d4ed8]"
                 >
-                  Book a new patient exam
+                  Call the studio
                 </Link>
                 <Link
-                  href="/"
-                  className="inline-flex items-center rounded-full border border-[#bfdbfe] px-6 py-3 text-sm font-semibold text-[#2563eb] transition hover:border-[#2563eb] hover:text-[#1e40af]"
+                  href="/#book-consultation"
+                  className="inline-flex items-center rounded-full border border-[#2563eb]/40 px-6 py-3 text-sm font-semibold text-[#2563eb] transition hover:border-[#2563eb]"
                 >
-                  Download patient forms
+                  Book online
                 </Link>
               </div>
             </div>
-            <div className="grid gap-6 sm:grid-cols-2">
-              {clinicGallery.map((item) => (
-                <figure
-                  key={item.alt}
-                  className="overflow-hidden rounded-3xl border border-[#bfdbfe] bg-white shadow-[0_20px_55px_rgba(148,163,184,0.2)]"
-                >
-                  <img
-                    src={item.src}
-                    alt={item.alt}
-                    className="h-48 w-full object-cover transition duration-500 hover:scale-105"
-                    loading="lazy"
-                  />
-                  <figcaption className="px-5 py-4 text-sm text-[#475569]">
-                    {item.label}
-                  </figcaption>
-                </figure>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-[#e0f2ff] py-24 text-[#0f172a]">
-        <div className="mx-auto max-w-6xl px-6 md:px-12">
-          <div className="md:flex md:items-center md:justify-between">
-            <div className="max-w-xl">
-              <h2 className="font-heading text-3xl md:text-4xl">
-                {`A meditative visual gallery.`}
-              </h2>
-              <p className="mt-4 text-sm text-[#475569]">
-                {`We highlight Lumina’s calming environments through a soft-focus media grid with hover parallax. It signals attention to detail and a serene patient journey.`}
-              </p>
-            </div>
-            <Link
-              href="/"
-              className="fade-right mt-8 inline-flex items-center rounded-full border border-[#2563eb]/40 px-6 py-3 text-sm font-semibold text-[#2563eb] transition hover:border-[#2563eb] md:mt-0"
-            >
-              Tour the studio →
-            </Link>
-          </div>
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {[
-              'https://images.unsplash.com/photo-1505849864904-01b9e182ed1e?auto=format&fit=crop&w=900&q=80',
-              'https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?auto=format&fit=crop&w=900&q=80',
-              'https://images.unsplash.com/photo-1573496529574-be85d6a60704?auto=format&fit=crop&w=900&q=80',
-            ].map((src, idx) => (
-              <div
-                // eslint-disable-next-line react/no-array-index-key
-                key={idx}
-                className="fade-up group relative overflow-hidden rounded-3xl border border-[#bfdbfe] bg-white"
-              >
-                <img
-                  src={src}
-                  alt="Lumina dental experience"
-                  className="h-64 w-full object-cover transition duration-700 group-hover:scale-105"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/60 via-transparent to-transparent" />
-                <p className="absolute bottom-6 left-6 text-sm font-semibold text-white">
-                  Lumina wellness moments
-                </p>
+            <div className="overflow-hidden rounded-3xl border border-[#e0e7ff] shadow-[0_18px_55px_rgba(15,23,42,0.1)]">
+              <img
+                src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1400&q=80"
+                alt="Dental operatory"
+                className="h-72 w-full object-cover"
+                loading="lazy"
+              />
+              <div className="grid gap-4 border-t border-[#e0e7ff] bg-white p-6 text-sm text-[#475569] md:grid-cols-2">
+                <div>
+                  <p className="text-xs uppercase tracking-[0.3em] text-[#2563eb]">
+                    Parking
+                  </p>
+                  <p className="mt-1">
+                    Reserved spots in the building garage · validated for 90
+                    minutes.
+                  </p>
+                </div>
+                <div>
+                  <p className="text-xs uppercase tracking-[0.3em] text-[#2563eb]">
+                    Transit
+                  </p>
+                  <p className="mt-1">
+                    Link Light Rail – Lake Union stop · Bus routes 40, 70, and C
+                    Line.
+                  </p>
+                </div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="treatments" className="bg-white py-24 text-[#0f172a]">
+      <section id="gallery" className="bg-[#f0f4ff] py-24">
         <div className="mx-auto max-w-6xl px-6 md:px-12">
           <div className="md:flex md:items-end md:justify-between">
             <div>
-              <span className="inline-flex items-center rounded-full bg-[#2563eb]/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-[#2563eb]">
-                Treatments
+              <span className="inline-flex items-center rounded-full bg-white px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-[#2563eb]/70">
+                Smile gallery
               </span>
-              <h2 className="mt-6 font-heading text-3xl md:text-4xl">
-                Personalized journeys for every smile stage.
+              <h2 className="mt-4 font-heading text-3xl md:text-4xl">
+                Before-and-after stories from our patients.
               </h2>
             </div>
-            <p className="mt-4 max-w-xl text-sm text-[#475569] md:mt-0">
-              Treatment tiles combine empathy and clarity. We share benefits,
-              key differentiators, and next steps while inviting users to
-              schedule consults tailored to their goals.
-            </p>
+            <Link
+              href="/#book-consultation"
+              className="mt-4 inline-flex items-center rounded-full border border-[#2563eb]/30 px-6 py-3 text-sm font-semibold text-[#2563eb] transition hover:border-[#2563eb] md:mt-0"
+            >
+              Request a smile preview
+            </Link>
           </div>
-
-          <div className="mt-12 grid gap-8 md:grid-cols-3">
-            {treatmentGrid.map((item) => (
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {smileGallery.map((image) => (
               <div
-                key={item.name}
-                className="fade-up overflow-hidden rounded-3xl border border-[#bfdbfe]/80 bg-[#eff6ff] shadow-[0_22px_50px_rgba(148,163,184,0.18)] transition hover:-translate-y-1 hover:shadow-[0_28px_65px_rgba(148,163,184,0.26)]"
+                key={image}
+                className="overflow-hidden rounded-3xl border border-[#e0e7ff] bg-white shadow-[0_18px_55px_rgba(15,23,42,0.08)]"
               >
                 <img
-                  src={item.image}
-                  alt={item.name}
-                  className="h-44 w-full object-cover"
+                  src={image}
+                  alt="Lumina patient smile"
+                  className="h-64 w-full object-cover"
                   loading="lazy"
                 />
-                <div className="flex h-full flex-col p-6">
-                  <h3 className="font-heading text-xl text-[#1d4ed8]">
-                    {item.name}
-                  </h3>
-                  <p className="mt-3 text-sm text-[#475569]">{item.copy}</p>
-                  <ul className="mt-6 space-y-2 text-sm text-[#475569]">
-                    {item.perks.map((perk) => (
-                      <li key={perk} className="flex items-start gap-2">
-                        <span className="mt-1 inline-flex size-2 rounded-full bg-[#1d4ed8]" />
-                        <span>{perk}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Link
-                    href="/"
-                    className="mt-6 inline-flex items-center text-sm font-semibold text-[#1d4ed8] transition hover:text-[#1e40af]"
-                  >
-                    Book this experience →
-                  </Link>
+                <div className="px-5 py-4 text-xs uppercase tracking-[0.3em] text-[#2563eb]/70">
+                  Cosmetic & Wellness journey
                 </div>
               </div>
             ))}
@@ -474,165 +442,61 @@ const LuminaSmilesDemo = () => (
         </div>
       </section>
 
-      <section className="bg-[#e8f4ff] py-24 text-[#0f172a]">
+      <section className="bg-white py-24">
         <div className="mx-auto max-w-6xl px-6 md:px-12">
-          <div className="grid gap-10 md:grid-cols-2">
-            <div>
-              <h2 className="font-heading text-3xl md:text-4xl">
-                Visualize transformation with Lumina’s Smile Gallery.
-              </h2>
-              <p className="mt-4 text-sm text-[#475569]">
-                Before/after sliders combine photography, procedure summaries,
-                and patient quotes. A subtle CTA invites viewers to “Create my
-                smile map.”
-              </p>
-              <ul className="mt-6 space-y-3 text-sm text-[#475569]">
-                <li>
-                  Detailed captions sharing treatment timelines and care teams.
-                </li>
-                <li>
-                  Color-coded tags for cosmetic, restorative, and wellness
-                  categories.
-                </li>
-                <li>
-                  Consent-based storytelling highlighting comfort, confidence,
-                  and care.
-                </li>
-              </ul>
-            </div>
-            <div className="rounded-3xl border border-[#bfdbfe] bg-white p-6 shadow-lg">
-              <p className="text-xs uppercase tracking-[0.3em] text-[#2563eb]">
-                Patient Testimonial
-              </p>
-              <blockquote className="mt-4 text-sm leading-relaxed text-[#475569]">
-                “Lumina’s site made it easy to review treatments, calculate
-                financing, and schedule a virtual consult. I felt taken care of
-                before I even stepped into the studio.”
+          <div className="text-center">
+            <span className="inline-flex items-center rounded-full bg-[#e6efff] px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-[#2563eb]">
+              Patient voices
+            </span>
+            <h2 className="mt-4 font-heading text-3xl md:text-4xl">
+              Kind words from the community.
+            </h2>
+          </div>
+          <div className="mt-12 grid gap-6 md:grid-cols-2">
+            {testimonials.map((testimonial) => (
+              <blockquote
+                key={testimonial.name}
+                className="rounded-3xl border border-[#e0e7ff] bg-[#f5f8ff] p-6 text-sm text-[#475569] shadow-[0_16px_45px_rgba(15,23,42,0.08)]"
+              >
+                <p className="text-base text-[#0f172a]">{testimonial.quote}</p>
+                <p className="mt-4 font-semibold text-[#0f172a]">
+                  {testimonial.name}
+                </p>
+                <p className="text-xs uppercase tracking-[0.3em] text-[#2563eb]">
+                  {testimonial.detail}
+                </p>
               </blockquote>
-              <p className="mt-4 text-sm font-semibold text-[#1d4ed8]">
-                Avery Martinez — Wedding Photographer
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-white py-24 text-[#0f172a]">
-        <div className="mx-auto max-w-6xl px-6 md:px-12">
-          <div className="md:flex md:items-start md:justify-between">
-            <div className="max-w-xl">
-              <span className="inline-flex items-center rounded-full bg-[#2563eb]/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-[#2563eb]">
-                Care Journey
-              </span>
-              <h2 className="mt-6 font-heading text-3xl md:text-4xl">
-                Every step feels supported, calm, and transparent.
-              </h2>
-              <p className="mt-4 text-sm text-[#475569]">
-                Timeline cards outline the Lumina care experience from virtual
-                introductions to follow-up wellness calls. Links to new patient
-                forms and financing calculators are woven in contextually.
-              </p>
-            </div>
-            <div className="mt-8 grid gap-6 md:mt-0">
-              <div className="rounded-3xl border border-[#bfdbfe] bg-[#eff6ff] p-6">
-                <p className="text-xs uppercase tracking-[0.3em] text-[#2563eb]">
-                  01 · Discover
-                </p>
-                <h3 className="mt-3 font-heading text-xl text-[#1d4ed8]">
-                  Virtual consult &amp; smile mapping
-                </h3>
-                <p className="mt-2 text-sm text-[#475569]">
-                  Meet your dentist online, review goals, and receive a curated
-                  treatment preview in 48 hours.
-                </p>
-              </div>
-              <div className="rounded-3xl border border-[#bfdbfe] bg-[#eff6ff] p-6">
-                <p className="text-xs uppercase tracking-[0.3em] text-[#2563eb]">
-                  02 · Design
-                </p>
-                <h3 className="mt-3 font-heading text-xl text-[#1d4ed8]">
-                  Comfort-first visit
-                </h3>
-                <p className="mt-2 text-sm text-[#475569]">
-                  Enjoy spa amenities, sedation choices, and real-time 3D
-                  imaging to finalize your personalized plan.
-                </p>
-              </div>
-              <div className="rounded-3xl border border-[#bfdbfe] bg-[#eff6ff] p-6">
-                <p className="text-xs uppercase tracking-[0.3em] text-[#2563eb]">
-                  03 · Glow
-                </p>
-                <h3 className="mt-3 font-heading text-xl text-[#1d4ed8]">
-                  Guided recovery
-                </h3>
-                <p className="mt-2 text-sm text-[#475569]">
-                  Post-care kits, tele-dentistry check-ins, and wellness plans
-                  ensure comfort long after your visit.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-gradient-to-br from-[#d9f1ff] via-[#e0c3fc] to-[#c3f0f7] py-24 text-[#0f172a]">
-        <div className="mx-auto max-w-5xl px-6 text-center">
+      <section className="bg-[#2563eb] py-24 text-white">
+        <div className="mx-auto max-w-4xl px-6 text-center md:px-0">
           <h2 className="font-heading text-3xl md:text-4xl">
-            Ready to make Lumina your home for dental wellness?
+            Start your Lumina Smiles journey today.
           </h2>
-          <p className="mt-4 text-sm text-[#475569] md:text-base">
-            {`Ready to make Lumina your home for dental wellness? Book a consultation and we’ll craft a personalized care journey. Prefer to talk it through? Call our concierge team at `}
-            <span className="font-semibold">(555) 012-4567</span>.
+          <p className="mt-4 text-sm text-white/80 md:text-base">
+            Submit an inquiry or call our patient concierge to reserve a
+            consultation. We’ll tailor next steps within one business day.
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <Link
               href="/#book-consultation"
-              className="inline-flex items-center rounded-full bg-[#2563eb] px-7 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#1e40af]"
+              className="inline-flex items-center rounded-full bg-white px-8 py-3 text-sm font-semibold text-[#2563eb] transition hover:-translate-y-0.5 hover:bg-[#f5f8ff]"
             >
-              Schedule consultation
+              Book consultation
             </Link>
             <Link
-              href="/"
-              className="inline-flex items-center rounded-full border border-[#2563eb]/50 px-6 py-3 text-sm font-semibold text-[#2563eb] transition hover:border-[#2563eb] hover:text-[#1e40af]"
+              href="tel:12065550148"
+              className="inline-flex items-center rounded-full border border-white/40 px-6 py-3 text-sm font-semibold text-white transition hover:border-white"
             >
-              Download new patient guide
+              Call the patient line
             </Link>
           </div>
         </div>
       </section>
     </main>
-
-    <style jsx>{`
-      @keyframes fadeUp {
-        from {
-          opacity: 0;
-          transform: translateY(24px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      @keyframes fadeRight {
-        from {
-          opacity: 0;
-          transform: translateX(24px);
-        }
-        to {
-          opacity: 1;
-          transform: translateX(0);
-        }
-      }
-
-      .fade-up {
-        animation: fadeUp 0.9s ease-out both;
-      }
-
-      .fade-right {
-        animation: fadeRight 1s ease-out both;
-      }
-    `}</style>
   </>
 );
 

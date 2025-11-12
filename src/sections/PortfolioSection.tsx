@@ -68,8 +68,9 @@ const PortfolioSection = () => (
           Crafted for clarity, performance, and trust.
         </h2>
         <p className="mt-3 max-w-2xl text-base text-linyr-slate">
-          Every launch pairs strategic conversion design with intentional
-          interaction patterns so your team can scale with confidence.
+          These showcase builds only scratch the surface of what we deliver. We
+          tailor every engagement to your brand, layering in custom flows,
+          integrations, and feature sets to match your company’s roadmap.
         </p>
       </div>
 

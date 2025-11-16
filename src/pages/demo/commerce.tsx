@@ -11,121 +11,154 @@ const navLinks = [
   { label: 'Insights', href: '#insights' },
 ];
 
+const heroHighlights = [
+  {
+    title: 'Fractional CFO Pods',
+    description:
+      'Executive leadership that writes the board deck, leads forecast reviews, and keeps your cash story tight.',
+  },
+  {
+    title: 'Finance Ops Engine',
+    description:
+      'Controllers and analysts embedded in your systems to deliver a clean close and dependable reporting.',
+  },
+  {
+    title: 'Deal & Diligence Desk',
+    description:
+      'Project-level pods built for fundraising, M&A, and strategic pricing work when timing matters.',
+  },
+];
+
 const services = [
   {
-    title: 'Fractional CFO Desk',
-    description:
-      'Executive-grade finance leadership managing planning cycles, board communications, and capital strategy on retainer.',
-    points: [
-      'Weekly finance leadership meetings',
-      'Investor reporting and fundraising support',
-      'Scenario modeling and cash planning',
+    title: 'Fractional CFO Program',
+    copy: 'Partner-level finance leadership with standing cadences, investor comms, and scenario planning.',
+    bullets: [
+      'Weekly finance leadership and OKR reviews',
+      'Board-ready models, decks, and narratives',
+      'Capital planning, pipeline & pricing strategy',
     ],
   },
   {
     title: 'Finance Operations Suite',
-    description:
-      'Reliable close and reporting managed by controllers and senior accountants embedded in your workflows.',
-    points: [
-      'Close management and consolidations',
-      'Revenue operations and billing oversight',
-      'Compliance monitoring and controls',
+    copy: 'Close management, reporting, and RevOps handled by controllers and analysts in our pod structure.',
+    bullets: [
+      'Close + consolidation playbooks',
+      'Revenue operations & billing governance',
+      'Compliance and control monitoring',
     ],
   },
   {
     title: 'Transactions & Advisory',
-    description:
-      'Project-based support for M&A, diligence, and special finance initiatives with tailored pods.',
-    points: [
-      'Data room preparation and diligence Q&A',
-      'Integration roadmaps and KPI alignment',
-      'Unit economics and pricing projects',
+    copy: 'Specialized pods for diligence, integrations, cost programs, and liquidity events.',
+    bullets: [
+      'Buy-side and sell-side diligence support',
+      'Integration roadmaps with KPI guardrails',
+      'Margin & cost optimization sprints',
     ],
   },
 ];
 
 const caseStudies = [
   {
-    client: 'Northwind Labs',
+    company: 'Northwind Labs',
     industry: 'AI Security',
-    result:
-      'Extended runway by 16 months with a new capital plan and pricing strategy.',
-    description:
-      'Built an integrated operating model, rebuilt the weekly leadership cadence, and guided investor conversations leading into a $24M extension round.',
+    headline:
+      'Extended runway by 16 months and completed a $24M extension round.',
+    body: 'We rebuilt the operating model, orchestrated investor updates, and coached leadership through pricing and hiring moves.',
+    image:
+      'https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1400&q=80',
   },
   {
-    client: 'Cascade Robotics',
+    company: 'Cascade Robotics',
     industry: 'Manufacturing',
-    result:
-      'Lifted gross margin to 54% while scaling production across three facilities.',
-    description:
-      'Implemented cost dashboards, vendor scorecards, and a new close playbook, giving executives dependable data for expansion decisions.',
+    headline:
+      'Lifted gross margin to 54% while scaling production across three sites.',
+    body: 'Implemented vendor scorecards, automated inventory reporting, and stood up a close cadence that aligned ops and finance.',
+    image:
+      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1400&q=80',
+  },
+  {
+    company: 'Atlas Banking',
+    industry: 'Fintech',
+    headline: 'Navigated diligence and closed a Series C within 90 days.',
+    body: 'Built the data room, wrote investor narratives, and managed diligence workflows across legal, HR, and finance teams.',
+    image:
+      'https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?auto=format&fit=crop&w=1400&q=80',
   },
 ];
 
 const processSteps = [
   {
-    title: 'Scope & Onboard',
-    detail:
-      'A two-week assessment to map systems, team workflows, and reporting gaps. We deliver a finance scorecard and 90-day priorities.',
+    title: 'Discover & Map',
+    description:
+      'Two-week immersion into tooling, models, and leadership priorities. Deliverable: finance scorecard + 90-day plan.',
   },
   {
-    title: 'Stabilize & Operate',
-    detail:
-      'Your pod embeds into leadership and operations. We establish reporting cadences, automate data, and manage day-to-day finance tasks.',
+    title: 'Operate & Embed',
+    description:
+      'Pods take over close, reporting, and meeting rhythms. We keep executives informed and investors confident.',
   },
   {
     title: 'Advise & Scale',
-    detail:
-      'As strategy evolves, we drive scenario planning, investor updates, and special projects with the same pod that understands your business.',
+    description:
+      'Finance leadership supports strategy, fundraising, and special projects while we grow the pod alongside your team.',
   },
 ];
 
-const insights = [
+const insightCards = [
   {
     title: '2025 SaaS Finance Benchmarks',
-    blurb:
-      'Key metrics, burn multiples, and growth levers from 120 venture-backed finance teams preparing for the next round.',
+    description:
+      'Key metrics, burn multiples, and runway guidance from 120 venture-backed finance teams.',
   },
   {
-    title: 'Checklist: Preparing for Diligence',
-    blurb:
-      'A practical guide covering data rooms, KPIs, and stakeholder prep before kicking off a fundraising or M&A process.',
+    title: 'Founder Finance Operating Guide',
+    description:
+      'How to staff finance, when to add RevOps, and frameworks for healthy cash conversations.',
   },
   {
-    title: 'Finance Ops Hiring Guide',
-    blurb:
-      'How to staff your first controller, when to add RevOps support, and playbooks for onboarding new hires.',
+    title: 'Diligence Playbook',
+    description:
+      'Checklists, data room structure, and narrative guidance before running a process.',
   },
 ];
 
 const testimonials = [
   {
     quote:
-      '“Redwood Ledger operates like an in-house finance team. They built our metrics infrastructure, coached our executives, and walked us into a successful raise.”',
+      '“Redwood Ledger dropped burn multiple below 1.0x and walked us into an extension round with clean, confident numbers.”',
     name: 'Maya Chen',
-    role: 'CEO, Atlas Banking',
+    title: 'CEO, Atlas Banking',
   },
   {
     quote:
-      '“From weekly cash reporting to diligence prep, they kept us informed and investors impressed. It’s the best finance partnership we’ve had.”',
+      '“They operate like an in-house CFO team—weekly signals, fast scenario work, and depth when diligence hit.”',
     name: 'Jordan Blake',
-    role: 'COO, Northwind Labs',
+    title: 'COO, Northwind Labs',
   },
+];
+
+const financeLogos = [
+  'Northwind',
+  'Cascade Robotics',
+  'Atlas',
+  'Pilotworks',
+  'Motive',
 ];
 
 const RedwoodLedgerDemo = () => (
   <>
     <Meta
       title={`Redwood Ledger CPA Demo — ${AppConfig.title}`}
-      description="See how Redwood Ledger delivers fractional CFO leadership, dependable finance operations, and strategic advisory for modern teams."
+      description="Explore Redwood Ledger’s fractional CFO, finance operations, and advisory services delivered by embedded finance pods."
     />
-    <main className="bg-[#f5f7fb] text-[#142640]">
-      <header className="sticky top-0 z-30 border-b border-[#d8dee8] bg-white/95 backdrop-blur">
+    <main className="bg-[#f7f9fc] text-[#16324f]">
+      <header className="sticky top-0 z-30 border-b border-[#d9e2f1] bg-white/95 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 md:px-12">
           <Link
             href="/"
-            className="font-heading text-lg font-semibold text-[#142640]"
+            className="font-heading text-lg font-semibold text-[#16324f]"
           >
             Redwood Ledger
           </Link>
@@ -134,7 +167,7 @@ const RedwoodLedgerDemo = () => (
               <Link
                 key={link.label}
                 href={link.href}
-                className="rounded-full px-3 py-1 text-[#142640]/75 transition hover:bg-[#e8edf6] hover:text-[#142640]"
+                className="rounded-full px-3 py-1 text-[#1f4060]/75 transition hover:bg-[#e8eff9] hover:text-[#16324f]"
               >
                 {link.label}
               </Link>
@@ -142,107 +175,137 @@ const RedwoodLedgerDemo = () => (
           </nav>
           <Link
             href="/#book-consultation"
-            className="inline-flex items-center rounded-full bg-[#142640] px-4 py-2 text-xs font-semibold text-white shadow-[0_8px_18px_rgba(20,38,64,0.25)] transition hover:-translate-y-0.5"
+            className="inline-flex items-center rounded-full bg-[#16324f] px-4 py-2 text-xs font-semibold text-white shadow-[0_8px_20px_rgba(22,50,79,0.25)] transition hover:-translate-y-0.5"
           >
             Talk to finance leadership
           </Link>
         </div>
       </header>
 
-      <section id="overview" className="bg-white">
-        <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-[1.15fr,0.85fr] md:px-12">
+      <section
+        id="overview"
+        className="border-b border-[#d9e2f1] bg-white"
+        style={{
+          backgroundImage:
+            'linear-gradient(180deg, rgba(247,249,252,0.88) 0%, rgba(247,249,252,1) 55%), url(https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1600&q=80)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="mx-auto grid max-w-6xl gap-12 px-6 py-24 md:grid-cols-[1.15fr,0.85fr] md:px-12">
           <div className="space-y-6">
-            <span className="inline-flex items-center rounded-full bg-[#e8edf6] px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-[#405a83]">
+            <span className="inline-flex items-center rounded-full bg-white/80 px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-[#1f4060]">
               Fractional finance leadership
             </span>
             <h1 className="font-heading text-4xl leading-tight md:text-5xl">
-              Finance partners that give founders clarity, investors confidence,
-              and teams more time.
+              Finance pods that turn metrics into momentum.
             </h1>
-            <p className="text-base text-[#435573]">
-              Redwood Ledger embeds experienced CFOs, controllers, and analysts
-              directly into your company. We manage the close, build the models,
-              support fundraising, and keep metrics board-ready so leadership
-              can stay focused on the business.
+            <p className="text-base text-[#375273]">
+              We embed senior CFOs, controllers, and analysts into your team.
+              They operate your close, build executive-ready reporting, and
+              steer capital conversations so founders stay focused on customers
+              and product.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
                 href="#services"
-                className="inline-flex items-center rounded-full bg-[#142640] px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5"
+                className="inline-flex items-center rounded-full bg-[#16324f] px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5"
               >
                 Explore service pods
               </Link>
               <Link
                 href="/#book-consultation"
-                className="inline-flex items-center rounded-full border border-[#142640]/25 px-6 py-3 text-sm font-semibold text-[#142640] transition hover:border-[#142640]"
+                className="inline-flex items-center rounded-full border border-[#16324f]/30 px-6 py-3 text-sm font-semibold text-[#16324f] transition hover:border-[#16324f]"
               >
                 Request a finance assessment →
               </Link>
             </div>
-            <div className="grid gap-4 text-sm text-[#435573] sm:grid-cols-2">
-              <div className="rounded-2xl border border-[#d8dee8] bg-[#f0f3f9] p-4">
-                <p className="font-heading text-lg text-[#142640]">
-                  Executive reporting
-                </p>
-                <p className="mt-1 text-xs uppercase tracking-[0.2em] text-[#405a83]">
-                  weekly dashboards & board decks
-                </p>
-              </div>
-              <div className="rounded-2xl border border-[#d8dee8] bg-[#f0f3f9] p-4">
-                <p className="font-heading text-lg text-[#142640]">
-                  Investor readiness
-                </p>
-                <p className="mt-1 text-xs uppercase tracking-[0.2em] text-[#405a83]">
-                  data rooms · diligence · runway plans
-                </p>
-              </div>
+            <div className="grid gap-4 text-sm text-[#375273] sm:grid-cols-3">
+              {heroHighlights.map((highlight) => (
+                <div
+                  key={highlight.title}
+                  className="rounded-2xl border border-[#d9e2f1] bg-white/80 p-4 shadow-sm"
+                >
+                  <p className="font-heading text-base text-[#16324f]">
+                    {highlight.title}
+                  </p>
+                  <p className="mt-2 text-xs">{highlight.description}</p>
+                </div>
+              ))}
+            </div>
+            <div className="flex flex-wrap gap-4 text-xs font-semibold uppercase tracking-[0.3em] text-[#8fa3bf]">
+              {financeLogos.map((logo) => (
+                <span key={logo}>{logo}</span>
+              ))}
             </div>
           </div>
-          <div className="overflow-hidden rounded-3xl border border-[#d8dee8] shadow-[0_20px_60px_rgba(20,38,64,0.12)]">
-            <img
-              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80"
-              alt="Finance team working"
-              className="h-72 w-full object-cover"
-              loading="lazy"
-            />
-            <div className="grid gap-4 border-t border-[#d8dee8] bg-white p-6 text-sm text-[#435573] md:grid-cols-2">
-              <div>
-                <p className="text-xs uppercase tracking-[0.3em] text-[#405a83]">
-                  Week-over-week visibility
-                </p>
-                <p className="mt-1">
-                  Rolling forecasts, cash dashboards, and revenue analytics
-                  delivered every Monday.
-                </p>
+          <div className="space-y-6">
+            <div className="overflow-hidden rounded-3xl border border-[#d9e2f1] bg-white/90 shadow-[0_16px_45px_rgba(22,50,79,0.12)]">
+              <img
+                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80"
+                alt="Finance team collaborating"
+                className="h-64 w-full object-cover"
+                loading="lazy"
+              />
+              <div className="grid gap-4 border-t border-[#d9e2f1] bg-white p-6 text-sm text-[#375273] md:grid-cols-2">
+                <div>
+                  <p className="text-xs uppercase tracking-[0.3em] text-[#1f4060]">
+                    Leader cadence
+                  </p>
+                  <p className="mt-1">
+                    Weekly exec review packets, cash dashboards, and rolling
+                    forecasts.
+                  </p>
+                </div>
+                <div>
+                  <p className="text-xs uppercase tracking-[0.3em] text-[#1f4060]">
+                    Investor readiness
+                  </p>
+                  <p className="mt-1">
+                    Data rooms, diligence coaching, and on-call support when the
+                    process starts.
+                  </p>
+                </div>
               </div>
-              <div>
-                <p className="text-xs uppercase tracking-[0.3em] text-[#405a83]">
-                  Finance pod structure
-                </p>
-                <p className="mt-1">
-                  CFO + controller + analyst blend tuned to company stage and
-                  complexity.
-                </p>
-              </div>
+            </div>
+            <div className="rounded-3xl border border-[#d9e2f1] bg-white/90 p-6 text-sm text-[#375273] shadow-[0_16px_45px_rgba(22,50,79,0.1)]">
+              <p className="font-heading text-base text-[#16324f]">
+                Signals we deliver weekly
+              </p>
+              <ul className="mt-3 space-y-2">
+                <li className="flex items-start gap-2">
+                  <span className="mt-1 inline-flex size-2 rounded-full bg-[#16324f]" />
+                  Board-ready scorecards and runway insights
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1 inline-flex size-2 rounded-full bg-[#16324f]" />
+                  Margin and unit economic breakdowns with commentary
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1 inline-flex size-2 rounded-full bg-[#16324f]" />
+                  Action signals for hiring, pricing, and spend controls
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="services" className="bg-[#f5f7fb] py-24">
+      <section id="services" className="bg-[#f7f9fc] py-24">
         <div className="mx-auto max-w-6xl px-6 md:px-12">
           <div className="md:flex md:items-end md:justify-between">
             <div>
-              <span className="inline-flex items-center rounded-full bg-white px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-[#405a83]">
+              <span className="inline-flex items-center rounded-full bg-white px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-[#1f4060]">
                 Services
               </span>
               <h2 className="mt-4 font-heading text-3xl md:text-4xl">
-                Tailored pods that scale finance without the overhead.
+                Flexible pods aligned to your finance roadmap.
               </h2>
             </div>
-            <p className="mt-4 max-w-xl text-sm text-[#435573] md:mt-0">
-              Each engagement is built around deliverables, cadence, and
-              outcomes you need—then adapted as your company evolves.
+            <p className="mt-4 max-w-xl text-sm text-[#375273] md:mt-0">
+              Start with the pod you need—fractional leadership, dependable
+              operations, or transaction support. We adjust scope and talent as
+              your business evolves.
             </p>
           </div>
 
@@ -250,19 +313,17 @@ const RedwoodLedgerDemo = () => (
             {services.map((service) => (
               <article
                 key={service.title}
-                className="rounded-3xl border border-[#d8dee8] bg-white p-8 shadow-[0_16px_45px_rgba(20,38,64,0.1)]"
+                className="rounded-3xl border border-[#d9e2f1] bg-white p-8 shadow-[0_12px_35px_rgba(22,50,79,0.12)]"
               >
-                <h3 className="font-heading text-xl text-[#142640]">
+                <h3 className="font-heading text-xl text-[#16324f]">
                   {service.title}
                 </h3>
-                <p className="mt-3 text-sm text-[#435573]">
-                  {service.description}
-                </p>
-                <ul className="mt-6 space-y-3 text-sm text-[#435573]">
-                  {service.points.map((point) => (
-                    <li key={point} className="flex items-start gap-2">
-                      <span className="mt-1 inline-flex size-2 rounded-full bg-[#142640]" />
-                      <span>{point}</span>
+                <p className="mt-3 text-sm text-[#375273]">{service.copy}</p>
+                <ul className="mt-6 space-y-3 text-sm text-[#375273]">
+                  {service.bullets.map((bullet) => (
+                    <li key={bullet} className="flex items-start gap-2">
+                      <span className="mt-1 inline-flex size-2 rounded-full bg-[#16324f]" />
+                      <span>{bullet}</span>
                     </li>
                   ))}
                 </ul>
@@ -276,58 +337,66 @@ const RedwoodLedgerDemo = () => (
         <div className="mx-auto max-w-6xl px-6 md:px-12">
           <div className="md:flex md:items-end md:justify-between">
             <div className="max-w-xl">
-              <span className="inline-flex items-center rounded-full bg-[#e8edf6] px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-[#405a83]">
+              <span className="inline-flex items-center rounded-full bg-[#e8eff9] px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-[#1f4060]">
                 Case studies
               </span>
               <h2 className="mt-4 font-heading text-3xl md:text-4xl">
-                Recent results from teams we partner with.
+                Proven finance partnerships across sectors.
               </h2>
             </div>
-            <p className="mt-4 max-w-lg text-sm text-[#435573] md:mt-0">
-              We combine executive partnership and dependable operations to
-              remove finance surprises and keep leadership confident.
+            <p className="mt-4 max-w-lg text-sm text-[#375273] md:mt-0">
+              We stay engaged through fundraising cycles, expansions, and margin
+              programs—delivering finance clarity every week along the way.
             </p>
           </div>
 
-          <div className="mt-12 grid gap-8 md:grid-cols-2">
-            {caseStudies.map((study) => (
-              <article
-                key={study.client}
-                className="rounded-3xl border border-[#d8dee8] bg-[#f5f7fb] p-8 shadow-[0_16px_45px_rgba(20,38,64,0.08)]"
-              >
-                <p className="text-xs uppercase tracking-[0.3em] text-[#405a83]">
-                  {study.industry}
-                </p>
-                <h3 className="mt-3 font-heading text-xl text-[#142640]">
-                  {study.client}
-                </h3>
-                <p className="mt-2 font-semibold text-[#142640]">
-                  {study.result}
-                </p>
-                <p className="mt-3 text-sm text-[#435573]">
-                  {study.description}
-                </p>
-              </article>
-            ))}
+          <div className="mt-10 overflow-x-auto pb-4">
+            <div className="flex snap-x gap-6">
+              {caseStudies.map((study) => (
+                <article
+                  key={study.company}
+                  className="group relative h-[320px] w-[340px] flex-none snap-center overflow-hidden rounded-3xl border border-[#d9e2f1] bg-[#0f4c75] shadow-[0_20px_55px_rgba(22,50,79,0.2)]"
+                  style={{
+                    backgroundImage: `linear-gradient(180deg, rgba(15,76,117,0.35) 0%, rgba(15,76,117,0.85) 75%), url(${study.image})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                  }}
+                >
+                  <div className="flex h-full flex-col justify-between p-6 text-white">
+                    <div className="space-y-2">
+                      <p className="text-xs uppercase tracking-[0.3em] text-white/70">
+                        {study.industry}
+                      </p>
+                      <h3 className="font-heading text-lg">{study.company}</h3>
+                    </div>
+                    <div className="space-y-2 text-sm text-white/85">
+                      <p className="font-semibold">{study.headline}</p>
+                      <p className="text-xs leading-relaxed text-white/70">
+                        {study.body}
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="process" className="bg-[#f5f7fb] py-24">
+      <section id="process" className="bg-[#f0f4fa] py-24">
         <div className="mx-auto max-w-6xl px-6 md:px-12">
           <div className="md:flex md:items-end md:justify-between">
             <div>
-              <span className="inline-flex items-center rounded-full bg-white px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-[#405a83]">
-                Process
+              <span className="inline-flex items-center rounded-full bg-white px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-[#1f4060]">
+                Working rhythm
               </span>
               <h2 className="mt-4 font-heading text-3xl md:text-4xl">
-                A clear rhythm from onboarding to advisory.
+                Clarity from onboarding to advisory.
               </h2>
             </div>
-            <p className="mt-4 max-w-lg text-sm text-[#435573] md:mt-0">
-              Your finance pod stays consistent, communicates proactively, and
-              keeps leadership focused on the next decision—not the last
-              spreadsheet.
+            <p className="mt-4 max-w-lg text-sm text-[#375273] md:mt-0">
+              Pods communicate proactively, stay aligned with leadership, and
+              surface the metrics needed to make confident calls every week.
             </p>
           </div>
 
@@ -335,15 +404,17 @@ const RedwoodLedgerDemo = () => (
             {processSteps.map((step) => (
               <article
                 key={step.title}
-                className="rounded-3xl border border-[#d8dee8] bg-white p-6 shadow-[0_12px_35px_rgba(20,38,64,0.08)]"
+                className="rounded-3xl border border-[#d9e2f1] bg-white p-6 shadow-[0_12px_35px_rgba(22,50,79,0.12)]"
               >
-                <p className="text-xs uppercase tracking-[0.3em] text-[#405a83]">
-                  Step
+                <p className="text-xs uppercase tracking-[0.3em] text-[#1f4060]">
+                  Phase
                 </p>
-                <h3 className="mt-2 font-heading text-lg text-[#142640]">
+                <h3 className="mt-2 font-heading text-lg text-[#16324f]">
                   {step.title}
                 </h3>
-                <p className="mt-2 text-sm text-[#435573]">{step.detail}</p>
+                <p className="mt-2 text-sm text-[#375273]">
+                  {step.description}
+                </p>
               </article>
             ))}
           </div>
@@ -353,25 +424,25 @@ const RedwoodLedgerDemo = () => (
       <section className="bg-white py-24">
         <div className="mx-auto max-w-6xl px-6 md:px-12">
           <div className="text-center">
-            <span className="inline-flex items-center rounded-full bg-[#e8edf6] px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-[#405a83]">
+            <span className="inline-flex items-center rounded-full bg-[#e8eff9] px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-[#1f4060]">
               Testimonials
             </span>
             <h2 className="mt-4 font-heading text-3xl md:text-4xl">
-              Finance teams and founders who trust Redwood.
+              Leaders who rely on Redwood every week.
             </h2>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-2">
             {testimonials.map((testimonial) => (
               <blockquote
                 key={testimonial.name}
-                className="rounded-3xl border border-[#d8dee8] bg-[#f5f7fb] p-6 text-sm text-[#435573] shadow-[0_12px_35px_rgba(20,38,64,0.08)]"
+                className="border[#d9e2f1] bg[#f7f9fc] rounded-3xl border p-6 text-sm text-[#375273] shadow-[0_12px_35px_rgba(22,50,79,0.1)]"
               >
-                <p className="text-base text-[#142640]">{testimonial.quote}</p>
-                <p className="mt-4 font-semibold text-[#142640]">
+                <p className="text-base text-[#16324f]">{testimonial.quote}</p>
+                <p className="mt-4 font-semibold text-[#16324f]">
                   {testimonial.name}
                 </p>
-                <p className="text-xs uppercase tracking-[0.3em] text-[#405a83]">
-                  {testimonial.role}
+                <p className="text-xs uppercase tracking-[0.3em] text-[#1f4060]">
+                  {testimonial.title}
                 </p>
               </blockquote>
             ))}
@@ -379,36 +450,36 @@ const RedwoodLedgerDemo = () => (
         </div>
       </section>
 
-      <section id="insights" className="bg-[#f5f7fb] py-24">
+      <section id="insights" className="bg-[#f7f9fc] py-24">
         <div className="mx-auto max-w-6xl px-6 md:px-12">
           <div className="md:flex md:items-end md:justify-between">
             <div>
-              <span className="inline-flex items-center rounded-full bg-white px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-[#405a83]">
-                Insights & tools
+              <span className="inline-flex items-center rounded-full bg-white px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-[#1f4060]">
+                Insights & templates
               </span>
               <h2 className="mt-4 font-heading text-3xl md:text-4xl">
-                Guides and templates we share with clients.
+                Resources we give every finance pod.
               </h2>
             </div>
-            <p className="mt-4 max-w-lg text-sm text-[#435573] md:mt-0">
-              A sample of the playbooks, checklists, and templates we provide
-              throughout each engagement for planning, diligence, and hiring.
+            <p className="mt-4 max-w-lg text-sm text-[#375273] md:mt-0">
+              Browse examples of the frameworks, benchmarks, and playbooks that
+              help our clients operate finance with clarity.
             </p>
           </div>
 
           <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {insights.map((insight) => (
+            {insightCards.map((insight) => (
               <article
                 key={insight.title}
-                className="rounded-3xl border border-[#d8dee8] bg-white p-6 text-sm text-[#435573] shadow-[0_12px_35px_rgba(20,38,64,0.08)]"
+                className="rounded-3xl border border-[#d9e2f1] bg-white p-6 text-sm text-[#375273] shadow-[0_12px_35px_rgba(22,50,79,0.1)]"
               >
-                <h3 className="font-heading text-lg text-[#142640]">
+                <h3 className="font-heading text-lg text-[#16324f]">
                   {insight.title}
                 </h3>
-                <p className="mt-3">{insight.blurb}</p>
+                <p className="mt-3">{insight.description}</p>
                 <Link
                   href="/"
-                  className="mt-4 inline-flex items-center text-sm font-semibold text-[#142640] transition hover:text-[#0c1d34]"
+                  className="mt-4 inline-flex items-center text-sm font-semibold text-[#16324f] transition hover:text-[#0d2337]"
                 >
                   Download resource →
                 </Link>
@@ -418,26 +489,25 @@ const RedwoodLedgerDemo = () => (
         </div>
       </section>
 
-      <section className="bg-white py-24">
+      <section className="bg-[#16324f] py-24 text-white">
         <div className="mx-auto max-w-4xl px-6 text-center md:px-0">
           <h2 className="font-heading text-3xl md:text-4xl">
-            Ready for finance leadership that scales with you?
+            Ready for finance leadership that keeps pace with your goals?
           </h2>
-          <p className="mt-4 text-sm text-[#435573] md:text-base">
-            Share your goals and current pain points. We’ll come prepared with a
-            pod structure, timeline, and measurable targets for the first 90
-            days.
+          <p className="mt-4 text-sm text-white/80 md:text-base">
+            Share your roadmap and gaps. We’ll propose a pod structure,
+            timeline, and measurable impact for the first 90 days.
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <Link
               href="/#book-consultation"
-              className="inline-flex items-center rounded-full bg-[#142640] px-8 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5"
+              className="inline-flex items-center rounded-full bg-white px-8 py-3 text-sm font-semibold text-[#16324f] transition hover:-translate-y-0.5 hover:bg-[#f7f9fc]"
             >
               Schedule a consultation
             </Link>
             <Link
               href="#services"
-              className="inline-flex items-center rounded-full border border-[#142640]/40 px-6 py-3 text-sm font-semibold text-[#142640] transition hover:border-[#142640]"
+              className="inline-flex items-center rounded-full border border-white/40 px-6 py-3 text-sm font-semibold text-white transition hover:border-white"
             >
               Review service pods
             </Link>
